@@ -99,16 +99,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "20f5573e7d5a71c2d4c2ba75372d028a33d9237a"
+                "reference": "ba5d862a9ac3f831072383d00002fcc95475a1c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/20f5573e7d5a71c2d4c2ba75372d028a33d9237a",
-                "reference": "20f5573e7d5a71c2d4c2ba75372d028a33d9237a",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/ba5d862a9ac3f831072383d00002fcc95475a1c0",
+                "reference": "ba5d862a9ac3f831072383d00002fcc95475a1c0",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-12T00:51:59+00:00"
+            "time": "2020-06-12T09:21:53+00:00"
         }
     ],
     "packages-dev": [],
