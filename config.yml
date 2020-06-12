@@ -19,3 +19,5 @@ manifest:
       type: image/png
 serviceworker:
   enabled: true
+podcast:
+  image: cover.png
