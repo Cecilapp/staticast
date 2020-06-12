@@ -1,7 +1,7 @@
 ---
 date: 2020-06-12
 episode:
-  file: /audio/test.mp3
+  file: /audio/episode-2.mp3
 ---
 
 _Example of a podcast episode._
