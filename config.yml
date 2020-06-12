@@ -11,8 +11,8 @@ theme:
   - "serviceworker"
 icon: icon.svg
 manifest:
-  background_color: '#D4DBDE'
-  theme_color: '#7E4EA3'
+  background_color: '#7E4EA3'
+  theme_color: '#D4DBDE'
   icons:
     - src: icon-512x512.png
       sizes: 512x512
