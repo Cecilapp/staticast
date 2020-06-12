@@ -1,0 +1,152 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "9b3f633665683d0072133fc3fffa7596",
+    "packages": [
+        {
+            "name": "cecil/theme-garth",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cecilapp/theme-garth.git",
+                "reference": "9bba8ce9d8dbf5823217042127345e34c212a02b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/9bba8ce9d8dbf5823217042127345e34c212a02b",
+                "reference": "9bba8ce9d8dbf5823217042127345e34c212a02b",
+                "shasum": ""
+            },
+            "require": {
+                "cecil/theme-installer": "^1.3"
+            },
+            "type": "cecil-theme",
+            "extra": {
+                "name": "garth",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Cecil Garth theme",
+            "keywords": [
+                "Garth",
+                "cecil",
+                "theme"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/narno",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-05-19T18:49:02+00:00"
+        },
+        {
+            "name": "cecil/theme-installer",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cecilapp/theme-installer.git",
+                "reference": "53f9557922f30cba89a91fcab18700394eb52de3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cecilapp/theme-installer/zipball/53f9557922f30cba89a91fcab18700394eb52de3",
+                "reference": "53f9557922f30cba89a91fcab18700394eb52de3",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Cecil\\Installer\\Composer\\CecilPlugin",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Cecil\\Installer\\Composer": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Ligny",
+                    "email": "arnaud@ligny.org",
+                    "homepage": "https://arnaudligny.fr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Installer for Cecil themes",
+            "keywords": [
+                "cecil",
+                "installer",
+                "themes"
+            ],
+            "time": "2018-11-21T14:35:40+00:00"
+        },
+        {
+            "name": "cecil/theme-podcast",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cecilapp/theme-podcast.git",
+                "reference": "53f45c98710c686a9965fb85fc6b2363070c088e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/53f45c98710c686a9965fb85fc6b2363070c088e",
+                "reference": "53f45c98710c686a9965fb85fc6b2363070c088e",
+                "shasum": ""
+            },
+            "require": {
+                "cecil/theme-installer": "^1.3"
+            },
+            "type": "cecil-theme",
+            "extra": {
+                "name": "podcast",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Cecil component theme: Podcast",
+            "keywords": [
+                "cecil",
+                "podcast",
+                "theme"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/narno",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-06-11T17:19:12+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

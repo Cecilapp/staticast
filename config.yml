@@ -1,0 +1,10 @@
+title: "Staticast"
+baseline: "Staticast"
+description: "Staticast"
+keywords: "Cecil, Static Site Generator, Podcast"
+author: "Arnaud Ligny"
+baseurl: "/"
+canonicalurl: true
+theme:
+  - "podcast"
+  - "garth"
