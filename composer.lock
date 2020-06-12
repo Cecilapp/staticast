@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cecil/theme-garth",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-garth.git",
-                "reference": "9bba8ce9d8dbf5823217042127345e34c212a02b"
+                "reference": "e07b3aeee7ba039675a05f661b8a9c6ec4353340"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/9bba8ce9d8dbf5823217042127345e34c212a02b",
-                "reference": "9bba8ce9d8dbf5823217042127345e34c212a02b",
+                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/e07b3aeee7ba039675a05f661b8a9c6ec4353340",
+                "reference": "e07b3aeee7ba039675a05f661b8a9c6ec4353340",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-05-19T18:49:02+00:00"
+            "time": "2020-06-12T11:22:05+00:00"
         },
         {
             "name": "cecil/theme-installer",

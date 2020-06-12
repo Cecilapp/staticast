@@ -1,5 +1,5 @@
 ---
-date: 2020-06-11
+date: 2020-06-10
 episode:
   file: /audio/episode-1.mp3
 ---
