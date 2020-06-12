@@ -20,4 +20,8 @@ manifest:
 serviceworker:
   enabled: true
 podcast:
-  image: cover.png
+  author: Arnaud Ligny
+  owner:
+    name: Arnaud Ligny
+    email: arnaud@ligny.fr
+  image: /cover.png
