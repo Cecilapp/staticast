@@ -8,3 +8,6 @@ canonicalurl: true
 theme:
   - "podcast"
   - "garth"
+  - "serviceworker"
+serviceworker:
+  enabled: true
