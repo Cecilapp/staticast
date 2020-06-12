@@ -12,7 +12,7 @@ theme:
 icon: icon.svg
 manifest:
   background_color: '#7E4EA3'
-  theme_color: '#D4DBDE'
+  theme_color: '#7E4EA3'
   icons:
     - src: icon-512x512.png
       sizes: 512x512
