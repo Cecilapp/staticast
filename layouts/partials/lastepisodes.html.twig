@@ -1,5 +1,6 @@
       <section class="lastposts typeset">
         <h2>Last episodes</h2>
+{#
         <ul class="list list--posts">
 {% for post in site.pages|filter_by('section', 'episodes')|sort_by_date %}
           <li class="item item--post">
@@ -7,4 +8,11 @@
           </li>
 {% endfor %}
         </ul>
+#}
+        <dl>
+{% for post in site.pages|filter_by('section', 'episodes')|sort_by_date %}
+          <dt><a href="{{ url(post) }}">{{ post.title }}</a></dt>
+          <dd>{{ post.content|excerpt(200) }}</dd>
+{% endfor %}
+        </dl>
       </section>

@@ -4,7 +4,7 @@
 <article class="page typeset">
   {{ page.content }}
 </article>
-<a href="{{ url('episodes/rss.xml') }}">Subscribe</a>
+<a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS</a>
 {#
 {% for post in site.pages|filter_by('section', 'episodes')|sort_by_date|slice(0, 1) %}
 {% include 'partials/post-item.html.twig' with {'post': post} only %}
