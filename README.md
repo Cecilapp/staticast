@@ -1,5 +1,5 @@
 # Staticast
 
-Staticast is a podcast website template, powered by [Cecil](https://cecil.app).
+Staticast is a podcast website [template](https://github.com/Cecilapp/staticast), powered by [Cecil](https://cecil.app).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Cecilapp/staticast)
+You could deploy your own in few seconds with [Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/Cecilapp/staticast).
