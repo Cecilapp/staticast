@@ -1,0 +1,29 @@
+{% for episode in site.pages|filter_by('section', 'episodes')|sort_by_date %}
+	<p>
+		<audio id="{{ episode.slug|replace({'-': '_'}) }}" src="{{ episode.episode.file }}" preload="auto"></audio>
+		<a id="miniplayer-{{ episode.slug|replace({'-': '_'}) }}" onclick="togglePlay_{{ episode.slug|replace({'-': '_'}) }}()" style="cursor: pointer;"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/play-circle-512.png" width="30"/></a>
+		{{ episode.title }}
+	</p>
+	<script>
+		var {{ episode.slug|replace({'-': '_'}) }} = document.getElementById('{{ episode.slug|replace({'-': '_'}) }}');
+function togglePlay_ {{ episode.slug|replace({'-': '_'}) }}() {
+if ({{ episode.slug|replace({'-': '_'}) }}.paused) {
+document.querySelector('#miniplayer- {{ episode.slug|replace({'-': '_'}) }}> img').setAttribute('src', 'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/pause-circle-512.png');
+console.log('Play');
+return {{ episode.slug|replace({'-': '_'}) }}.play();;
+}
+document.querySelector('#miniplayer- {{ episode.slug|replace({'-': '_'}) }}> img').setAttribute('src', 'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/play-circle-512.png');
+console.log('Pause');
+return {{ episode.slug|replace({'-': '_'}) }}.pause();
+}
+// auto pause others players
+document.addEventListener('play', function (e) {
+var audios = document.getElementsByTagName('audio');
+console.log(audios);
+for (var i = 0, len = audios.length; i < len; i++) { // if (audios[i] != e.target) {
+audios[i].pause();
+// }
+}
+}, true);
+	</script>
+{% endfor %}
