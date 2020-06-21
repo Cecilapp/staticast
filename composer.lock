@@ -99,16 +99,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "d8b9f28f41346fcf5399f2860ab9df4aca8270b6"
+                "reference": "604802e2f71e81d40479c4ba3630db105186fc3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/d8b9f28f41346fcf5399f2860ab9df4aca8270b6",
-                "reference": "d8b9f28f41346fcf5399f2860ab9df4aca8270b6",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/604802e2f71e81d40479c4ba3630db105186fc3d",
+                "reference": "604802e2f71e81d40479c4ba3630db105186fc3d",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-17T22:45:15+00:00"
+            "time": "2020-06-21T21:35:07+00:00"
         },
         {
             "name": "cecil/theme-serviceworker",
