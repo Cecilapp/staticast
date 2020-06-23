@@ -2,7 +2,7 @@
 
 {% block content %}
 <article class="page typeset">
-  {{ page.content }}
+  {{ page.content|excerpt_html }}
 </article>
 <a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS</a>
 {#
