@@ -2,6 +2,8 @@
 
 {% block content %}
 <article class="page typeset">
+  <h1>{{ site.title }}</h1>
+  <strong><em>{{ site.baseline }}</em></strong>
   {{ page.content|excerpt_html }}
 </article>
 <a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS</a>
