@@ -6,7 +6,7 @@
   <strong><em>{{ site.baseline }}</em></strong>
   {{ page.content|excerpt_html }}
 </article>
-<a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS</a>
+<a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS →</a>
 {#
 {% for post in site.pages|filter_by('section', 'episodes')|sort_by_date|slice(0, 1) %}
 {% include 'partials/post-item.html.twig' with {'post': post} only %}
