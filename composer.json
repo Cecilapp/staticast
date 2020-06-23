@@ -13,7 +13,7 @@
   ],
   "require": {
     "cecil/theme-garth": "^1.1",
-    "cecil/theme-podcast": "^1.5",
+    "cecil/theme-podcast": "^1.6",
     "cecil/theme-serviceworker": "^1.8"
   }
 }
