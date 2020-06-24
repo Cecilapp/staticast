@@ -2,6 +2,7 @@
 
 {% block head %}
 {{ parent() }}
+    <meta property="og:image" content="{{ asset(site.podcast.image)|url({canonical: true}) }}" />
     <link rel="manifest" href="{{ url('manifest') }}">
 {% include 'partials/regsw.js.twig' %}
 {% endblock %}
