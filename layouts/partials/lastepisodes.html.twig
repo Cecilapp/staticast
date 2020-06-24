@@ -10,7 +10,7 @@
         </ul>
 #}
         <dl>
-{% for post in site.pages|filter_by('section', 'episodes')|sort_by_date|slice(0, 3) %}
+{% for post in site.pages|filter_by('section', 'episodes')|sort_by_date|slice(0, 2) %}
           <dt><a href="{{ url(post) }}">{{ post.title }}</a></dt>
           <dd>{{ post.content|excerpt(200) }}</dd>
 {% endfor %}
