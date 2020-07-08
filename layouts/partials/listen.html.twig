@@ -1,0 +1,10 @@
+<style>
+  #listen img {
+    display:inline;
+  }
+</style>
+<div id="listen">
+{% for service, url in site.podcast.listen %}
+  <a href="{{ url }}"><img src="{{ asset('badge/'~ service ~'.svg')|url }}" alt="Listen on {{ service|capitalize }}"/></a>
+{% endfor %}
+</div>

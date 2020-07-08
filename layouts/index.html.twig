@@ -7,5 +7,6 @@
   {{ page.content|excerpt_html }}
 </article>
 <a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS →</a>
+{% include 'partials/listen.html.twig' %}
 {% include 'partials/lastepisodes.html.twig' %}
 {% endblock content %}

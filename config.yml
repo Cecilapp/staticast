@@ -27,3 +27,7 @@ podcast:
     name: Arnaud Ligny
     email: arnaud@ligny.fr
   image: cover.png
+  listen:
+    apple: https://podcasts.apple.com/fr/podcast/staticast/id1520249637
+    spotify: https://open.spotify.com/show/6dlhe4G6Au5Zm7qX2M5tnS
+    google: https://podcasts.google.com/feed/aHR0cHM6Ly9zdGF0aWNhc3QubmV0bGlmeS5hcHAvZXBpc29kZXMvcnNzLnhtbA
