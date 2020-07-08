@@ -3,6 +3,7 @@ baseline: "The easiest way to diffuse your podcast"
 description: "The easiest way to diffuse your podcast."
 keywords: "Cecil, Static Site Generator, Podcast"
 author: "Arnaud Ligny"
+copyright: "Arnaud Ligny"
 baseurl: "/"
 canonicalurl: true
 theme:
