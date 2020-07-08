@@ -10,6 +10,8 @@ theme:
   - "garth"
   - "serviceworker"
 icon: icon.svg
+pagination:
+  max: 10
 manifest:
   background_color: '#7E4EA3'
   theme_color: '#7E4EA3'
