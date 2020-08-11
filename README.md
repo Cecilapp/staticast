@@ -7,11 +7,10 @@ _Staticast_ is a theme for Cecil, so you need to download and run Cecil to build
 ### Download and serve locally
 
 1. Be sure PHP is available
-2. [Download `cecil.phar`](https://github.com/Cecilapp/Cecil/releases/latest/download/cecil.phar)
-3. [Download _Staticast_](https://github.com/Cecilapp/staticast/archive/master.zip) and install theme with `composer install`
-4. Move `cecil.phar` at the root of _Staticast_
-5. Run `php cecil.phar serve`
-6. Open `http://localhost:8080`
+2. [Download _Staticast_](https://github.com/Cecilapp/staticast/archive/master.zip) and install theme with `composer install`
+3. [Download `cecil.phar`](https://github.com/Cecilapp/Cecil/releases/latest/download/cecil.phar) and move it to the root of _Staticast_
+4. Run `php cecil.phar serve`
+5. Open `http://localhost:8080`
 
 ### Add a new episode
 
