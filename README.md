@@ -6,17 +6,17 @@ _Staticast_ is a theme for Cecil, so you need to download and run Cecil to build
 
 ### Download and serve locally
 
-1. [Download _Staticast_](https://github.com/Cecilapp/staticast/archive/master.zip)
+1. Be sure PHP is available
 2. [Download `cecil.phar`](https://github.com/Cecilapp/Cecil/releases/latest/download/cecil.phar)
-3. Move `cecil.phar` at the root of _Staticast_
-4. Run `php cecil.phar serve`
-5. Open http://localhost:8080
+3. [Download _Staticast_](https://github.com/Cecilapp/staticast/archive/master.zip) and install theme with `composer install`
+4. Move `cecil.phar` at the root of _Staticast_
+5. Run `php cecil.phar serve`
+6. Open `http://localhost:8080`
 
-### Add/edit content
+### Add a new episode
 
-#### Episodes
-
-Create a new Markdown file in `content/episodes`.
+1. Add the MP3 file in `static` directory.
+2. Create a new Markdown file in `content/episodes`.
 
 Example (`my-episode.md`):
 
@@ -27,5 +27,3 @@ episode:
 ---
 Description of the episode
 ```
-
-Add MP3 files in `static` directory.
