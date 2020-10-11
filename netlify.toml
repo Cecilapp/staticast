@@ -1,0 +1,20 @@
+[build]
+  command = "chmod +x .netlify/build.sh && bash .netlify/build.sh"
+  publish = "_site"
+  environment = { PHP_VERSION = "7.2", CECIL_VERSION = "5.33.0" }
+
+[context.deploy-preview]
+  command = "chmod +x .netlify/build.sh && bash .netlify/build.sh preview"
+
+[context.branch-deploy]
+  command = "chmod +x .netlify/build.sh && bash .netlify/build.sh preview"
+
+[template.environment]
+  CECIL_TITLE = "Podcast's title"
+  CECIL_BASELINE = "Short description (~ 20 characters)"
+  CECIL_DESCRIPTION = "Full description (~ 250 characters)"
+  CECIL_AUTHOR = "Your name"
+  CECIL_COPYRIGHT = "Your name"
+  CECIL_PODCAST_AUTHOR = "Your name"
+  CECIL_PODCAST_OWNER_NAME = "Your name"
+  CECIL_PODCAST_OWNER_EMAIL = "Your email"
