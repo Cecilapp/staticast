@@ -10,6 +10,7 @@ theme:
   - "podcast"
   - "garth"
   - "serviceworker"
+  - "netlify-cms"
 icon: icon.svg
 pagination:
   max: 10
