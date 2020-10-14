@@ -10,6 +10,7 @@ theme:
   - "podcast"
   - "garth"
   - "serviceworker"
+  - "netlify"
   - "netlify-cms"
 date:
   format: "j F Y"
