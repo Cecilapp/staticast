@@ -11,6 +11,9 @@ theme:
   - "garth"
   - "serviceworker"
   - "netlify-cms"
+date:
+  format: "j F Y"
+  timezone: "Europe/Paris"
 icon: icon.svg
 pagination:
   max: 10
@@ -32,4 +35,4 @@ podcast:
   subscribe:
     apple: https://podcasts.apple.com/fr/podcast/staticast/id1520249637
     google: https://podcasts.google.com/feed/aHR0cHM6Ly9zdGF0aWNhc3QubmV0bGlmeS5hcHAvZXBpc29kZXMvcnNzLnhtbA
-    #spotify: https://open.spotify.com/show/6dlhe4G6Au5Zm7qX2M5tnS
+    spotify: https://open.spotify.com/show/6dlhe4G6Au5Zm7qX2M5tnS
