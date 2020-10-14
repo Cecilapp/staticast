@@ -5,4 +5,17 @@
     <meta property="og:image" content="{{ asset(site.podcast.image)|url({canonical: true}) }}" />
     <link rel="manifest" href="{{ url('manifest') }}">
 {% include 'partials/regsw.js.twig' %}
+    <!-- Netlify Identity -->
+    <script src="https://identity.netlify.com/{{ site.netlify.identity.version|default('v1') }}/netlify-identity-widget.js"></script>
+    {% apply minify_js %}<script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', user => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = "/{{ site.netlify.cms.path|default('admin') }}/";
+            });
+          }
+        });
+      }
+    </script>{% endapply %}
 {% endblock %}
