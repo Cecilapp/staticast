@@ -22,14 +22,15 @@ _Staticast_ is a theme for Cecil, so you need to download and run Cecil to build
 1. Add the MP3 file in `static` directory
 2. Create a new Markdown file in `content/episodes`
 
-Example (`my-episode.md`):
+Example (`episode-1.md`):
 
 ```yaml
 ---
+title: "Episode #1"
 episode:
-  file: my-episode.mp3
+  file: /audio/episode-1.mp3
 ---
-Description of the episode
+Description of the episode.
 ```
 
 ### Preview locally
