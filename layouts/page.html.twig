@@ -2,6 +2,7 @@
 
 {% block head %}
 {{ parent() }}
+    <!--<link rel="stylesheet" href="{{ asset(['sass/garth.scss','sass/garth.scss'],{fingerprint:false,minify:false,filename:'css/style.css'})|url() }}">-->
     <meta property="og:image" content="{{ asset(site.podcast.image)|url({canonical: true}) }}" />
     <link rel="manifest" href="{{ url('manifest') }}">
 {% include 'partials/regsw.js.twig' %}
