@@ -141,16 +141,16 @@
         },
         {
             "name": "cecil/theme-netlifycms",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-netlifycms.git",
-                "reference": "65f8ca194a3e15b7d6a303129b16e00e64cb8565"
+                "reference": "7d200ed5f28a9bcf39131d6c5a4c5d0995f2c332"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/65f8ca194a3e15b7d6a303129b16e00e64cb8565",
-                "reference": "65f8ca194a3e15b7d6a303129b16e00e64cb8565",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/7d200ed5f28a9bcf39131d6c5a4c5d0995f2c332",
+                "reference": "7d200ed5f28a9bcf39131d6c5a4c5d0995f2c332",
                 "shasum": ""
             },
             "require": {
@@ -179,7 +179,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-10-14T22:44:46+00:00"
+            "time": "2020-10-15T08:32:57+00:00"
         },
         {
             "name": "cecil/theme-podcast",
