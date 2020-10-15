@@ -49,7 +49,6 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string", default: "Home"}
           - {label: "Text", name: "body", widget: "markdown"}
-          - {label: "Menu", name: "menu", widget: "string", default: "main"}
       - label: "About"
         name: "about"
         file: "content/about.md"
