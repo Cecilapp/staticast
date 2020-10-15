@@ -3,8 +3,8 @@ backend:
   branch: master
   squash_merges: true
 publish_mode: editorial_workflow
-media_folder: "static/audio"
-public_folder: "/audio"
+media_folder: "static/"
+public_folder: "/"
 logo_url: https://cecil.app/images/cecil-logo-netlify-cms.png
 show_preview_links: true
 slug:
