@@ -1,4 +1,5 @@
 ---
+title: "Staticast - Episode #3"
 date: 2020-06-12
 episode:
   file: /audio/episode-3.mp3
