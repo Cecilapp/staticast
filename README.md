@@ -8,7 +8,7 @@ _Staticast_ is a theme for Cecil, so you need to download and run Cecil to build
 2. [Download _Staticast_](https://github.com/Cecilapp/staticast/archive/master.zip) and install theme with `composer install`
 3. [Download `cecil.phar`](https://github.com/Cecilapp/Cecil/releases/latest/download/cecil.phar) and move it to the root of _Staticast_
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Cecilapp/staticast)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Cecilapp/staticast&stack=cms)
 
 ## Usage
 
