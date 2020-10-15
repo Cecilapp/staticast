@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: master
+  squash_merges: true
+publish_mode: editorial_workflow
+media_folder: "static/audio"
+public_folder: "/audio"
+logo_url: https://cecil.app/images/cecil-logo-netlify-cms.png
+show_preview_links: true
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+collections:
+  - label: "Episodes"
+    name: "episodes"
+    label_singular: "Episode"
+    description: >
+      Podcast episodes.
+    folder: "content/episodes"
+    create: true
+    preview_path: "episodes/{{title}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - label: "Episode"
+        name: "episode"
+        widget: "object"
+        fields:
+          - {label: "MP3 file", name: "file", widget: "file", required: true}
+      - {label: "Text", name: "body", widget: "markdown"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: true}
+    sortable_fields: ['title', 'date']
+    view_filters:
+      - label: Draft
+        field: draft
+        pattern: true
+  - label: "Pages"
+    name: "pages"
+    label_singular: "Page"
+    description: >
+      Single pages.
+    delete: false
+    preview_path: "{{title}}"
+    files:
+      - label: "Home"
+        name: "index"
+        file: "content/index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Home"}
+          - {label: "Text", name: "body", widget: "markdown"}
+          - {label: "Menu", name: "menu", widget: "string", default: "main"}
+      - label: "About"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "About"}
+          - {label: "Text", name: "body", widget: "markdown"}
+          - {label: "Menu", name: "menu", widget: "string", default: "main"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: true, required: true}
+  - label: "Settings"
+    name: "settings"
+    description: >
+      Site settings.
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Configuration"
+        name: "config"
+        file: "config.yml"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Cecil", required: true}
+          - {label: "Baseline", name: "baseline", widget: "string", default: "Your blog's butler.", required: true}
+          - {label: "Description", name: "description", widget: "string", default: "A ready to use static blog, powered by Cecil and Hyde.", required: true}
+          - {label: "Base URL", name: "baseurl", widget: "string", default: "/", required: true, hint: "With a trailing slash."}
+          - {label: "Use canonical URL", name: "canonicalurl", widget: "boolean", default: true, required: true}
+          - {label: "Theme", name: "theme", widget: "list", required: true}
+          - label: "Date"
+            name: "date"
+            widget: "object"
+            fields:
+              - {label: "Format", name: "format", widget: "string", default: "j F Y", required: true}
+              - {label: "Time zone", name: "timezone", widget: "string", default: "Europe/Paris", required: true}
