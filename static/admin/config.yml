@@ -75,9 +75,34 @@ collections:
           - {label: "Base URL", name: "baseurl", widget: "string", default: "/", required: true, hint: "With a trailing slash."}
           - {label: "Use canonical URL", name: "canonicalurl", widget: "boolean", default: true, required: true}
           - {label: "Theme", name: "theme", widget: "list", required: true}
+          - {label: "Icon", name: "icon", widget: "image", default: "icon.svg", required: true}
           - label: "Date"
             name: "date"
             widget: "object"
             fields:
               - {label: "Format", name: "format", widget: "string", default: "j F Y", required: true}
               - {label: "Time zone", name: "timezone", widget: "string", default: "Europe/Paris", required: true}
+          - label: "Pagination"
+            name: "pagination"
+            widget: "object"
+            fields:
+              - {label: "Pages by page", name: "max", widget: "number", default: "10"}
+          - label: "Podcast"
+            name: podcast
+            widget: "object"
+            fields:
+              - {label: "Author", name: "author", widget: "string", required: true}
+              - label: "Owner"
+                name: "owner"
+                widget: "object"
+                fields:
+                  - {label: "Name", name: "name", widget: "string", required: true}
+                  - {label: "Email", name: "email", widget: "string", required: true}
+              - {label: "Cover", name: "image", widget: "image", required: true}
+              - label: "Subscribe"
+                name: "subscribe"
+                widget: "object"
+                fields:
+                  - {label: "Apple Podcasts", name: "apple", widget: "string"}
+                  - {label: "Google Podcasts", name: "google", widget: "string"}
+                  - {label: "Spotify", name: "spotify", widget: "string"}
