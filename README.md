@@ -2,13 +2,26 @@ _Staticast_ is a podcast website [template](https://github.com/Cecilapp/staticas
 <!-- break -->
 ## Installation
 
+### Manually
+
 _Staticast_ is a theme for Cecil, so you need to download and run Cecil to build your website, then you can publish it where you want.
 
 1. Be sure PHP is available
 2. [Download _Staticast_](https://github.com/Cecilapp/staticast/archive/master.zip) and install theme with `composer install`
 3. [Download `cecil.phar`](https://github.com/Cecilapp/Cecil/releases/latest/download/cecil.phar) and move it to the root of _Staticast_
 
+### Automatically
+
+Use the button to get your own copy of the repository.
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Cecilapp/staticast&stack=cms)
+
+This will setup everything needed for running your website, with a CMS:
+
+- A new repository in your GitHub account
+- Continuous Deployment to Netlify's CDN
+- Control users and access with Netlify Identity
+- Manage content with Netlify CMS
 
 ## Usage
 
