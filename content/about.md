@@ -1,11 +1,10 @@
 ---
 title: About
 menu: footer
-#external: https://raw.githubusercontent.com/Cecilapp/staticast/master/README.md
 ---
 
 _Staticast_ is a podcast website [template](https://github.com/Cecilapp/staticast#installation), powered by [Cecil](https://cecil.app) and can be deployed in few seconds with [Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/Cecilapp/staticast).
-<!-- break -->
+
 ## Installation
 
 _Staticast_ is a theme for Cecil, so you need to download and run Cecil to build your website, then you can publish it where you want.
