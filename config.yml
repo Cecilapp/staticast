@@ -13,6 +13,12 @@ theme:
   - "netlify"
   - "netlify-cms"
 icon: /logo.svg
+menus:
+  footer:
+    - id: admin
+      name: "Admin"
+      url: admin
+      weight: 99
 date:
   format: "j F Y"
   timezone: "Europe/Paris"

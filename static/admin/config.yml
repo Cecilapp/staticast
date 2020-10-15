@@ -23,12 +23,12 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Date", name: "date", widget: "datetime", required: true}
+      - {label: "Text", name: "body", widget: "markdown"}
       - label: "Episode"
         name: "episode"
         widget: "object"
         fields:
           - {label: "MP3 file", name: "file", widget: "file", required: true}
-      - {label: "Text", name: "body", widget: "markdown"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true, required: true}
     sortable_fields: ['title', 'date']
     view_filters:
@@ -76,6 +76,18 @@ collections:
           - {label: "Use canonical URL", name: "canonicalurl", widget: "boolean", default: true, required: true}
           - {label: "Theme", name: "theme", widget: "list", required: true}
           - {label: "Icon", name: "icon", widget: "image", default: "icon.svg", required: true}
+          - label: "Menus"
+            name: "menus"
+            widget: "object"
+            fields:
+              - label: "Footer"
+                name: "footer"
+                widget: "list"
+                fields:
+                - {label: "Identifier", name: "id", widget: "string", required: true}
+                - {label: "Name", name: "name", widget: "string", required: true}
+                - {label: "URL", name: "url", widget: "string"}
+                - {label: "Position", name: "weight", widget: "number"}
           - label: "Date"
             name: "date"
             widget: "object"
