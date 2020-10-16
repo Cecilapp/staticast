@@ -1,6 +1,8 @@
 ---
 title: About
-menu: footer
+menu:
+  main:
+    weight: 999
 ---
 
 _Staticast_ is a podcast website [template](https://github.com/Cecilapp/staticast#installation), powered by [Cecil](https://cecil.app) and can be deployed in few seconds with [Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/Cecilapp/staticast&stack=cms).
