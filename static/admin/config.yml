@@ -22,7 +22,7 @@ collections:
     preview_path: "episodes/{{title}}"
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Date", name: "date", widget: "date", format: "DD/MM/YYYY", required: true}
+      - {label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD", required: true}
       - {label: "Text", name: "body", widget: "markdown"}
       - label: "Episode"
         name: "episode"
