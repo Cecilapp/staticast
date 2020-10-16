@@ -5,9 +5,13 @@
 
 [context.deploy-preview]
   command = "chmod +x .netlify/build.sh && bash .netlify/build.sh preview"
+[context.deploy-preview.environment]
+  CECIL_SERVICEWORKER_ENABLED = false
 
 [context.branch-deploy]
   command = "chmod +x .netlify/build.sh && bash .netlify/build.sh preview"
+[context.branch-deploy.environment]
+  CECIL_SERVICEWORKER_ENABLED = false
 
 [template.environment]
   #CECIL_TITLE = "Podcast's title"
