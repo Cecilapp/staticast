@@ -9,9 +9,9 @@ canonicalurl: true
 theme:
   - "podcast"
   - "garth"
-  - "serviceworker"
-  - "netlify"
   - "netlify-cms"
+  - "netlify"
+  - "serviceworker"
 icon: /logo.svg
 menus:
   footer:
