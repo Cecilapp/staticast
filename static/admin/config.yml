@@ -29,12 +29,7 @@ collections:
         widget: "object"
         fields:
           - {label: "MP3 file", name: "file", widget: "file", required: true}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: true}
     sortable_fields: ['title', 'date']
-    view_filters:
-      - label: Draft
-        field: draft
-        pattern: true
   - label: "Pages"
     name: "pages"
     label_singular: "Page"
@@ -56,7 +51,6 @@ collections:
           - {label: "Title", name: "title", widget: "string", default: "About"}
           - {label: "Text", name: "body", widget: "markdown"}
           - {label: "Menu", name: "menu", widget: "string", default: "main"}
-          - {label: "Draft", name: "draft", widget: "boolean", default: true, required: true}
   - label: "Settings"
     name: "settings"
     description: >
