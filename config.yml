@@ -42,4 +42,4 @@ manifest:
       sizes: 512x512
       type: image/png
 serviceworker:
-  enabled: false
+  enabled: true
