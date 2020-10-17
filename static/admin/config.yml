@@ -107,8 +107,8 @@ collections:
               - {label: "Cover", name: "image", widget: "image", required: true}
               - label: "Subscribe"
                 name: "subscribe"
-                widget: "object"
+                widget: "list"
                 fields:
-                  - {label: "Apple Podcasts", name: "apple", widget: "string", required: false}
-                  - {label: "Google Podcasts", name: "google", widget: "string", required: false}
-                  - {label: "Spotify", name: "spotify", widget: "string", required: false}
+                  - {label: "Name", name: "name", widget: "string", required: true}
+                  - {label: "URL", name: "url", widget: "string", required: true}
+                  - {label: "Enabled", name: "enabled", widget: "boolean", default: true}

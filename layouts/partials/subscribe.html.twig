@@ -5,9 +5,9 @@
   }
 </style>
 <div id="subscribe">
-{% for service, url in site.podcast.subscribe %}
-{% if url %}
-  <a href="{{ url }}"><img src="{{ asset('badge/'~ service ~'.svg')|url }}" alt="Listen on {{ service|capitalize }}"/></a>
+{% for subscribe in site.podcast.subscribe %}
+{% if subscribe.enabled %}
+  <a href="{{ subscribe.url }}"><img src="{{ asset('badge/'~ subscribe.name|lower ~'.svg')|url }}" alt="Listen on {{ subscribe.name|capitalize }}"/></a>
 {% endif %}
 {% endfor %}
 </div>
