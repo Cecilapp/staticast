@@ -109,6 +109,6 @@ collections:
                 name: "subscribe"
                 widget: "object"
                 fields:
-                  - {label: "Apple Podcasts", name: "apple", widget: "string"}
-                  - {label: "Google Podcasts", name: "google", widget: "string"}
-                  - {label: "Spotify", name: "spotify", widget: "string"}
+                  - {label: "Apple Podcasts", name: "apple", widget: "string", required: false}
+                  - {label: "Google Podcasts", name: "google", widget: "string", required: false}
+                  - {label: "Spotify", name: "spotify", widget: "string", required: false}
