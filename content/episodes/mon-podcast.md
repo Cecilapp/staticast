@@ -5,3 +5,5 @@ episode:
   file: /episode-1.mp3
 ---
 test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test
+
+![](/cover.png)
