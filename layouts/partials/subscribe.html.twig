@@ -6,6 +6,8 @@
 </style>
 <div id="subscribe">
 {% for service, url in site.podcast.subscribe %}
+{% if url %}
   <a href="{{ url }}"><img src="{{ asset('badge/'~ service ~'.svg')|url }}" alt="Listen on {{ service|capitalize }}"/></a>
+{% endif %}
 {% endfor %}
 </div>
