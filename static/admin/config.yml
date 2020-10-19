@@ -105,6 +105,25 @@ collections:
                   - {label: "Name", name: "name", widget: "string", required: true}
                   - {label: "Email", name: "email", widget: "string", required: true}
               - {label: "Cover", name: "image", widget: "image", required: true}
+              - label: "Categories"
+                name: "categories"
+                widget: "select"
+                multiple: true
+                options: ["Arts", "Business", "Comedy", "Education", "Fiction", "Government", "History", "Health & Fitness", "Kids & Family", "Leisure", "Music", "News", "Religion & Spirituality", "Science", "Society & Culture", "Sports", "Technology", "True Crime", "TV & Film"]
+              - label: "Explicit"
+                name: "explicit"
+                widget: "select"
+                options:
+                  - { label: "No", value: "false" }
+                  - { label: "Yes", value: "true" }
+                default: ["No"]
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Episodic", value: "episodic" }
+                  - { label: "Serial", value: "serial" }
+                default: ["episodic"]
               - label: "Subscribe"
                 name: "subscribe"
                 widget: "list"
