@@ -30,6 +30,8 @@ podcast:
     name: Arnaud Ligny
     email: arnaud@ligny.fr
   image: cover.png
+  categories:
+    - Technology
   subscribe:
     - name: apple
       url: https://podcasts.apple.com/fr/podcast/staticast/id1520249637
