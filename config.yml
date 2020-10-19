@@ -32,7 +32,7 @@ podcast:
   image: cover.png
   categories:
     - Technology
-  explicit: false
+  explicit: "false"
   type: episodic
   subscribe:
     - name: apple
