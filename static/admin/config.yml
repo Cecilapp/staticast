@@ -29,6 +29,31 @@ collections:
         widget: "object"
         fields:
           - {label: "MP3 file", name: "file", widget: "file", required: true}
+          - {label: "Season", name: "season", widget: "number", default: 0, value_type: "int"}
+          - {label: "Number", name: "number", widget: "number", default: 0, value_type: "int"}
+          - label: "Type"
+            name: "type"
+            widget: "select"
+            options:
+              - { label: "Full", value: "full" }
+              - { label: "Trailer", value: "trailer" }
+              - { label: "Bonus", value: "bonus" }
+            default: ["full"]
+          - label: "Explicit"
+            name: "explicit"
+            widget: "select"
+            options:
+              - { label: "No", value: "false" }
+              - { label: "Yes", value: "true" }
+            default: ["false"]
+          - label: "Block"
+            name: "block"
+            widget: "select"
+            options:
+              - { label: "No", value: "no" }
+              - { label: "Yes", value: "yes" }
+            default: ["no"]
+            hint: "Blocks iTunes and Google Podcasts."
     sortable_fields: ['title', 'date']
   - label: "Pages"
     name: "pages"
