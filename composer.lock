@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c525c40d076020c188a4b8c1bba5a178",
+    "content-hash": "e7fd99b0fdedba832f71ffb8edbf4111",
     "packages": [
         {
             "name": "cecil/theme-garth",
@@ -99,16 +99,16 @@
         },
         {
             "name": "cecil/theme-netlify",
-            "version": "1.0.1",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-netlify.git",
-                "reference": "2ea442eea6913fa3e59ab56920f8eb986ddc78ff"
+                "reference": "0038fa19ac3102edb9b722fd7cb5d04eaf8fb2d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/2ea442eea6913fa3e59ab56920f8eb986ddc78ff",
-                "reference": "2ea442eea6913fa3e59ab56920f8eb986ddc78ff",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/0038fa19ac3102edb9b722fd7cb5d04eaf8fb2d0",
+                "reference": "0038fa19ac3102edb9b722fd7cb5d04eaf8fb2d0",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-10-17T00:04:11+00:00"
+            "time": "2020-10-19T14:33:45+00:00"
         },
         {
             "name": "cecil/theme-netlifycms",

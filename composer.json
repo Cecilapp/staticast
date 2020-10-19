@@ -15,7 +15,7 @@
     "cecil/theme-garth": "^1.2",
     "cecil/theme-podcast": "^1.6",
     "cecil/theme-serviceworker": "^1.8",
-    "cecil/theme-netlify": "^1.0",
+    "cecil/theme-netlify": "^1.1",
     "cecil/theme-netlifycms": "^1.0"
   }
 }

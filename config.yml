@@ -49,3 +49,9 @@ manifest:
       type: image/png
 serviceworker:
   enabled: true
+netlify:
+  redirects:
+    - from: "https://staticast.netlify.app/*"
+      to: "https://staticast.cecil.app/:splat"
+      status: 301
+      force: true
