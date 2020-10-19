@@ -23,7 +23,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: true}
-      - {label: "Text", name: "body", widget: "markdown"}
+      - {label: "Description", name: "body", widget: "markdown"}
       - label: "Episode"
         name: "episode"
         widget: "object"
