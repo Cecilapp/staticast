@@ -116,7 +116,7 @@ collections:
                 options:
                   - { label: "No", value: "false" }
                   - { label: "Yes", value: "true" }
-                default: ["No"]
+                default: ["false"]
               - label: "Type"
                 name: "type"
                 widget: "select"
