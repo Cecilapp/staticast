@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7fd99b0fdedba832f71ffb8edbf4111",
+    "content-hash": "754b0e71b50f3074f7f5e07c920c1be4",
     "packages": [
         {
             "name": "cecil/theme-garth",
@@ -183,16 +183,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "1.6.1",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "cf8e6e5c1cee562ed2c602e62532e8b66e6fe9f5"
+                "reference": "da5fce63f7d61a0c44f79b7a214b0d68831c4ed5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/cf8e6e5c1cee562ed2c602e62532e8b66e6fe9f5",
-                "reference": "cf8e6e5c1cee562ed2c602e62532e8b66e6fe9f5",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/da5fce63f7d61a0c44f79b7a214b0d68831c4ed5",
+                "reference": "da5fce63f7d61a0c44f79b7a214b0d68831c4ed5",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +221,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-23T13:07:49+00:00"
+            "time": "2020-10-19T22:12:10+00:00"
         },
         {
             "name": "cecil/theme-serviceworker",
