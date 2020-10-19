@@ -60,4 +60,4 @@ Description of the episode.
 
 ### Configuration
 
-See the [`config.yml`](https://github.com/Cecilapp/staticast/blob/f96067544f3d2e700b939c94a84cd8650cfc435b/config.yml#L25) file and more precisely the "podcast" section.
+See the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config.yml) file and more precisely the `podcast` section.
