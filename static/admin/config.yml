@@ -91,9 +91,12 @@ collections:
         name: "config"
         file: "config.yml"
         fields:
-          - {label: "Title", name: "title", widget: "string", default: "Cecil", required: true}
-          - {label: "Baseline", name: "baseline", widget: "string", default: "Your blog's butler.", required: true}
-          - {label: "Description", name: "description", widget: "string", default: "A ready to use static blog, powered by Cecil and Hyde.", required: true}
+          - {label: "Title", name: "title", widget: "string", default: "Staticast", required: true}
+          - {label: "Baseline", name: "baseline", widget: "string", required: true}
+          - {label: "Description", name: "description", widget: "string", required: true}
+          - {label: "Keywords", name: "keywords", widget: "string", required: false}
+          - {label: "Author", name: "author", widget: "string", required: false}
+          - {label: "Copyright", name: "copyright", widget: "string", required: false}
           - {label: "Base URL", name: "baseurl", widget: "string", default: "/", required: true, hint: "With a trailing slash."}
           - {label: "Use canonical URL", name: "canonicalurl", widget: "boolean", default: true, required: true}
           - {label: "Theme", name: "theme", widget: "list", required: true}
