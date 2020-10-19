@@ -1,29 +1,10 @@
-title: "Staticast"
-baseline: "The easiest way to diffuse your podcast"
-description: "The easiest way to diffuse your podcast."
-keywords: "Cecil, Static Site Generator, Podcast"
-author: "Arnaud Ligny"
-copyright: "Arnaud Ligny"
-baseurl: "/"
-canonicalurl: true
+baseline: The easiest way to diffuse your podcast
 theme:
-  - "podcast"
-  - "garth"
-  - "netlify-cms"
-  - "netlify"
-  - "serviceworker"
-icon: /logo.svg
-menus:
-  footer:
-    - id: admin
-      name: "Admin"
-      url: admin
-      weight: 99
-date:
-  format: "j F Y"
-  timezone: "Europe/Paris"
-pagination:
-  max: 10
+  - podcast
+  - garth
+  - netlify-cms
+  - netlify
+  - serviceworker
 podcast:
   author: Arnaud Ligny
   owner:
@@ -44,18 +25,38 @@ podcast:
     - name: spotify
       url: https://open.spotify.com/show/6dlhe4G6Au5Zm7qX2M5tnS
       enabled: true
+copyright: Arnaud Ligny
+keywords: Cecil, Static Site Generator, Podcast
+author: Arnaud Ligny
+netlify:
+  redirects:
+    - from: https://staticast.netlify.app/*
+      to: https://staticast.cecil.app/:splat
+      status: 301
+      force: true
+description: Staticast is a podcast website template, powered by Cecil and can
+  be deployed in few seconds with Netlify.
+baseurl: /
+canonicalurl: true
+date:
+  format: j F Y
+  timezone: Europe/Paris
 manifest:
-  background_color: '#7E4EA3'
-  theme_color: '#7E4EA3'
+  background_color: "#7E4EA3"
+  theme_color: "#7E4EA3"
   icons:
     - src: manifest/icon-512x512.png
       sizes: 512x512
       type: image/png
 serviceworker:
   enabled: true
-netlify:
-  redirects:
-    - from: "https://staticast.netlify.app/*"
-      to: "https://staticast.cecil.app/:splat"
-      status: 301
-      force: true
+title: Staticast
+icon: /logo.svg
+menus:
+  footer:
+    - id: admin
+      name: Admin
+      url: admin
+      weight: 99
+pagination:
+  max: 10
