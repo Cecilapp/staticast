@@ -36,7 +36,7 @@ Example (`episode-1.md`):
 ---
 title: "Episode #1"
 episode:
-  file: /audio/episode-1.mp3
+  file: /episode-1.mp3
 ---
 Description of the episode.
 ```
