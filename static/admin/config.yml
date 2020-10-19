@@ -57,7 +57,20 @@ collections:
             default: ["no"]
             required: false
             hint: "Blocks iTunes and Google Podcasts."
-    sortable_fields: ['title', 'date']
+    sortable_fields: ['title', 'date', 'episode.number']
+    view_filters:
+      - label: "Full"
+        field: episode.type
+        pattern: 'full'
+      - label: "Trailer"
+        field: episode.type
+        pattern: 'trailer'
+      - label: "Bonus"
+        field: episode.type
+        pattern: 'bonus'
+      - label: Explicit
+        field: explicit
+        pattern: false
   - label: "Pages"
     name: "pages"
     label_singular: "Page"
