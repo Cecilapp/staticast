@@ -2,12 +2,15 @@ title: Staticast
 baseline: The easiest way to diffuse your podcast
 description: Staticast is a podcast website template, powered by Cecil and can
   be deployed in few seconds with Netlify.
-keywords: Cecil, Static Site Generator, Podcast
+keywords: Podcast, Cecil, Static Site Generator
 author: Arnaud Ligny
 copyright: Arnaud Ligny
 baseurl: /
 canonicalurl: true
 language: en
+date:
+  format: j F Y
+  timezone: Europe/Paris
 theme:
   - podcast
   - garth
@@ -17,13 +20,10 @@ theme:
 icon: /logo.svg
 menus:
   footer:
-    - id: admin
-      name: Admin
+    - name: Admin
+      id: admin
       url: admin
       weight: 99
-date:
-  format: j F Y
-  timezone: Europe/Paris
 pagination:
   max: 10
 podcast:
