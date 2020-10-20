@@ -187,8 +187,9 @@ collections:
                 default: ["no"]
                 hint: >
                   If you want to remove your show from Apple Podcasts and Google Podcasts platforms.
-              - label: "Subscribe from platforms"
+              - label: "Platforms"
                 name: "subscribe"
+                label_singular: "Platform"
                 widget: "list"
                 fields:
                   - {label: "Name", name: "name", widget: "string", required: true}
