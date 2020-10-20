@@ -119,6 +119,7 @@ collections:
           - label: "Date"
             name: "date"
             widget: "object"
+            collapsed: true
             fields:
               - {label: "Format", name: "format", widget: "string", default: "j F Y", required: true}
               - {label: "Time zone", name: "timezone", widget: "string", default: "Europe/Paris", required: true}
@@ -127,6 +128,7 @@ collections:
           - label: "Menus"
             name: "menus"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Footer"
                 name: "footer"
@@ -139,6 +141,7 @@ collections:
           - label: "Pagination"
             name: "pagination"
             widget: "object"
+            collapsed: true
             fields:
               - {label: "Pages by page", name: "max", widget: "number", default: "10"}
           - label: "Podcast"
