@@ -7,6 +7,7 @@ author: Arnaud Ligny
 copyright: Arnaud Ligny
 baseurl: /
 canonicalurl: true
+language: en
 theme:
   - podcast
   - garth
