@@ -19,7 +19,7 @@ collections:
       Podcast episodes.
     folder: "content/episodes"
     create: true
-    preview_path: "episodes/{{title}}"
+    preview_path: "episodes/{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: true}
@@ -77,7 +77,7 @@ collections:
     description: >
       Single pages.
     delete: false
-    preview_path: "{{title}}"
+    preview_path: "{{slub}}"
     files:
       - label: "Home"
         name: "index"
