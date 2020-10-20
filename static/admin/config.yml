@@ -154,7 +154,7 @@ collections:
                   - {label: "Email", name: "email", widget: "string", required: true}
                 hint: >
                   Required if you want to add the podcast to Apple Podcasts or Google Podcasts platforms.
-              - {label: "Cover", name: "image", widget: "image", required: true}
+              - {label: "Cover image", name: "image", widget: "image", required: true}
               - label: "Categories"
                 name: "categories"
                 widget: "select"
