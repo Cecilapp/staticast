@@ -86,15 +86,15 @@ collections:
         name: "index"
         file: "content/index.md"
         fields:
-          - {label: "Title", name: "title", widget: "string", default: "Home"}
-          - {label: "Text", name: "body", widget: "markdown"}
+          - {label: "Title", name: "title", widget: "string", default: "Home", required: true}
+          - {label: "Text", name: "body", widget: "markdown", required: true}
       - label: "About"
         name: "about"
         file: "content/about.md"
         fields:
-          - {label: "Title", name: "title", widget: "string", default: "About"}
-          - {label: "Text", name: "body", widget: "markdown"}
-          - {label: "Menu", name: "menu", widget: "string", default: "main"}
+          - {label: "Title", name: "title", widget: "string", default: "About", required: true}
+          - {label: "Text", name: "body", widget: "markdown", required: true}
+          - {label: "Menu", name: "menu", widget: "string", default: "main", required: true}
   - label: "Settings"
     name: "settings"
     description: >
@@ -143,12 +143,11 @@ collections:
             widget: "object"
             collapsed: true
             fields:
-              - {label: "Pages by page", name: "max", widget: "number", default: "10"}
+              - {label: "Pages by page", name: "max", widget: "number", default: "10", required: false}
           - label: "Podcast"
             name: podcast
             widget: "object"
             fields:
-              - {label: "Author", name: "author", widget: "string", required: true}
               - label: "Owner"
                 name: "owner"
                 widget: "object"
@@ -156,13 +155,15 @@ collections:
                   - {label: "Name", name: "name", widget: "string", required: true}
                   - {label: "Email", name: "email", widget: "string", required: true}
                 hint: >
-                  Required if you want to add the podcast to Apple Podcasts or Google Podcasts platforms.
+                  Required to add the podcast to Apple Podcasts or Google Podcasts platforms.
               - {label: "Cover image", name: "image", widget: "image", required: true}
+              - {label: "Author", name: "author", widget: "string", required: false}
               - label: "Categories"
                 name: "categories"
                 widget: "select"
                 multiple: true
                 options: ["Arts", "Business", "Comedy", "Education", "Fiction", "Government", "History", "Health & Fitness", "Kids & Family", "Leisure", "Music", "News", "Religion & Spirituality", "Science", "Society & Culture", "Sports", "Technology", "True Crime", "TV & Film"]
+                required: false
                 hint: >
                   The general topic of the podcast to be shown in the Search results.
               - label: "Type"
@@ -172,6 +173,7 @@ collections:
                   - { label: "Episodic", value: "episodic" }
                   - { label: "Serial", value: "serial" }
                 default: ["episodic"]
+                required: false
               - label: "Explicit"
                 name: "explicit"
                 widget: "select"
@@ -179,6 +181,7 @@ collections:
                   - { label: "No", value: "no" }
                   - { label: "Yes", value: "yes" }
                 default: ["no"]
+                required: false
                 hint: >
                   Explicit content warning: drugs, inflammatory speech, profanity, sexual references/depictions, violence, etc.
               - label: "Block"
@@ -188,8 +191,10 @@ collections:
                   - { label: "No", value: "no" }
                   - { label: "Yes", value: "yes" }
                 default: ["no"]
+                required: false
                 hint: >
                   If you want to remove your show from Apple Podcasts and Google Podcasts platforms.
+              - {label: "New feed URL", name: "newfeedurl", widget: "string", required: false, hint: "If you move your feed."}
               - label: "Platforms"
                 name: "subscribe"
                 label_singular: "Platform"
