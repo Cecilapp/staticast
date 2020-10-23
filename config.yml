@@ -27,15 +27,17 @@ menus:
 pagination:
   max: 10
 podcast:
-  author: Arnaud Ligny
   owner:
     name: Arnaud Ligny
     email: arnaud@ligny.fr
   image: cover.png
+  author: Arnaud Ligny
   categories:
     - Technology
-  explicit: "false"
   type: episodic
+  explicit: "no"
+  block: "no"
+  newfeedurl: ""
   subscribe:
     - name: apple
       url: https://podcasts.apple.com/fr/podcast/staticast/id1520249637
