@@ -1,5 +1,12 @@
 {% extends 'blog/page.html.twig' %}
 
+{% block head %}
+{{- parent() }}
+    <!-- Open Graph audio -->
+    <meta property="og:audio" content="{{ asset(page.episode.file) }}" />
+    <meta property="og:audio:type" content="{{ asset(page.episode.file).subtype }}" />
+{% endblock %}
+
 {% block content %}
 {{ parent() }}
 {% include 'partials/audioplayer.html.twig' %}
