@@ -3,7 +3,7 @@
 {% block head %}
 {{ parent() }}
     <!-- Open Graph image -->
-    <meta property="og:image" content="{{ asset(site.podcast.image)|url({canonical: true}) }}" />
+    <meta property="og:image" content="{{ asset(site.podcast.image)|url({canonical: true} }}" />
     <!-- PWA -->
     <link rel="manifest" href="{{ url('manifest') }}">
 {% include 'partials/regsw.js.twig' %}
