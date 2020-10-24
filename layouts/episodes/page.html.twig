@@ -3,7 +3,7 @@
 {% block head %}
 {{- parent() }}
     <!-- Open Graph audio -->
-    <meta property="og:audio" content="{{ asset(page.episode.file)|url({canonical: true}) }}" />
+    <meta property="og:audio" content="{{ asset(page.episode.file)|url({canonical: true} }}" />
     <meta property="og:audio:type" content="{{ asset(page.episode.file).subtype }}" />
 {% endblock %}
 
