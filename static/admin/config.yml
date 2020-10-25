@@ -194,7 +194,7 @@ collections:
                 required: false
                 hint: >
                   If you want to remove your show from Apple Podcasts and Google Podcasts platforms.
-              - {label: "New feed URL", name: "newfeedurl", widget: "string", required: false, hint: "If you move your feed."}
+              - {label: "New feed URL", name: "newfeedurl", widget: "string", required: false, hint: "Only if you move your feed."}
               - label: "Platforms"
                 name: "subscribe"
                 label_singular: "Platform"
