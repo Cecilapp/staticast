@@ -18,6 +18,7 @@ theme:
   - netlify
   - serviceworker
 icon: /logo.svg
+image: twitter-card.png
 menus:
   footer:
     - name: Admin
