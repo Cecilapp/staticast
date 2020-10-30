@@ -2,10 +2,10 @@
 
 {% block head %}
 {{ parent() }}
-    <!-- PWA -->
+    {#- PWA #}
     <link rel="manifest" href="{{ url('manifest') }}">
 {% include 'partials/regsw.js.twig' %}
-    <!-- Netlify Identity -->
+    {#- Netlify Identity #}
     <script src="https://identity.netlify.com/{{ site.netlify.identity.version|default('v1') }}/netlify-identity-widget.js"></script>
     {% apply minify_js %}<script>
       if (window.netlifyIdentity) {
