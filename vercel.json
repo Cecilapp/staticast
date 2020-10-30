@@ -1,0 +1,14 @@
+{
+  "build": {
+    "env": {
+      "PHP_VERSION": "7.2",
+      "INSTALL_OPTIM": "false",
+      "CECIL_VERSION": "5.34.2"
+    }
+  },
+  "builds": [{
+    "src": "vercel-build.sh",
+    "use": "@vercel/static-build",
+    "config": { "distDir": "_site" }
+  }]
+}
