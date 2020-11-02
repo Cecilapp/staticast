@@ -1,12 +1,12 @@
 {% extends 'page.html.twig' %}
 
 {% block content %}
-<article class="page typeset">
-  <h1>{{ site.title }}</h1>
-  <strong><em>{{ site.baseline }}</em></strong>
-  {{ page.content|excerpt_html }}
-</article>
-<a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS →</a>
-{% include 'partials/subscribe.html.twig' %}
-{% include 'partials/lastepisodes.html.twig' %}
+        <article class="page typeset">
+          <h1>{{ site.title }}</h1>
+          <strong><em>{{ site.baseline }}</em></strong>
+          {{ page.content|excerpt_html }}
+        </article>
+        <a href="{{ url('episodes/rss.xml') }}">Subscribe to RSS →</a>
+        {%~ include 'partials/subscribe.html.twig' ~%}
+        {%~ include 'partials/lastepisodes.html.twig' ~%}
 {% endblock content %}
