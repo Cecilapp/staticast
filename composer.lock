@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c6bdcaeec9bf05b932dbdfaf4f67a15",
+    "content-hash": "d0ec8dfa6ce457adc736018ebf68d13c",
     "packages": [
         {
             "name": "cecil/theme-garth",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-garth.git",
-                "reference": "502c1a529d5679d369e207709c751d20c250ef01"
+                "reference": "0b143bc9c5acd70bf64d8fb21072b3d4795dadf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/502c1a529d5679d369e207709c751d20c250ef01",
-                "reference": "502c1a529d5679d369e207709c751d20c250ef01",
+                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/0b143bc9c5acd70bf64d8fb21072b3d4795dadf7",
+                "reference": "0b143bc9c5acd70bf64d8fb21072b3d4795dadf7",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-11-01T23:09:47+00:00"
+            "time": "2020-11-02T22:56:27+00:00"
         },
         {
             "name": "cecil/theme-installer",
@@ -141,16 +141,16 @@
         },
         {
             "name": "cecil/theme-netlifycms",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-netlifycms.git",
-                "reference": "fbeaf4b9ab018aa2bd6bddcd0b09d9c951e79ab7"
+                "reference": "540bed7be1ae934c9f44753624928e2364f3a553"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/fbeaf4b9ab018aa2bd6bddcd0b09d9c951e79ab7",
-                "reference": "fbeaf4b9ab018aa2bd6bddcd0b09d9c951e79ab7",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/540bed7be1ae934c9f44753624928e2364f3a553",
+                "reference": "540bed7be1ae934c9f44753624928e2364f3a553",
                 "shasum": ""
             },
             "require": {
@@ -171,6 +171,7 @@
             "keywords": [
                 "cecil",
                 "cms",
+                "netlify",
                 "theme"
             ],
             "funding": [
@@ -179,7 +180,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-10-15T11:46:43+00:00"
+            "time": "2020-11-02T22:11:29+00:00"
         },
         {
             "name": "cecil/theme-podcast",
