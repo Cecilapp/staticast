@@ -7,7 +7,7 @@
 {% include 'partials/regsw.js.twig' %}
     {#- Netlify Identity #}
     <script src="https://identity.netlify.com/{{ site.netlify.identity.version|default('v1') }}/netlify-identity-widget.js"></script>
-    {% apply minify_js %}<script>
+    <script>{% apply minify_js %}
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on('init', user => {
           if (!user) {
@@ -17,5 +17,5 @@
           }
         });
       }
-    </script>{% endapply ~%}
+    {% endapply %}</script>
 {% endblock %}
