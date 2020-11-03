@@ -2,7 +2,7 @@
 
 {% block precache %}
 // cache last 2 episodes
-{% for file in site.static|filter(f => f.ext == 'mp3')|sort((a, b) => a.date|date('U') < b.date|date('U'))|slice(0,2) %}
-urlsToCache.push('{{ url(file.path) }}');
+{% for page in site.pages|filter(p => p.section == 'episodes')|sort_by_date|slice(0,2) %}
+urlsToCache.push('{{ url(page.episode.file) }}');
 {% endfor %}
 {% endblock %}

@@ -58,16 +58,14 @@ manifest:
       type: image/png
 serviceworker:
   enabled: true
+defaultpages:
+  serviceworker:
+    path: serviceworker
+    layout: sw # override default layout
+    output: js
 netlify:
   redirects:
     - from: https://staticast.netlify.app/*
       to: https://staticast.cecil.app/:splat
       status: 301
       force: true
-defaultpages:
-  serviceworker:
-    path: serviceworker
-    layout: sw
-    output: js
-static:
-  load: true
