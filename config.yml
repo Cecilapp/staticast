@@ -21,9 +21,9 @@ icon: /logo.svg
 assets:
   compile:
     variables:
-      #bodyColour: '#5a5a5a'
-      #linkColour: '#7E4EA3'
-      #backgroundColour: '#F1F3F4'
+      bodyColour: '#5a5a5a'
+      linkColour: '#7E4EA3'
+      backgroundColour: '#F1F3F4'
 image: twitter-card.png
 menus:
   footer:
