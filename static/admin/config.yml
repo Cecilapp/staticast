@@ -125,6 +125,23 @@ collections:
               - {label: "Time zone", name: "timezone", widget: "string", default: "Europe/Paris", required: true}
           - {label: "Theme(s)", name: "theme", widget: "list", required: true}
           - {label: "Icon", name: "icon", widget: "image", default: "icon.svg", required: true}
+          - label: "Assets"
+            name: assets
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Styles"
+                name: "compile"
+                widget: "object"
+                fields:
+                  - label: "Colours"
+                    name: "variables"
+                    widget: "object"
+                    fields:
+                      - {label: "Body", name: "bodyColour", widget: "color", allowInput: true}
+                      - {label: "Link", name: "linkColour", widget: "color", allowInput: true}
+                      - {label: "Background", name: "backgroundColour", widget: "color", allowInput: true}
+          - {label: "Image", name: "image", widget: "image", default: "twitter-card.png", required: false, hint: Used for social share.}
           - label: "Menus"
             name: "menus"
             widget: "object"
