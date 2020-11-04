@@ -4,7 +4,7 @@ date: 2020-06-17
 episode:
   file: /episode-4.mp3
   number: 4
-  type: trailer
+  type: bonus
   season: 0
   explicit: "false"
   block: no
