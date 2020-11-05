@@ -12,7 +12,6 @@
     }
   ],
   "require": {
-    "composer-plugin-api": "^1.0",
     "cecil/theme-garth": "^1.2",
     "cecil/theme-podcast": "^1.8",
     "cecil/theme-serviceworker": "^1.9",
