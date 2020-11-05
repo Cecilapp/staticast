@@ -1,3 +1,6 @@
+php composer.phar self-update --1
+php composer.phar update
+
 echo "Downloading Cecil"
 if [ -z $CECIL_VERSION ]; then
   curl -sSOL https://cecil.app/cecil.phar
