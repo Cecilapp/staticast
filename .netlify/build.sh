@@ -6,7 +6,7 @@ else
 fi
 php cecil.phar --version
 
-echo "Installing theme(s)..."
+echo "Installing theme(s)"
 curl -sS https://getcomposer.org/installer | php
 php composer.phar self-update --1
 php composer.phar install --prefer-dist --no-dev --no-progress --no-interaction
