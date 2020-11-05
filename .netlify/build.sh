@@ -1,5 +1,5 @@
-php composer.phar self-update --1
-php composer.phar update
+composer self-update --1
+composer update
 
 echo "Downloading Cecil"
 if [ -z $CECIL_VERSION ]; then
