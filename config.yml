@@ -11,6 +11,9 @@ language: en
 date:
   format: j F Y
   timezone: Europe/Paris
+output:
+  pagetypeformats:
+    section: ['html', 'rss', 'json']
 theme:
   - podcast
   - garth
