@@ -74,7 +74,7 @@ defaultpages:
     output: js
 netlify:
   redirects:
-    - from: https://staticast.netlify.app/*
-      to: https://staticast.cecil.app/:splat
+    - from: https://staticast-demo.netlify.app/*
+      to: https://staticast-demo.cecil.app/:splat
       status: 301
       force: true
