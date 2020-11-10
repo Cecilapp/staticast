@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cecil/theme-garth",
-            "version": "1.2.5",
+            "version": "1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-garth.git",
-                "reference": "93f45060d2d6797cffda01810b82481e943e6c8b"
+                "reference": "d927e268d4a15cccfff7f192edb5c6f8bd1692a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/93f45060d2d6797cffda01810b82481e943e6c8b",
-                "reference": "93f45060d2d6797cffda01810b82481e943e6c8b",
+                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/d927e268d4a15cccfff7f192edb5c6f8bd1692a4",
+                "reference": "d927e268d4a15cccfff7f192edb5c6f8bd1692a4",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-garth/issues",
-                "source": "https://github.com/Cecilapp/theme-garth/tree/1.2.5"
+                "source": "https://github.com/Cecilapp/theme-garth/tree/1.2.7"
             },
             "funding": [
                 {
@@ -50,7 +50,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-11-06T12:04:37+00:00"
+            "time": "2020-11-10T00:17:28+00:00"
         },
         {
             "name": "cecil/theme-installer",
