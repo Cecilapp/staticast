@@ -255,16 +255,16 @@
         },
         {
             "name": "cecil/theme-serviceworker",
-            "version": "1.9.2",
+            "version": "1.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-serviceworker.git",
-                "reference": "f6aab4cb4da8780c3f675b65294821d9a0b4c0c3"
+                "reference": "8169abc6a8e1e82d7fc39d0c364f0dd00e281298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-serviceworker/zipball/f6aab4cb4da8780c3f675b65294821d9a0b4c0c3",
-                "reference": "f6aab4cb4da8780c3f675b65294821d9a0b4c0c3",
+                "url": "https://api.github.com/repos/Cecilapp/theme-serviceworker/zipball/8169abc6a8e1e82d7fc39d0c364f0dd00e281298",
+                "reference": "8169abc6a8e1e82d7fc39d0c364f0dd00e281298",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +289,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-serviceworker/issues",
-                "source": "https://github.com/Cecilapp/theme-serviceworker/tree/1.9.2"
+                "source": "https://github.com/Cecilapp/theme-serviceworker/tree/1.9.3"
             },
             "funding": [
                 {
@@ -297,7 +297,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-11-06T12:10:21+00:00"
+            "time": "2020-11-09T21:34:01+00:00"
         }
     ],
     "packages-dev": [],
