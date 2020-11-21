@@ -8,6 +8,14 @@
 {% endblock %}
 
 {% block content %}
-{{ parent() }}
-        {%~ include 'partials/audioplayer.html.twig' ~%}
+        <article class="article article--page typeset">
+          <h1 style="text-align:center">{{ page.title }}</h1>
+          {%- if page.episode.image is defined -%}
+          <p style="margin:revert"><img src="{{ asset(page.episode.image|default(site.podcast.image))|url }}" alt="{{ page.title }}" style="align:center" width="250px" /></p>
+          {%- endif -%}
+          {%~ include 'partials/audioplayer.html.twig' ~%}
+          <h2>Description</h2>
+          {%~ include 'partials/post-meta.html.twig' with {'post': page} only ~%}
+          {{ page.content }}
+        </article>
 {% endblock %}
