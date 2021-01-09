@@ -3,7 +3,7 @@
   command = "chmod +x ./scripts/netlify-build.sh && bash ./scripts/netlify-build.sh"
 [build.environment]
   PHP_VERSION = "7.2"
-  CECIL_VERSION = "5.34.4"
+  CECIL_VERSION = "5.42.10"
 
 [context.deploy-preview.environment]
   CECIL_ENV = "preview"
