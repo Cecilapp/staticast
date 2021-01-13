@@ -217,16 +217,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "1.8.5",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "dc258b0a0b6c557b32175781b40413e188f9f44d"
+                "reference": "ed2cb0dd9f88f153f2bed9f857962f9e9e007713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/dc258b0a0b6c557b32175781b40413e188f9f44d",
-                "reference": "dc258b0a0b6c557b32175781b40413e188f9f44d",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/ed2cb0dd9f88f153f2bed9f857962f9e9e007713",
+                "reference": "ed2cb0dd9f88f153f2bed9f857962f9e9e007713",
                 "shasum": ""
             },
             "require": {
@@ -251,15 +251,19 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-podcast/issues",
-                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.8.5"
+                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.9.0"
             },
             "funding": [
                 {
                     "url": "https://www.paypal.me/narno",
                     "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Narno",
+                    "type": "github"
                 }
             ],
-            "time": "2020-11-21T00:54:30+00:00"
+            "time": "2021-01-13T00:30:32+00:00"
         },
         {
             "name": "cecil/theme-serviceworker",
