@@ -1,5 +1,5 @@
 ---
-title: "Staticast - Episode #4"
+title: "Fourth demo episode"
 date: 2020-06-17
 episode:
   file: /episode-4.mp3
