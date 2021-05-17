@@ -56,3 +56,9 @@ Description of the episode.
 ### Configuration
 
 See the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config.yml) file and more precisely the `podcast` section.
+
+## License
+
+Staticast is a free software distributed under the terms of the MIT license.
+
+© [Arnaud Ligny](https://arnaudligny.fr)
