@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "883d2e91442df35fd7a031fa55a2ffc5",
+    "content-hash": "5e2182ad59efdc9ef1bcdd21ad8ca1e6",
     "packages": [
         {
             "name": "cecil/theme-garth",
-            "version": "1.3.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-garth.git",
-                "reference": "da4177da859fb20d0017defdd50d863af59b5f50"
+                "reference": "67049ebf4cbc78c34a02fa5d60f6df39bb5414c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/da4177da859fb20d0017defdd50d863af59b5f50",
-                "reference": "da4177da859fb20d0017defdd50d863af59b5f50",
+                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/67049ebf4cbc78c34a02fa5d60f6df39bb5414c3",
+                "reference": "67049ebf4cbc78c34a02fa5d60f6df39bb5414c3",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-garth/issues",
-                "source": "https://github.com/Cecilapp/theme-garth/tree/1.3.0"
+                "source": "https://github.com/Cecilapp/theme-garth/tree/1.5.1"
             },
             "funding": [
                 {
@@ -52,22 +52,26 @@
                 {
                     "url": "https://github.com/Narno",
                     "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
                 }
             ],
-            "time": "2021-06-20T22:20:49+00:00"
+            "time": "2021-12-29T00:55:04+00:00"
         },
         {
             "name": "cecil/theme-installer",
-            "version": "1.4.3",
+            "version": "1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-installer.git",
-                "reference": "20038a142b0e201f23bc4a5a3b97b6149d599178"
+                "reference": "4c6fa8b98b4d8d62bf7a39de4c56956e6568d382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-installer/zipball/20038a142b0e201f23bc4a5a3b97b6149d599178",
-                "reference": "20038a142b0e201f23bc4a5a3b97b6149d599178",
+                "url": "https://api.github.com/repos/Cecilapp/theme-installer/zipball/4c6fa8b98b4d8d62bf7a39de4c56956e6568d382",
+                "reference": "4c6fa8b98b4d8d62bf7a39de4c56956e6568d382",
                 "shasum": ""
             },
             "require": {
@@ -100,7 +104,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Installer for Cecil themes",
+            "description": "Installer for Cecil's themes",
             "keywords": [
                 "cecil",
                 "installer",
@@ -108,7 +112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-installer/issues",
-                "source": "https://github.com/Cecilapp/theme-installer/tree/1.4.3"
+                "source": "https://github.com/Cecilapp/theme-installer/tree/1.4.4"
             },
             "funding": [
                 {
@@ -118,22 +122,26 @@
                 {
                     "url": "https://github.com/Narno",
                     "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
                 }
             ],
-            "time": "2021-04-29T23:05:14+00:00"
+            "time": "2021-10-05T21:47:38+00:00"
         },
         {
             "name": "cecil/theme-netlify",
-            "version": "1.1.6",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-netlify.git",
-                "reference": "8b6f164606cdcbea951e9de0c26c9cf5e1f24900"
+                "reference": "23cf4e60ba431b88fec2bcc24a7d1bcde6d1312a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/8b6f164606cdcbea951e9de0c26c9cf5e1f24900",
-                "reference": "8b6f164606cdcbea951e9de0c26c9cf5e1f24900",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/23cf4e60ba431b88fec2bcc24a7d1bcde6d1312a",
+                "reference": "23cf4e60ba431b88fec2bcc24a7d1bcde6d1312a",
                 "shasum": ""
             },
             "require": {
@@ -158,7 +166,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-netlify/issues",
-                "source": "https://github.com/Cecilapp/theme-netlify/tree/1.1.6"
+                "source": "https://github.com/Cecilapp/theme-netlify/tree/1.2.2"
             },
             "funding": [
                 {
@@ -168,9 +176,13 @@
                 {
                     "url": "https://github.com/Narno",
                     "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
                 }
             ],
-            "time": "2021-02-07T01:42:40+00:00"
+            "time": "2021-11-28T00:37:59+00:00"
         },
         {
             "name": "cecil/theme-netlifycms",
@@ -275,16 +287,16 @@
         },
         {
             "name": "cecil/theme-serviceworker",
-            "version": "1.9.3",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-serviceworker.git",
-                "reference": "8169abc6a8e1e82d7fc39d0c364f0dd00e281298"
+                "reference": "999d79578d34d381e0c5edff524339dd405ef6e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-serviceworker/zipball/8169abc6a8e1e82d7fc39d0c364f0dd00e281298",
-                "reference": "8169abc6a8e1e82d7fc39d0c364f0dd00e281298",
+                "url": "https://api.github.com/repos/Cecilapp/theme-serviceworker/zipball/999d79578d34d381e0c5edff524339dd405ef6e5",
+                "reference": "999d79578d34d381e0c5edff524339dd405ef6e5",
                 "shasum": ""
             },
             "require": {
@@ -309,15 +321,23 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-serviceworker/issues",
-                "source": "https://github.com/Cecilapp/theme-serviceworker/tree/1.9.3"
+                "source": "https://github.com/Cecilapp/theme-serviceworker/tree/1.10.1"
             },
             "funding": [
                 {
                     "url": "https://www.paypal.me/narno",
                     "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Narno",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
                 }
             ],
-            "time": "2020-11-09T21:34:01+00:00"
+            "time": "2021-12-08T00:19:54+00:00"
         }
     ],
     "packages-dev": [],
@@ -328,5 +348,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
