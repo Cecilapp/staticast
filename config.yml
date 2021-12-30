@@ -67,6 +67,7 @@ manifest:
     - src: manifest/icon-512x512.png
       sizes: 512x512
       type: image/png
+  shortcuts: true
 serviceworker:
   enabled: true
 defaultpages:
