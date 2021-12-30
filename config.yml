@@ -61,6 +61,9 @@ manifest:
   background_color: "#7E4EA3"
   theme_color: "#7E4EA3"
   icons:
+    - src: manifest/icon-192x192.png
+      sizes: 192x192
+      type: image/png
     - src: manifest/icon-512x512.png
       sizes: 512x512
       type: image/png
