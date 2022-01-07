@@ -9,5 +9,8 @@
 {% extends '_default/page.html.twig' %}
 
 {% block content %}
-      {% include 'partials/episode.html.twig' with {p: pages|filter_by('section','episodes').first} %}
+      {%- for p in pages ~%}
+      {% include 'partials/episode.html.twig' with {p: p} %}
+      {%- endfor ~%}
+    {%~ include 'partials/pagination.html.twig' with {page: page} only ~%}
 {% endblock content %}

@@ -16,17 +16,9 @@ output:
     section: ['html', 'rss', 'json']
 theme:
   - podcast
-  - garth
   - netlify-cms
   - netlify
   - serviceworker
-logo: logo.svg
-assets:
-  compile:
-    variables:
-      bodyColour: '#5a5a5a'
-      linkColour: '#7E4EA3'
-      backgroundColour: '#F1F3F4'
 menus:
   footer:
     - name: Admin
@@ -34,7 +26,7 @@ menus:
       url: admin
       weight: 99
 pagination:
-  max: 10
+  enabled: false
 podcast:
   owner:
     name: Arnaud Ligny
@@ -69,7 +61,7 @@ manifest:
       type: image/png
   shortcuts: true
 serviceworker:
-  enabled: true
+  enabled: false
 defaultpages:
   serviceworker:
     path: serviceworker
@@ -81,3 +73,10 @@ netlify:
       to: https://staticast-demo.cecil.app/:splat
       status: 301
       force: true
+hoster:
+  - name: Arnaud Ligny
+    avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
+    twitter: "@arnaudligny"
+  - name: lol
+    avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
+    twitter: "@arnaudligny"

@@ -57,6 +57,14 @@ Description of the episode.
 
 See the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config.yml) file and more precisely the `podcast` section.
 
+## Development
+
+```bash
+npm install
+npx tailwindcss -i ./assets/tailwind.css -o ./assets/styles.css --watch
+php cecil.phar serve -v --config=config_dev.yml
+```
+
 ## License
 
 Staticast is a free software distributed under the terms of the MIT license.

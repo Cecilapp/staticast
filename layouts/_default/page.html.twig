@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%~ include 'partials/metatags.html.twig' with {'title': title|default('')} ~%}
+    <meta name="copyright" content="{{ site.author }}" />
+    {%- if getenv('CECIL_ENV') == 'production' ~%}
+    <style>
+      {{- asset('styles.css')|inline ~}}
+    </style>
+    {%- else ~%}
+    <link rel="stylesheet" href="{{ asset('styles.css',{minify:false,fingerprint:false}) }}" />
+    {%- endif ~%}
+    {% endblock %}
+  </head>
+  <body class="bg-slate-200">
+    <div class="container mx-auto">
+      <div class="grid gap-4 grid-cols-0 md:grid-cols-[300px,1fr] h-full">
+        <!-- sidebar -->
+        <aside class="pl-6 pt-10 self-start bg-slate-200 h-full order-last md:order-first mb-8">
+          <!-- subscribe in -->
+          <div class="mb-5">
+            <h4 class="font-medium mb-3">Subscribe in</h4>
+            <ol class="text-sm">
+              {% for subscribe in site.podcast.subscribe %}
+              <li>
+                <a class="flex p-1 space-x-1 items-center hover:bg-slate-300 rounded-lg" href="{{ subscribe.url }}">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                  <span class="grow text-slate-500">{{ subscribe.name|capitalize }}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-slate-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                </a>
+              </li>
+              {% endfor %}
+            </ol>
+          </div>
+          <!-- hosted by -->
+          <div class="mb-5 border-t border-white pt-8">
+            <h4 class="font-medium mb-3">Hosted by</h4>
+            {% for hoster in site.hoster %}
+            <div class="flex items-center space-x-4 mb-4">
+              <img src="{{ hoster.avatar }}" alt="{{ hoster.name }}" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              <div class="flex-auto">
+                <div class="text-base text-gray-900 font-semibold dark:text-gray-300">
+                  {{ hoster.name }}
+                </div>
+                <a href="https://twitter.com/{{ hoster.twitter }}">
+                  <div class="mt-0.5 text-base text-gray-600">{{ hoster.twitter }}</div>
+                </a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </aside>
+        <!-- main -->
+        <main class="px-6 md:px-14 bg-white">
+          <header class="mt-6 md:mt-14">
+            <h1 class="uppercase text-3xl font-bold"><a href="{{ url(site.home) }}">{{ site.title }}</a></h1>
+            <p class="text-2xl mt-1">{{ site.baseline }}</p>
+            {%- set menu = menu|default('main') -%}
+            <nav class="my-4">
+              <ol class="flex space-x-2">
+                {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
+                <li>
+                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm{% if url(page) == url(item.url) %} font-bold text-purple-100 transition-colors duration-150 bg-purple-800 rounded-full focus:shadow-outline hover:bg-purple-900{% endif %}">{{ item.name }}</a>
+                </li>
+                {%- endfor ~%}
+              </ol>
+            </nav>
+          </header>
+          {%- block content ~%}
+          {{ page.content }}
+          {%- endblock ~%}
+          <footer class="border-t border-gray-300 pt-2">
+            <div class="text-sm text-gray-500 mb-10">© {{ "now"|date('Y') }} {{ site.author}}</div>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

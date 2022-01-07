@@ -1,0 +1,24 @@
+          <article class="mb-10">
+            <header class="mb-1">
+              {%- if p.categories is defined -%}
+              <div class="uppercase text-sm"><a href="/categories/{{ p.categories[0] }}">{{ p.categories[0] }}</a></div>
+              {%- endif -%}
+              <h2 class="text-2xl text-purple-800">
+                {%- if page.type != 'page' -%}
+                <a href="{{ url(p) }}">{{ p.episode.number }}: {{ p.title }}</a>
+                {%- else -%}
+                {{ p.episode.number }}: {{ p.title }}
+                {%- endif -%}
+              </h2>
+              <time class="text-xs text-gray-500">{{ p.date|date('l j F Y') }}</time>
+            </header>
+
+            {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
+
+            <div class="mb-8">
+              {{ p.content }}
+            </div>
+            {%- if page.type != 'page' -%}
+            <a href="{{ url(p) }}" class="my-10 p-4 bg-purple-800 text-purple-100 rounded-lg hover:bg-purple-900">View player and notes</a>
+            {%- endif -%}
+          </article>
