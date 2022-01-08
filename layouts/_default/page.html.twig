@@ -23,9 +23,42 @@
   <body class="bg-slate-200 dark:bg-slate-900 dark:text-slate-300">
     <div class="container mx-auto">
       <div class="grid gap-4 grid-cols-0 md:grid-cols-[300px,1fr] h-full">
-        {# sidebar #}
-        <aside class="px-4 md:p-6 mb-8 self-start order-last md:order-first h-full bg-slate-200 dark:bg-slate-900">
-          {# subscribe in #}
+        {#- main ~#}
+        <main class="px-4 md:px-14 bg-white dark:bg-black">
+          <header class="mt-4 md:mt-10">
+            <h1 class="uppercase text-3xl font-bold"><a href="{{ url(site.home) }}">{{ site.title }}</a></h1>
+            <p class="text-xl mt-1">{{ site.baseline }}</p>
+            {#- navigation ~#}
+            {%- set menu = menu|default('main') ~%}
+            <nav class="mt-4 mb-6">
+              <ol class="flex space-x-2">
+                {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
+                <li>
+                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm{% if url(page) == url(item.url) %} font-bold text-purple-100 transition-colors duration-150 bg-purple-700 rounded-full focus:shadow-outline hover:bg-purple-900{% endif %}">{{ item.name }}</a>
+                </li>
+                {%- endfor ~%}
+              </ol>
+            </nav>
+          </header>
+          {#- content ~#}
+          {%- block content ~%}
+          <div class="markdown max-w-none dark:markdown-invert markdown-code:text-xs">
+            {{ page.content }}
+          </div>
+          {%- endblock ~%}
+          {#- footer ~#}
+          <footer class="pt-2 mt-4 mb-6 md:mb-10 border-t border-slate-300">
+            <div class="text-sm text-slate-500">
+              © {{ "now"|date('Y') }} {{ site.author}} ·
+              {%- for item in site.menus.footer ~%}
+              <a href="{{ url(item.url) }}" class="text-slate-500">{{ item.name }}</a>
+              {%- endfor ~%}
+            </div>
+          </footer>
+        </main>
+        {#- sidebar ~#}
+        <aside class="px-4 md:p-6 mb-8 self-start md:order-first h-full bg-slate-200 dark:bg-slate-900">
+          {#- subscribe in ~#}
           <div class="mb-5">
             <h4 class="font-medium mb-2">Subscribe in</h4>
             <ol class="text-sm">
@@ -41,7 +74,7 @@
               {%- endfor ~%}
             </ol>
           </div>
-          {# hosted by #}
+          {#- hosted by ~#}
           <div class="pt-4 md:pt-6 border-t border-white">
             <h4 class="font-medium mb-3">Hosted by</h4>
             {%- for hoster in site.hoster ~%}
@@ -59,39 +92,6 @@
             {%- endfor ~%}
           </div>
         </aside>
-        {# main #}
-        <main class="px-4 md:px-14 bg-white dark:bg-black">
-          <header class="mt-4 md:mt-10">
-            <h1 class="uppercase text-3xl font-bold"><a href="{{ url(site.home) }}">{{ site.title }}</a></h1>
-            <p class="text-xl mt-1">{{ site.baseline }}</p>
-            {# navigation #}
-            {%- set menu = menu|default('main') -%}
-            <nav class="mt-4 mb-6">
-              <ol class="flex space-x-2">
-                {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
-                <li>
-                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm{% if url(page) == url(item.url) %} font-bold text-purple-100 transition-colors duration-150 bg-purple-700 rounded-full focus:shadow-outline hover:bg-purple-900{% endif %}">{{ item.name }}</a>
-                </li>
-                {%- endfor ~%}
-              </ol>
-            </nav>
-          </header>
-          {# content #}
-          {%- block content ~%}
-          <div class="markdown dark:markdown-invert">
-            {{ page.content }}
-          </div>
-          {%- endblock ~%}
-          {# footer #}
-          <footer class="pt-2 mb-6 md:mb-10 border-t border-slate-300">
-            <div class="text-sm text-slate-500">
-              © {{ "now"|date('Y') }} {{ site.author}} ·
-              {%- for item in site.menus.footer ~%}
-              <a href="{{ url(item.url) }}" class="text-slate-500">{{ item.name }}</a>
-              {%- endfor ~%}
-            </div>
-          </footer>
-        </main>
       </div>
     </div>
   </body>
