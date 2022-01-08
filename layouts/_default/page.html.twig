@@ -63,6 +63,7 @@
           <header class="mt-6 md:mt-14">
             <h1 class="uppercase text-3xl font-bold"><a href="{{ url(site.home) }}">{{ site.title }}</a></h1>
             <p class="text-2xl mt-1">{{ site.baseline }}</p>
+            <!-- menu -->
             {%- set menu = menu|default('main') -%}
             <nav class="my-4">
               <ol class="flex space-x-2">
@@ -80,7 +81,12 @@
           </div>
           {%- endblock ~%}
           <footer class="border-t border-gray-300 pt-2">
-            <div class="text-sm text-gray-500 mb-10">© {{ "now"|date('Y') }} {{ site.author}}</div>
+            <div class="text-sm text-gray-500 mb-10">
+              © {{ "now"|date('Y') }} {{ site.author}} -
+              {%- for item in site.menus.footer ~%}
+              <a href="{{ url(item.url) }}" class="text-gray-500">{{ item.name }}</a>
+              {%- endfor ~%}
+            </div>
           </footer>
         </main>
       </div>
