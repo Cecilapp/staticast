@@ -1,6 +1,6 @@
 # Staticast
 
-> _Staticast_ is a ready to use Progressive Web App to publish your podcast, with a RSS feed ready for syndication platforms, and a user friendly CMS.
+_Staticast_ is a ready to use Progressive Web App to publish your podcast, with a RSS feed ready for syndication platforms, and a user friendly CMS.
 
 ## Installation
 
