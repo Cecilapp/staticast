@@ -14,6 +14,6 @@ audio {
 
 @layer base {
   a {
-    @apply text-purple-800;
+    @apply text-purple-700;
   }
 }
