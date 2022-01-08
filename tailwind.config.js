@@ -1,25 +1,22 @@
 module.exports = {
-    content: [
-        './layouts/**/*.html.twig',
-        './themes/**/layouts/**/*.html.twig',
-    ],
-    darkMode: 'media',
-    theme: {
-        container: {
-            screens: {
-                sm: '100%',
-                md: '100%',
-                lg: '1024px',
-                xl: '1024px',
-            }
-        }
+  content: [
+    './layouts/**/*.html.twig',
+    './themes/**/layouts/**/*.html.twig',
+  ],
+  darkMode: 'media',
+  theme: {
+    container: {
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '1024px',
+        xl: '1024px',
+      }
     },
-    variants: {
-        typography: ['dark'],
-    },
-    plugins: [
-        require('@tailwindcss/typography')({
-            className: 'markdown',
-        }),
-    ],
+  },
+  plugins: [
+    require('@tailwindcss/typography')({
+      className: 'markdown',
+    }),
+  ],
 }
