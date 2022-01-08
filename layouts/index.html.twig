@@ -8,6 +8,6 @@
 
 {% extends '_default/page.html.twig' %}
 
-{% block content %}
-      {% include 'partials/episode.html.twig' with {p: pages|filter_by('section','episodes').first} %}
+{% block content ~%}
+{% include 'partials/episode.html.twig' with {p: pages|filter_by('section','episodes').first} %}
 {% endblock content %}
