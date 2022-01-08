@@ -21,7 +21,7 @@ theme:
   - serviceworker
 menus:
   footer:
-    - name: Admin
+    - name: CMS
       id: admin
       url: admin
 pagination:
