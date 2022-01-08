@@ -4,3 +4,4 @@
 vendor/
 _site/
 themes/
+node_modules/

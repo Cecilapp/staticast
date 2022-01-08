@@ -1,0 +1,19 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 18px
+}
+
+audio {
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+}
+
+@layer base {
+  a {
+    @apply text-purple-800;
+  }
+}
