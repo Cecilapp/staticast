@@ -857,37 +857,13 @@ a {
   margin-bottom: 0;
 }
 
-.order-last {
-  order: 9999;
-}
-
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.my-8 {
-  margin-top: 2rem;
+.mb-8 {
   margin-bottom: 2rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .mb-1 {
@@ -898,20 +874,28 @@ a {
   margin-right: 0.5rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mb-5 {
   margin-bottom: 1.25rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -924,18 +908,6 @@ a {
 
 .mt-0 {
   margin-top: 0px;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 
 .block {
@@ -962,16 +934,16 @@ a {
   height: 100%;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
 
 .h-14 {
   height: 3.5rem;
-}
-
-.h-8 {
-  height: 2rem;
 }
 
 .w-6 {
@@ -984,6 +956,10 @@ a {
 
 .w-14 {
   width: 3.5rem;
+}
+
+.max-w-none {
+  max-width: none;
 }
 
 .flex-none {
@@ -1006,6 +982,12 @@ a {
   gap: 1rem;
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -1016,12 +998,6 @@ a {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-start {
@@ -1040,14 +1016,14 @@ a {
   border-top-width: 1px;
 }
 
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .border-slate-300 {
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-purple-700 {
@@ -1078,10 +1054,6 @@ a {
   padding: 0.75rem;
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -1091,12 +1063,12 @@ a {
   padding-right: 1rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-sm {
@@ -1114,11 +1086,6 @@ a {
   line-height: 1rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1129,16 +1096,21 @@ a {
   line-height: 1.75rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
 }
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .uppercase {
@@ -1211,6 +1183,23 @@ audio {
   color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
+.markdown-code\:overflow-x-auto :is(:where(code):not(:where([class~="not-markdown"] *))) {
+  overflow-x: auto;
+}
+
+.markdown-code\:overflow-x-scroll :is(:where(code):not(:where([class~="not-markdown"] *))) {
+  overflow-x: scroll;
+}
+
+.markdown-code\:text-xs :is(:where(code):not(:where([class~="not-markdown"] *))) {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.markdown-pre\:overflow-x-auto :is(:where(pre):not(:where([class~="not-markdown"] *))) {
+  overflow-x: auto;
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:markdown-invert {
     --tw-prose-body: var(--tw-prose-invert-body);
@@ -1231,11 +1220,6 @@ audio {
     --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
   }
 
-  .dark\:bg-slate-700 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-  }
-
   .dark\:bg-slate-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(15 23 42 / var(--tw-bg-opacity));
@@ -1253,11 +1237,6 @@ audio {
   .dark\:text-slate-300 {
     --tw-text-opacity: 1;
     color: rgb(203 213 225 / var(--tw-text-opacity));
-  }
-
-  .dark\:hover\:bg-slate-900:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(15 23 42 / var(--tw-bg-opacity));
   }
 
   .dark\:hover\:bg-black:hover {
