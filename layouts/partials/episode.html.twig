@@ -1,4 +1,4 @@
-          <article class="mb-10">
+          <article class="mb-8">
             <header class="mb-1">
               {%- if p.categories is defined -%}
               <div class="uppercase text-sm"><a href="/categories/{{ p.categories[0] }}">{{ p.categories[0] }}</a></div>
@@ -13,18 +13,18 @@
               </h2>
               <time class="text-xs text-slate-400">{{ p.date|date('l j F Y') }}</time>
             </header>
-            <div class="mb-8">
-              <div class="markdown dark:markdown-invert dark:markdown-dark">
+            <div class="mb-6">
+              <div class="markdown dark:markdown-invert">
                 {{ p.content|excerpt_html }}
               </div>
               {%- if page.type == 'page' -%}
               {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
-              <div class="markdown dark:markdown-invert dark:markdown-dark">
+              <div class="markdown dark:markdown-invert">
                 {{ p.content|excerpt_html({capture: 'after'}) }}
               </div>
               {%- endif -%}
             </div>
             {%- if page.type != 'page' -%}
-            <a href="{{ url(p) }}" class="my-10 p-3 bg-purple-700 text-purple-100 rounded-lg hover:bg-purple-900">View player and notes</a>
+            <a href="{{ url(p) }}" class="p-3 bg-purple-700 text-purple-100 rounded-lg hover:bg-purple-900">View player and notes</a>
             {%- endif -%}
           </article>
