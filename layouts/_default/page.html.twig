@@ -23,7 +23,7 @@
     <div class="container mx-auto">
       <div class="grid gap-4 grid-cols-0 md:grid-cols-[300px,1fr] h-full">
         <!-- sidebar -->
-        <aside class="pl-6 pt-4 md:pt-10 self-start bg-slate-200 h-full order-last md:order-first mb-8">
+        <aside class="px-4 md:p-6 self-start bg-slate-200 h-full order-last md:order-first mb-8">
           <!-- subscribe in -->
           <div class="mb-5">
             <h4 class="font-medium mb-3">Subscribe in</h4>
@@ -41,7 +41,7 @@
             </ol>
           </div>
           <!-- hosted by -->
-          <div class="mb-5 border-t border-white pt-8">
+          <div class="border-t border-white pt-4 md:pt-6">
             <h4 class="font-medium mb-3">Hosted by</h4>
             {%- for hoster in site.hoster ~%}
             <div class="flex items-center space-x-4 mb-4">
@@ -59,8 +59,8 @@
           </div>
         </aside>
         <!-- main -->
-        <main class="px-6 md:px-14 bg-white">
-          <header class="mt-6 md:mt-14">
+        <main class="px-4 md:px-14 bg-white">
+          <header class="mt-4 md:mt-10">
             <h1 class="uppercase text-3xl font-bold"><a href="{{ url(site.home) }}">{{ site.title }}</a></h1>
             <p class="text-2xl mt-1">{{ site.baseline }}</p>
             <!-- menu -->
@@ -80,8 +80,8 @@
             {{ page.content }}
           </div>
           {%- endblock ~%}
-          <footer class="border-t border-gray-300 pt-2">
-            <div class="text-sm text-gray-500 mb-10">
+          <footer class="border-t border-gray-300 pt-2 mb-6 md:mb-10">
+            <div class="text-sm text-gray-500">
               © {{ "now"|date('Y') }} {{ site.author}} -
               {%- for item in site.menus.footer ~%}
               <a href="{{ url(item.url) }}" class="text-gray-500">{{ item.name }}</a>
