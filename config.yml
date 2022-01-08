@@ -24,7 +24,6 @@ menus:
     - name: Admin
       id: admin
       url: admin
-      weight: 99
 pagination:
   enabled: false
 podcast:
