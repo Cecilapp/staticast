@@ -8,9 +8,9 @@
 
 {% extends '_default/page.html.twig' %}
 
-{% block content %}
+{% block content ~%}
       {%- for p in pages ~%}
-      {% include 'partials/episode.html.twig' with {p: p} %}
+      {%~ include 'partials/episode.html.twig' with {p: p} %}
       {%- endfor ~%}
     {%~ include 'partials/pagination.html.twig' with {page: page} only ~%}
 {% endblock content %}
