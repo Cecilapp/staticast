@@ -40,6 +40,10 @@ podcast:
   block: "no"
   newfeedurl: ""
   subscribe:
+    - name: rss
+      title: RSS
+      url: /episodes/rss.xml
+      enabled: true
     - name: apple
       title: Apple Podcasts
       url: https://podcasts.apple.com/fr/podcast/staticast/id1520249637
