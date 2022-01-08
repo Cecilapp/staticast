@@ -19,12 +19,12 @@
     {%~ include 'partials/identity.html.twig' -%}
     {%- endblock ~%}
   </head>
-  <body class="bg-slate-200">
+  <body class="bg-slate-200 dark:bg-slate-700 dark:text-slate-300">
     <div class="container mx-auto">
       <div class="grid gap-4 grid-cols-0 md:grid-cols-[300px,1fr] h-full">
-        <!-- sidebar -->
-        <aside class="px-4 md:p-6 self-start bg-slate-200 h-full order-last md:order-first mb-8">
-          <!-- subscribe in -->
+        {# sidebar #}
+        <aside class="px-4 md:p-6 mb-8 self-start order-last md:order-first h-full bg-slate-200 dark:bg-slate-700">
+          {# subscribe in #}
           <div class="mb-5">
             <h4 class="font-medium mb-3">Subscribe in</h4>
             <ol class="text-sm">
@@ -32,59 +32,61 @@
               {%- set icon = asset('icons/' ~ subscribe.name ~ '.png')|resize(30) ~%}
               <li>
                 <a class="flex p-1 mb-2 space-x-1 items-center hover:bg-slate-300 rounded-lg" href="{{ url(subscribe.url) }}">
-                  <img src="{{ icon }}" width="{{ icon.width }}" height="{{ icon.height }}" alt="{{ subscribe.title }}">
-                  <span class="grow text-slate-500">{{ subscribe.title }}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-slate-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                  <img class="mr-2" src="{{ icon }}" width="{{ icon.width }}" height="{{ icon.height }}" alt="{{ subscribe.title }}">
+                  <span class="grow text-slate-500 dark:text-slate-300">{{ subscribe.title }}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-slate-500 dark:fill-slate-300" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
                 </a>
               </li>
               {%- endfor ~%}
             </ol>
           </div>
-          <!-- hosted by -->
-          <div class="border-t border-white pt-4 md:pt-6">
+          {# hosted by #}
+          <div class="pt-4 md:pt-6 border-t border-white">
             <h4 class="font-medium mb-3">Hosted by</h4>
             {%- for hoster in site.hoster ~%}
             <div class="flex items-center space-x-4 mb-4">
               <img src="{{ hoster.avatar }}" alt="{{ hoster.name }}" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
               <div class="flex-auto">
-                <div class="text-base text-gray-900 font-semibold dark:text-gray-300">
+                <div class="text-base text-slate-900 font-semibold dark:text-slate-300">
                   {{ hoster.name }}
                 </div>
                 <a href="https://twitter.com/{{ hoster.twitter }}">
-                  <div class="mt-0.5 text-base text-gray-600">{{ hoster.twitter }}</div>
+                  <div class="mt-0.5 text-base text-slate-600 dark:text-slate-300">{{ hoster.twitter }}</div>
                 </a>
               </div>
             </div>
             {%- endfor ~%}
           </div>
         </aside>
-        <!-- main -->
-        <main class="px-4 md:px-14 bg-white">
+        {# main #}
+        <main class="px-4 md:px-14 bg-white dark:bg-slate-900">
           <header class="mt-4 md:mt-10">
             <h1 class="uppercase text-3xl font-bold"><a href="{{ url(site.home) }}">{{ site.title }}</a></h1>
-            <p class="text-2xl mt-1">{{ site.baseline }}</p>
-            <!-- menu -->
+            <p class="text-xl mt-1">{{ site.baseline }}</p>
+            {# navigation #}
             {%- set menu = menu|default('main') -%}
             <nav class="my-4">
               <ol class="flex space-x-2">
                 {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
                 <li>
-                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm{% if url(page) == url(item.url) %} font-bold text-purple-100 transition-colors duration-150 bg-purple-800 rounded-full focus:shadow-outline hover:bg-purple-900{% endif %}">{{ item.name }}</a>
+                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm{% if url(page) == url(item.url) %} font-bold text-purple-100 transition-colors duration-150 bg-purple-700 rounded-full focus:shadow-outline hover:bg-purple-900{% endif %}">{{ item.name }}</a>
                 </li>
                 {%- endfor ~%}
               </ol>
             </nav>
           </header>
+          {# content #}
           {%- block content ~%}
-          <div class="markdown">
+          <div class="markdown dark:markdown-invert dark:markdown-dark">
             {{ page.content }}
           </div>
           {%- endblock ~%}
-          <footer class="border-t border-gray-300 pt-2 mb-6 md:mb-10">
-            <div class="text-sm text-gray-500">
-              © {{ "now"|date('Y') }} {{ site.author}} -
+          {# footer #}
+          <footer class="border-t border-slate-300 pt-2 mb-6 md:mb-10">
+            <div class="text-sm text-slate-500">
+              © {{ "now"|date('Y') }} {{ site.author}} ·
               {%- for item in site.menus.footer ~%}
-              <a href="{{ url(item.url) }}" class="text-gray-500">{{ item.name }}</a>
+              <a href="{{ url(item.url) }}" class="text-slate-500">{{ item.name }}</a>
               {%- endfor ~%}
             </div>
           </footer>
