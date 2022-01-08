@@ -1,8 +1,0 @@
-{% extends '_default/page.html.twig' %}
-
-{% block head %}
-{{ parent() }}
-    <link rel="manifest" href="{{ url('manifest') }}">
-    {%~ include 'partials/regsw.js.twig' -%}
-    {%~ include 'partials/identity.html.twig' -%}
-{% endblock %}

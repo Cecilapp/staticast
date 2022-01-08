@@ -41,12 +41,15 @@ podcast:
   newfeedurl: ""
   subscribe:
     - name: apple
+      title: Apple Podcasts
       url: https://podcasts.apple.com/fr/podcast/staticast/id1520249637
       enabled: true
     - name: google
+      title: Google Podcasts
       url: https://podcasts.google.com/feed/aHR0cHM6Ly9zdGF0aWNhc3QubmV0bGlmeS5hcHAvZXBpc29kZXMvcnNzLnhtbA
       enabled: true
     - name: spotify
+      title: Spotify
       url: https://open.spotify.com/show/6dlhe4G6Au5Zm7qX2M5tnS
       enabled: true
 manifest:
@@ -61,7 +64,7 @@ manifest:
       type: image/png
   shortcuts: true
 serviceworker:
-  enabled: false
+  enabled: true
 defaultpages:
   serviceworker:
     path: serviceworker
@@ -75,8 +78,5 @@ netlify:
       force: true
 hoster:
   - name: Arnaud Ligny
-    avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
-    twitter: "@arnaudligny"
-  - name: lol
     avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
     twitter: "@arnaudligny"
