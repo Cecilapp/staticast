@@ -450,7 +450,7 @@ a {
 }
 
 .markdown {
-  color: #475569;
+  color: var(--tw-prose-body);
   max-width: 65ch;
 }
 
@@ -714,7 +714,7 @@ a {
 }
 
 .markdown {
-  --tw-prose-body: #e2e8f0;
+  --tw-prose-body: #374151;
   --tw-prose-headings: #111827;
   --tw-prose-lead: #4b5563;
   --tw-prose-links: #111827;
@@ -730,7 +730,7 @@ a {
   --tw-prose-pre-bg: #1f2937;
   --tw-prose-th-borders: #d1d5db;
   --tw-prose-td-borders: #e5e7eb;
-  --tw-prose-invert-body: #e2e8f0;
+  --tw-prose-invert-body: #d1d5db;
   --tw-prose-invert-headings: #fff;
   --tw-prose-invert-lead: #9ca3af;
   --tw-prose-invert-links: #fff;
@@ -958,10 +958,6 @@ a {
   width: 3.5rem;
 }
 
-.max-w-none {
-  max-width: none;
-}
-
 .flex-none {
   flex: none;
 }
@@ -1026,7 +1022,7 @@ a {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-purple-700 {
+.bg-primary-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
@@ -1117,7 +1113,7 @@ a {
   text-transform: uppercase;
 }
 
-.text-purple-700 {
+.text-primary-700 {
   --tw-text-opacity: 1;
   color: rgb(126 34 206 / var(--tw-text-opacity));
 }
@@ -1127,7 +1123,7 @@ a {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
-.text-purple-100 {
+.text-primary-100 {
   --tw-text-opacity: 1;
   color: rgb(243 232 255 / var(--tw-text-opacity));
 }
@@ -1168,7 +1164,7 @@ audio {
   margin: 1rem 0 1rem 0;
 }
 
-.hover\:bg-purple-900:hover {
+.hover\:bg-primary-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(88 28 135 / var(--tw-bg-opacity));
 }
@@ -1183,21 +1179,9 @@ audio {
   color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
-.markdown-code\:overflow-x-auto :is(:where(code):not(:where([class~="not-markdown"] *))) {
-  overflow-x: auto;
-}
-
-.markdown-code\:overflow-x-scroll :is(:where(code):not(:where([class~="not-markdown"] *))) {
-  overflow-x: scroll;
-}
-
 .markdown-code\:text-xs :is(:where(code):not(:where([class~="not-markdown"] *))) {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.markdown-pre\:overflow-x-auto :is(:where(pre):not(:where([class~="not-markdown"] *))) {
-  overflow-x: auto;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     './layouts/**/*.html.twig',
@@ -11,6 +13,11 @@ module.exports = {
         lg: '1024px',
         xl: '1024px',
       }
+    },
+    extend: {
+      colors: {
+        primary: colors.purple,
+      },
     },
   },
   plugins: [
