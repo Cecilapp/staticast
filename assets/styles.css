@@ -926,6 +926,10 @@ a {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -1008,6 +1012,14 @@ a {
   border-radius: 9999px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
+.border {
+  border-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -1020,6 +1032,21 @@ a {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-primary-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(126 34 206 / var(--tw-border-opacity));
+}
+
+.border-slate-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(100 116 139 / var(--tw-border-opacity));
+}
+
+.border-slate-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 163 184 / var(--tw-border-opacity));
 }
 
 .bg-primary-700 {
@@ -1054,9 +1081,23 @@ a {
   padding: 0.5rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .pt-2 {
@@ -1065,6 +1106,10 @@ a {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .text-sm {
@@ -1095,6 +1140,11 @@ a {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1179,6 +1229,11 @@ audio {
   color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
+.hover\:text-primary-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(88 28 135 / var(--tw-text-opacity));
+}
+
 .markdown-code\:text-xs :is(:where(code):not(:where([class~="not-markdown"] *))) {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1240,6 +1295,14 @@ audio {
 
   .md\:mb-10 {
     margin-bottom: 2.5rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:grid-cols-\[300px\2c 1fr\] {
