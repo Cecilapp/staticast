@@ -1,30 +1,39 @@
           <article class="mb-8">
             <header class="mb-1">
-              {%- if p.categories is defined ~%}
-              <div class="uppercase text-sm"><a href="/categories/{{ p.categories[0] }}">{{ p.categories[0] }}</a></div>
-              {%- endif ~%}
+              <time class="text-xs text-slate-400">{{ p.date|date('j F Y') }}</time>
               <h2 class="text-2xl text-primary-700 flex items-center">
                 {%- if page.type != 'page' ~%}
-                <a href="{{ url(p) }}#autoplay" class="mr-2 hover:text-slate-600"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewbox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg></a>
-                <a href="{{ url(p) }}">{{ p.episode.number }}: {{ p.title }}</a>
+                <a href="{{ url(p) }}">{{ p.title }}</a>
                 {%- else ~%}
-                {{ p.episode.number }}: {{ p.title }}
+                {{ p.title }}
                 {%- endif ~%}
               </h2>
-              <time class="text-xs text-slate-400">{{ p.date|date('l j F Y') }}</time>
+              {#-{%- if p.categories is defined ~%}
+              <div class="uppercase text-sm"><a href="/categories/{{ p.categories[0] }}">{{ p.categories[0] }}</a></div>
+              {%- endif ~%}~#}
             </header>
-            <div class="mb-6">
-              <div class="markdown dark:markdown-invert dark:text-slate-300">
-                {{ p.content|excerpt_html }}
-              </div>
+            <div class="mb-2">
               {%- if page.type == 'page' ~%}
               {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
               <div class="markdown dark:markdown-invert dark:text-slate-300">
-                {{ p.content|excerpt_html({capture: 'after'}) }}
+                {{ p.content }}
               </div>
               {%- endif ~%}
+              <div class="markdown dark:markdown-invert dark:text-slate-300">
+                {{ p.content|excerpt_html }}
+              </div>
             </div>
             {%- if page.type != 'page' ~%}
-            <a href="{{ url(p) }}" class="p-3 bg-primary-700 text-primary-100 rounded-lg hover:bg-primary-900">View player and notes</a>
+            <ol class="flex space-x-2">
+              <li class="border border-slate-300 rounded-full">
+                <a href="{{ url(p) }}#autoplay" class="transition-colors duration-150 text-primary-700 focus:shadow-outline hover:text-primary-900">
+                <div class="flex space-x-1 px-2 py-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewbox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                  <span class="uppercase">Play</span>
+                </div>
+                </a>
+              </li>
+            </ol>
+            <!--<a href="{{ url(p) }}" class="p-3 bg-primary-700 text-primary-100 rounded-lg hover:bg-primary-900">View player and notes</a>-->
             {%- endif ~%}
           </article>
