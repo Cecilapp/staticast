@@ -14,12 +14,12 @@
               <time class="text-xs text-slate-400">{{ p.date|date('l j F Y') }}</time>
             </header>
             <div class="mb-6">
-              <div class="markdown dark:markdown-invert">
+              <div class="markdown dark:markdown-invert dark:text-slate-300">
                 {{ p.content|excerpt_html }}
               </div>
               {%- if page.type == 'page' ~%}
               {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
-              <div class="markdown dark:markdown-invert">
+              <div class="markdown dark:markdown-invert dark:text-slate-300">
                 {{ p.content|excerpt_html({capture: 'after'}) }}
               </div>
               {%- endif ~%}
