@@ -4,74 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e2182ad59efdc9ef1bcdd21ad8ca1e6",
+    "content-hash": "d5e5cf63bfd2574fec25d528252f05a8",
     "packages": [
         {
-            "name": "cecil/theme-garth",
-            "version": "1.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Cecilapp/theme-garth.git",
-                "reference": "67049ebf4cbc78c34a02fa5d60f6df39bb5414c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-garth/zipball/67049ebf4cbc78c34a02fa5d60f6df39bb5414c3",
-                "reference": "67049ebf4cbc78c34a02fa5d60f6df39bb5414c3",
-                "shasum": ""
-            },
-            "require": {
-                "cecil/theme-installer": "^1.4"
-            },
-            "type": "cecil-theme",
-            "extra": {
-                "name": "garth",
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Cecil Garth theme",
-            "keywords": [
-                "Garth",
-                "cecil",
-                "theme"
-            ],
-            "support": {
-                "issues": "https://github.com/Cecilapp/theme-garth/issues",
-                "source": "https://github.com/Cecilapp/theme-garth/tree/1.5.1"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/narno",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/Narno",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/cecil",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2021-12-29T00:55:04+00:00"
-        },
-        {
             "name": "cecil/theme-installer",
-            "version": "1.4.4",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-installer.git",
-                "reference": "4c6fa8b98b4d8d62bf7a39de4c56956e6568d382"
+                "reference": "12b1d72ff38e1199eaca34877a64008b6a65e393"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-installer/zipball/4c6fa8b98b4d8d62bf7a39de4c56956e6568d382",
-                "reference": "4c6fa8b98b4d8d62bf7a39de4c56956e6568d382",
+                "url": "https://api.github.com/repos/Cecilapp/theme-installer/zipball/12b1d72ff38e1199eaca34877a64008b6a65e393",
+                "reference": "12b1d72ff38e1199eaca34877a64008b6a65e393",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +45,7 @@
             "authors": [
                 {
                     "name": "Arnaud Ligny",
-                    "email": "arnaud@ligny.org",
+                    "email": "arnaud@ligny.fr",
                     "homepage": "https://arnaudligny.fr",
                     "role": "Developer"
                 }
@@ -112,7 +58,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-installer/issues",
-                "source": "https://github.com/Cecilapp/theme-installer/tree/1.4.4"
+                "source": "https://github.com/Cecilapp/theme-installer/tree/1.4.5"
             },
             "funding": [
                 {
@@ -120,7 +66,7 @@
                     "type": "custom"
                 },
                 {
-                    "url": "https://github.com/Narno",
+                    "url": "https://github.com/ArnaudLigny",
                     "type": "github"
                 },
                 {
@@ -128,7 +74,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-10-05T21:47:38+00:00"
+            "time": "2022-01-06T10:54:26+00:00"
         },
         {
             "name": "cecil/theme-netlify",
@@ -233,16 +179,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "3075ad1289821230b067461532e1f0dd900f103b"
+                "reference": "a8f55b2ba75dd8fd96be9f9ded584fcacca94705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/3075ad1289821230b067461532e1f0dd900f103b",
-                "reference": "3075ad1289821230b067461532e1f0dd900f103b",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/a8f55b2ba75dd8fd96be9f9ded584fcacca94705",
+                "reference": "a8f55b2ba75dd8fd96be9f9ded584fcacca94705",
                 "shasum": ""
             },
             "require": {
@@ -267,7 +213,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-podcast/issues",
-                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.10.0"
+                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.11.0"
             },
             "funding": [
                 {
@@ -275,7 +221,7 @@
                     "type": "custom"
                 },
                 {
-                    "url": "https://github.com/Narno",
+                    "url": "https://github.com/ArnaudLigny",
                     "type": "github"
                 },
                 {
@@ -283,7 +229,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-08-13T22:57:03+00:00"
+            "time": "2022-01-09T23:02:33+00:00"
         },
         {
             "name": "cecil/theme-serviceworker",
