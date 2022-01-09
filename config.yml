@@ -55,6 +55,10 @@ podcast:
       title: Spotify
       url: https://open.spotify.com/show/6dlhe4G6Au5Zm7qX2M5tnS
       enabled: true
+  hoster:
+    - name: Arnaud Ligny
+      avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
+      twitter: "@arnaudligny"
 manifest:
   background_color: "#7E4EA3"
   theme_color: "#7E4EA3"
@@ -79,7 +83,3 @@ netlify:
       to: https://staticast-demo.cecil.app/:splat
       status: 301
       force: true
-hoster:
-  - name: Arnaud Ligny
-    avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
-    twitter: "@arnaudligny"
