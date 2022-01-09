@@ -66,7 +66,7 @@
           </div>
           {#- subscribe in ~#}
           <div class="mb-5">
-            <h4 class="font-medium mb-2">Subscribe in</h4>
+            <div class="font-medium mb-2">Subscribe in</div>
             <ol class="text-sm">
               {%- for subscribe in site.podcast.subscribe ~%}
               {%- set icon = asset('icons/' ~ subscribe.name ~ '.png')|resize(30) ~%}
@@ -82,12 +82,13 @@
           </div>
           {#- hosted by ~#}
           <div class="pt-4 md:pt-6 border-t border-white">
-            <h4 class="font-medium mb-3">Hosted by</h4>
+            <div class="font-medium mb-3">Hosted by</div>
             {%- for hoster in site.hoster ~%}
             <div class="flex items-center space-x-4 mb-4">
-              <img src="{{ hoster.avatar }}" alt="{{ hoster.name }}" class="flex-none w-14 h-14 rounded-full object-cover" loading="lazy">
+              {%- set avatar = asset(hoster.avatar) ~%}
+              <img class="flex-none w-14 h-14 rounded-full object-cover" src="{{ avatar }}" alt="{{ hoster.name }}" width="{{ avatar.width }}" height="{{ avatar.height }}">
               <div class="flex-auto">
-                <div class="text-base text-slate-900 font-semibold dark:text-slate-300">
+                <div class="text-base font-semibold dark:text-slate-300">
                   {{ hoster.name }}
                 </div>
                 <a href="https://twitter.com/{{ hoster.twitter }}">
