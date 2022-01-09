@@ -3,7 +3,6 @@ module.exports = {
     './layouts/**/*.html.twig',
     './themes/**/layouts/**/*.html.twig',
   ],
-  darkMode: 'media',
   theme: {
     container: {
       screens: {
