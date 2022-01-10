@@ -142,12 +142,12 @@ collections:
           - label: "Podcast"
             name: podcast
             widget: "object"
-            collapsed: true
-            summary: "{{fields.name}} ({{fields.email}})"
             fields:
               - label: "Owner"
                 name: "owner"
                 widget: "object"
+                collapsed: true
+                summary: "{{fields.name}} ({{fields.email}})"
                 fields:
                   - {label: "Name", name: "name", widget: "string", required: true}
                   - {label: "Email", name: "email", widget: "string", required: true}
