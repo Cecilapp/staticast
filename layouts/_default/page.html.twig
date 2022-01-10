@@ -77,6 +77,14 @@
           <div class="mb-5">
             <div class="font-medium mb-2">Subscribe in</div>
             <ol class="text-sm">
+              {%- set rss_icon = asset('icons/rss.png')|resize(30) ~%}
+              <li>
+                <a class="flex p-2 space-x-1 items-center hover:bg-slate-300 dark:hover:bg-black rounded-lg" href="{{ url('episodes/rss.xml') }}">
+                  <img class="mr-2" src="{{ rss_icon }}" width="{{ rss_icon.width }}" height="{{ rss_icon.height }}" alt="RSS">
+                  <span class="grow text-slate-500 dark:text-slate-300">RSS</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-slate-500 dark:fill-slate-300" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                </a>
+              </li>
               {%- for subscribe in site.podcast.subscribe ~%}
               {%- set icon = asset('icons/' ~ subscribe.name ~ '.png')|resize(30) ~%}
               <li>
