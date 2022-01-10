@@ -233,16 +233,16 @@
         },
         {
             "name": "cecil/theme-serviceworker",
-            "version": "1.10.1",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-serviceworker.git",
-                "reference": "999d79578d34d381e0c5edff524339dd405ef6e5"
+                "reference": "96efd65743b4f69cef9ede0781bab52a1467f9a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-serviceworker/zipball/999d79578d34d381e0c5edff524339dd405ef6e5",
-                "reference": "999d79578d34d381e0c5edff524339dd405ef6e5",
+                "url": "https://api.github.com/repos/Cecilapp/theme-serviceworker/zipball/96efd65743b4f69cef9ede0781bab52a1467f9a1",
+                "reference": "96efd65743b4f69cef9ede0781bab52a1467f9a1",
                 "shasum": ""
             },
             "require": {
@@ -267,7 +267,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-serviceworker/issues",
-                "source": "https://github.com/Cecilapp/theme-serviceworker/tree/1.10.1"
+                "source": "https://github.com/Cecilapp/theme-serviceworker/tree/1.11.1"
             },
             "funding": [
                 {
@@ -275,7 +275,7 @@
                     "type": "custom"
                 },
                 {
-                    "url": "https://github.com/Narno",
+                    "url": "https://github.com/ArnaudLigny",
                     "type": "github"
                 },
                 {
@@ -283,7 +283,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-12-08T00:19:54+00:00"
+            "time": "2022-01-10T09:45:54+00:00"
         }
     ],
     "packages-dev": [],
