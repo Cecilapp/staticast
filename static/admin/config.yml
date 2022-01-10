@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: master
   squash_merges: true
+local_backend: true # https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
 publish_mode: editorial_workflow
 media_folder: "assets/"
 public_folder: "/"
