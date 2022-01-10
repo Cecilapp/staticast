@@ -18,7 +18,7 @@ collections:
     description: >
       Podcast episodes.
     folder: "content/episodes"
-    summary: "{{title}} · {{date | date('DD MMM YYYY')}} · Episode {{episode.number}} · {{episode.type}}"
+    summary: "# {{episode.number}} · {{title}} · {{date | date('DD MMM YYYY')}} · {{episode.type}}"
     create: true
     preview_path: "episodes/{{slug}}"
     fields:
