@@ -28,11 +28,29 @@
               <li class="border border-slate-300 rounded-full">
                 <a href="{{ url(p) }}#autoplay" class="transition-colors duration-150 text-primary-700 focus:shadow-outline hover:text-primary-900">
                 <div class="flex space-x-1 px-2 py-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewbox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
-                  <span class="uppercase">Play</span>
+                  <svg id="player-button-{{ p.id }}" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewbox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                  <span class="uppercase" id="player-button-text-{{ p.id }}">Play</span>
                 </div>
                 </a>
               </li>
             </ol>
+
+            <script>
+              window.addEventListener('DOMContentLoaded', (event) => {
+                const startTime = localStorage.getItem('{{ asset(p.episode.file) }}');
+                if (startTime !== null) {
+                  console.log('Resume "{{ p.title }}" at', startTime);
+                  const button = document.getElementById('player-button-{{ p.id }}');
+                  const buttonText = document.getElementById('player-button-text-{{ p.id }}');
+                  if (startTime == 'ended') {
+                    button.parentElement.className += ' text-slate-500';
+                    buttonText.innerText = 'Ended';
+                  } else {
+                    buttonText.innerText = 'Resume';
+                  }
+                }
+              });
+            </script>
+
             {%- endif ~%}
           </article>
