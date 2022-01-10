@@ -194,8 +194,9 @@ collections:
                 name: "subscribe"
                 label_singular: "Platform"
                 widget: "list"
+                add_to_top: true
                 fields:
-                  - {label: "Name", name: "name", widget: "string", required: true}
                   - {label: "Title", name: "title", widget: "string", required: true}
+                  - {label: "Name", name: "name", widget: "string", required: true}
                   - {label: "URL", name: "url", widget: "string", required: true}
                   - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
