@@ -25,7 +25,7 @@ menus:
       id: admin
       url: admin
 pagination:
-  enabled: false
+  max: 10
 podcast:
   owner:
     name: Arnaud Ligny

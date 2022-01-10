@@ -3,7 +3,7 @@ backend:
   branch: master
   squash_merges: true
 publish_mode: editorial_workflow
-media_folder: "static/"
+media_folder: "assets/"
 public_folder: "/"
 logo_url: https://cecil.app/images/cecil-logo-netlify-cms.png
 show_preview_links: true
@@ -83,12 +83,6 @@ collections:
     delete: false
     preview_path: "{{slug}}"
     files:
-      - label: "Home"
-        name: "index"
-        file: "content/index.md"
-        fields:
-          - {label: "Title", name: "title", widget: "string", default: "Home", required: true}
-          - {label: "Text", name: "body", widget: "markdown", required: true}
       - label: "About"
         name: "about"
         file: "content/about.md"
@@ -125,23 +119,6 @@ collections:
               - {label: "Format", name: "format", widget: "string", default: "j F Y", required: true}
               - {label: "Time zone", name: "timezone", widget: "string", default: "Europe/Paris", required: true}
           - {label: "Theme(s)", name: "theme", widget: "list", required: true}
-          - {label: "Icon", name: "icon", widget: "image", default: "icon.svg", required: true}
-          - label: "Assets"
-            name: assets
-            widget: "object"
-            collapsed: true
-            fields:
-              - label: "Styles"
-                name: "compile"
-                widget: "object"
-                fields:
-                  - label: "Colours"
-                    name: "variables"
-                    widget: "object"
-                    fields:
-                      - {label: "Text", name: "bodyColour", widget: "color", allowInput: true}
-                      - {label: "Link", name: "linkColour", widget: "color", allowInput: true}
-                      - {label: "Background", name: "backgroundColour", widget: "color", allowInput: true}
           - {label: "Image", name: "image", widget: "image", default: "twitter-card.png", required: false, hint: Used for social share.}
           - label: "Menus"
             name: "menus"
@@ -219,5 +196,6 @@ collections:
                 widget: "list"
                 fields:
                   - {label: "Name", name: "name", widget: "string", required: true}
+                  - {label: "Title", name: "title", widget: "string", required: true}
                   - {label: "URL", name: "url", widget: "string", required: true}
                   - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
