@@ -1,8 +1,8 @@
 {% extends 'serviceworker.js.twig' %}
 
-{% block precache %}
+{%- block precache ~%}
 // cache last 2 episodes
-{% for page in site.pages|filter(p => p.section == 'episodes')|sort_by_date|slice(0,2) %}
-urlsToCache.push('{{ url(page.episode.file) }}');
-{% endfor %}
-{% endblock %}
+  {%- for page in site.pages|filter(p => p.section == 'episodes')|sort_by_date|slice(0,2) ~%}
+urlsToCache.push('{{ asset(page.episode.file)|url }}');
+  {%- endfor ~%}
+{%- endblock ~%}
