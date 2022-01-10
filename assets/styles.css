@@ -1264,6 +1264,10 @@ audio {
     display: block;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:min-h-screen {
     min-height: 100vh;
   }
