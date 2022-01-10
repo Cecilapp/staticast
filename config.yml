@@ -13,7 +13,7 @@ date:
   timezone: Europe/Paris
 output:
   pagetypeformats:
-    section: ['html', 'rss', 'json']
+    section: [html, rss, json]
 theme:
   - podcast
   - netlify-cms
@@ -41,7 +41,7 @@ podcast:
   subscribe:
     - name: rss
       title: RSS
-      url: /episodes/rss.xml
+      url: episodes/rss.xml
       enabled: true
     - name: apple
       title: Apple Podcasts
