@@ -4,7 +4,6 @@
 
 [build.environment]
   PHP_VERSION = "7.4"
-  CECIL_VERSION = "5.79.12"
 
 [context.production.environment]
   CECIL_ENV = "production"
