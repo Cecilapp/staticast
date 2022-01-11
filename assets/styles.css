@@ -878,10 +878,6 @@ a {
   margin-bottom: 0.25rem;
 }
 
-.mb-0 {
-  margin-bottom: 0px;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -1260,8 +1256,8 @@ audio {
     order: -9999;
   }
 
-  .md\:mb-2 {
-    margin-bottom: 0.5rem;
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:mt-10 {
@@ -1270,10 +1266,6 @@ audio {
 
   .md\:mb-10 {
     margin-bottom: 2.5rem;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .md\:block {
