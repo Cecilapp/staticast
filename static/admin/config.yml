@@ -19,7 +19,7 @@ collections:
     description: >
       Podcast episodes.
     folder: "content/episodes"
-    summary: "# {{episode.number}} · {{title}} · {{date | date('DD MMM YYYY')}} · {{episode.type}}"
+    summary: "# {{episode.number}} · {{title}} · {{date | date('DD-MM-YYYY')}} · {{episode.type}}"
     create: true
     preview_path: "episodes/{{slug}}"
     fields:
@@ -30,7 +30,8 @@ collections:
         name: "episode"
         widget: "object"
         fields:
-          - {label: "MP3 file", name: "file", widget: "file", required: true}
+          - {label: "MP3 file", name: "file", widget: "file", choose_url: false, required: true}
+          - {label: "Cover image", name: "image", widget: "image", choose_url: false, required: false}
           - {label: "Season", name: "season", widget: "number", default: 0, value_type: "int", required: false}
           - {label: "Number", name: "number", widget: "number", default: 0, value_type: "int", required: false}
           - label: "Type"
