@@ -26,15 +26,15 @@
         {#- main ~#}
         <main class="px-4 md:px-14 bg-white dark:bg-black md:min-h-screen">
           <header class="mt-4 md:mt-10">
-            {% if page.type == 'homepage' %}
+            {%- if page.type == 'homepage' ~%}
             <h1 class="text-2xl md:text-3xl uppercase font-bold">
               <span class="text-primary-700">{{ site.title }}</span>
             </h1>
-            {% else %}
+            {%- else ~%}
             <div class="text-2xl md:text-3xl uppercase font-bold">
               <a href="{{ url(site.home) }}">{{ site.title }}</a>
             </div>
-            {% endif %}
+            {%- endif ~%}
             {#-<p class="text-sm text-slate-500">{{ site.podcast.author }}</p>~#}
             <p class="text-base mt-2">{{ site.description }}</p>
             {#- navigation ~#}
@@ -70,7 +70,7 @@
         <aside class="px-4 md:p-6 self-start md:order-first bg-slate-200 dark:bg-slate-900">
           {#- cover image ~#}
           <div class="pb-5 hidden md:block">
-            {% set cover = asset(site.podcast.image) %}
+            {%- set cover = asset(site.podcast.image) ~%}
             <img class="rounded-lg" src="{{ cover|url }}" alt="{{ site.title }} cover" width="{{ cover.width }}" height="{{ cover.height }}">
           </div>
           {#- subscribe in ~#}

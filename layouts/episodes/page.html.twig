@@ -1,11 +1,10 @@
 {% extends '_default/page.html.twig' %}
 
-{% block head %}
+{%- block head ~%}
 {{- parent() }}
-    <!-- Open Graph audio -->
     <meta property="og:audio" content="{{ asset(page.episode.file)|url({canonical: true}) }}" />
     <meta property="og:audio:type" content="{{ asset(page.episode.file).subtype }}" />
-{% endblock %}
+{%- endblock %}
 
 {%- block content ~%}
 {% include 'partials/episode.html.twig' with {p: page} %}

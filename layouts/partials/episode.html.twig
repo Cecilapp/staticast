@@ -29,7 +29,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/></svg>
                   </button>
                 </div>
-                <script>
+                <script>{% apply minify_js %}
                   {#- share ~#}
                   const shareButton = document.getElementById('share-button-text-{{ p.id }}');
                   if (navigator.share) {
@@ -50,7 +50,7 @@
                       audioplayer.currentTime = audioplayer.duration;
                     }
                   });
-                </script>
+                {% endapply %}</script>
               </div>
               <div class="markdown dark:markdown-invert dark:text-slate-300">
                 {{ p.content }}
@@ -72,7 +72,7 @@
                 </a>
               </li>
             </ol>
-            <script>
+            <script>{% apply minify_js %}
               window.addEventListener('DOMContentLoaded', (event) => {
                 const startTime = localStorage.getItem('{{ asset(p.episode.file) }}');
                 if (startTime !== null && startTime !== '0') {
@@ -87,6 +87,6 @@
                   }
                 }
               });
-            </script>
+            {% endapply %}</script>
             {%- endif ~%}
           </article>
