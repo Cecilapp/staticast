@@ -14,7 +14,44 @@
             </header>
             <div class="mb-2">
               {%- if page.type == 'page' ~%}
-              {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
+              <div class="flex space-x-2 flex-col md:flex-row">
+                {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
+                <div class="flex space-x-2 text-primary-700 mb-2 md:mb-0">
+                  <button class="inline-flex items-center" type="button" title="Download">
+                    <a href="{{ asset(page.episode.file)|url }}" download>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    </a>
+                  </button>
+                  <button class="inline-flex items-center" id="check-button-text-{{ p.id }}" type="button" title="Mark as read / unread">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  </button>
+                  <button class="inline-flex items-center" id="share-button-text-{{ p.id }}" type="button" title="Share this article">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/></svg>
+                  </button>
+                </div>
+                <script>
+                  {#- share ~#}
+                  const shareButton = document.getElementById('share-button-text-{{ p.id }}');
+                  shareButton.addEventListener('click', event => {
+                    if (navigator.share) {
+                      navigator.share({text: '{{ p.title }}', url: '{{ url(p) }}'}).then(() => {
+                        console.log('Thanks for sharing!');
+                      }).catch(console.error);
+                    } else {
+                      shareButton.remove();
+                    }
+                  });
+                  {#- mark as read ~#}
+                  const checkButton = document.getElementById('check-button-text-{{ p.id }}');
+                  checkButton.addEventListener('click', event => {
+                    if (audioplayer.currentTime == audioplayer.duration) {
+                      audioplayer.currentTime = 0;
+                    } else {
+                      audioplayer.currentTime = audioplayer.duration;
+                    }
+                  });
+                </script>
+              </div>
               <div class="markdown dark:markdown-invert dark:text-slate-300">
                 {{ p.content }}
               </div>
@@ -38,7 +75,7 @@
             <script>
               window.addEventListener('DOMContentLoaded', (event) => {
                 const startTime = localStorage.getItem('{{ asset(p.episode.file) }}');
-                if (startTime !== null) {
+                if (startTime !== null && startTime !== '0') {
                   console.log('Resume "{{ p.title }}" at', startTime);
                   const button = document.getElementById('player-button-{{ p.id }}');
                   const buttonText = document.getElementById('player-button-text-{{ p.id }}');
@@ -48,27 +85,6 @@
                   } else {
                     buttonText.innerText = 'Resume';
                   }
-                }
-              });
-            </script>
-            {%- else ~%}
-            {#- share button ~#}
-            <button class="flex space-x-1 md:hidden" id="share-button-text-{{ p.id }}" type="button" title="Share this article">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/></svg>
-            </button>
-            <script>
-              const shareButton = document.getElementById('share-button-text-{{ p.id }}');
-              shareButton.addEventListener('click', event => {
-                if (navigator.share) {
-                  navigator.share({
-                    text: '{{ p.title }}',
-                    url: '{{ url(p) }}',
-                  }).then(() => {
-                    console.log('Thanks for sharing!');
-                  })
-                  .catch(console.error);
-                } else {
-                  shareButton.remove();
                 }
               });
             </script>
