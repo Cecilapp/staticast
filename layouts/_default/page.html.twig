@@ -60,7 +60,7 @@
           <footer class="pt-2 mt-4 mb-6 md:mb-10 border-t border-slate-300">
             <div class="text-sm text-slate-500">
               © {{ "now"|date('Y') }} {{ site.author}} ·
-              {%- for item in site.menus.footer ~%}
+              {%- for item in site.menus.footer|default() ~%}
               <a href="{{ url(item.url) }}" class="text-slate-500">{{ item.name }}</a>
               {%- endfor ~%}
             </div>
@@ -75,7 +75,7 @@
           </div>
           {#- subscribe in ~#}
           <div class="mb-5">
-            <div class="font-medium mb-2">Subscribe in</div>
+            <div class="font-medium mb-2">{% trans %}Subscribe in{% endtrans %}</div>
             <ol class="text-sm">
               {%- set rss_icon = asset('icons/rss.png')|resize(30) ~%}
               <li>
@@ -99,7 +99,7 @@
           </div>
           {#- hosted by ~#}
           <div class="pt-4 md:pt-6 border-t border-white">
-            <div class="font-medium mb-3">Hosted by</div>
+            <div class="font-medium mb-3">{% trans %}Hosted by{% endtrans %}</div>
             {%- for hoster in site.podcast.hoster ~%}
             <div class="flex items-center space-x-4 mb-4">
               {%- set avatar = asset(hoster.avatar) ~%}

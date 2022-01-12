@@ -9,7 +9,7 @@
 {% extends '_default/page.html.twig' %}
 
 {% block content ~%}
-      <h1 class="text-lg mb-2">Available episodes</h1>
+      <h1 class="text-lg mb-2">{% trans %}Available episodes{% endtrans %}</h1>
       {%- for p in pages ~%}
       {%~ include 'partials/episode.html.twig' with {p: p} %}
       {% if not loop.last %}

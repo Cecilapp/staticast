@@ -9,6 +9,6 @@
 {% extends '_default/page.html.twig' %}
 
 {% block content ~%}
-<div class="text-lg mb-2">Last episode</div>
+<div class="text-lg mb-2">{% trans %}Last episode{% endtrans %}</div>
 {% include 'partials/episode.html.twig' with {p: pages|filter_by('section','episodes').first} %}
 {% endblock content %}
