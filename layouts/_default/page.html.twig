@@ -26,17 +26,26 @@
         {#- main ~#}
         <main class="px-4 md:px-14 bg-white dark:bg-black md:min-h-screen">
           <header class="mt-4 md:mt-10">
-            {%- if page.type == 'homepage' ~%}
-            <h1 class="text-2xl md:text-3xl uppercase font-bold">
-              <span class="text-primary-700">{{ site.title }}</span>
-            </h1>
-            {%- else ~%}
-            <div class="text-2xl md:text-3xl uppercase font-bold">
-              <a href="{{ url(site.home) }}">{{ site.title }}</a>
+            <div class="flex flex-row space-x-2">
+              <div>
+                {%- if page.type == 'homepage' ~%}
+                <h1 class="text-2xl md:text-3xl uppercase font-bold">
+                  <span class="text-primary-700">{{ site.title }}</span>
+                </h1>
+                {%- else ~%}
+                <div class="text-2xl md:text-3xl uppercase font-bold">
+                  <a href="{{ url(site.home) }}">{{ site.title }}</a>
+                </div>
+                {%- endif ~%}
+                {#-<p class="text-sm text-slate-500">{{ site.podcast.author }}</p>~#}
+                <p class="text-base mt-2">{{ site.description }}</p>
+              </div>
+              {#- cover image ~#}
+              <div class="block md:hidden">
+                {%- set cover_mobile = asset(site.podcast.image)|resize(225) ~%}
+                <img class="rounded-lg" src="{{ cover_mobile|url }}" alt="{{ site.title }} cover" width="{{ cover_mobile.width }}" height="{{ cover_mobile.height }}">
+              </div>
             </div>
-            {%- endif ~%}
-            {#-<p class="text-sm text-slate-500">{{ site.podcast.author }}</p>~#}
-            <p class="text-base mt-2">{{ site.description }}</p>
             {#- navigation ~#}
             {%- set menu = menu|default('main') ~%}
             <nav class="mt-4 mb-6">
