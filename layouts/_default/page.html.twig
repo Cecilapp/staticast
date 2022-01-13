@@ -52,8 +52,7 @@
               <ol class="flex space-x-2">
                 {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
                 <li>
-<a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm font-bold border-2 border-primary rounded-full{% if url(page) == url(item.url) %} text-slate-50 transition-colors duration-150 bg-primary focus:shadow-outline hover:brightness-90 hover:border-primary{% endif %}">{{ item.name }}</a>
-
+                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm font-bold border-2 border-primary rounded-full hover:shadow-lg hover:border-primary hover:bg-primary hover:text-slate-50{% if url(page) == url(item.url) %} text-slate-50 bg-primary{% endif %}">{{ item.name }}</a>
                 </li>
                 {%- endfor ~%}
               </ol>
