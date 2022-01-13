@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  a {
+    @apply text-primary;
+  }
+}
+
 html {
   font-size: 18px
 }
@@ -10,10 +16,4 @@ html {
 audio {
   width: 100%;
   margin: 1rem 0 1rem 0;
-}
-
-@layer base {
-  a {
-    @apply text-primary-700;
-  }
 }

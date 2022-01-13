@@ -2,7 +2,7 @@
 
 _Staticast_ is a ready to use Progressive Web App to publish your podcast, with a RSS feed ready for syndication platforms, and a user friendly CMS.
 
-<img width="1392" alt="Staticast preview" src="https://user-images.githubusercontent.com/80580/149333769-55261685-130f-4585-9ee6-e237cda3274f.png">
+![Staticast preview](https://user-images.githubusercontent.com/80580/149333769-55261685-130f-4585-9ee6-e237cda3274f.png)
 
 ## Installation
 
@@ -68,7 +68,7 @@ See the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config.
 
 ## Development
 
-_Staticast_ use Tailwind to build its style sheet.
+_Staticast_ use Tailwind CSS to build its styles sheet.
 
 ```bash
 npm install
