@@ -20,6 +20,9 @@ theme:
   - netlify
   - serviceworker
 menus:
+  main:
+    - id: episodes
+      enabled: false
   footer:
     - name: CMS
       id: admin

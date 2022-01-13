@@ -1,14 +1,1 @@
-{% set pages = site.pages.showable %}
-{% if page.pages is defined %}
-  {%- set pages = page.pages -%}
-{% endif %}
-{% if page.pagination.pages is defined %}
-  {%- set pages = page.pagination.pages -%}
-{% endif %}
-
-{% extends '_default/page.html.twig' %}
-
-{% block content ~%}
-<div class="text-lg mb-2">{% trans %}Last episode{% endtrans %}</div>
-{% include 'partials/episode.html.twig' with {p: pages|filter_by('section','episodes').first} %}
-{% endblock content %}
+{% extends 'episodes/list.html.twig' %}
