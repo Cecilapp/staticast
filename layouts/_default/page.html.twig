@@ -30,7 +30,7 @@
               <div>
                 {%- if page.type == 'homepage' ~%}
                 <h1 class="text-2xl md:text-3xl uppercase font-bold">
-                  <span class="text-primary-700">{{ site.title }}</span>
+                  <span class="text-primary">{{ site.title }}</span>
                 </h1>
                 {%- else ~%}
                 <div class="text-2xl md:text-3xl uppercase font-bold">
@@ -52,7 +52,8 @@
               <ol class="flex space-x-2">
                 {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
                 <li>
-                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm font-bold border-2 border-primary-700 rounded-full{% if url(page) == url(item.url) %} text-primary-100 transition-colors duration-150 bg-primary-700 focus:shadow-outline hover:bg-primary-900 hover:border-primary-900{% endif %}">{{ item.name }}</a>
+<a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm font-bold border-2 border-primary rounded-full{% if url(page) == url(item.url) %} text-slate-50 transition-colors duration-150 bg-primary focus:shadow-outline hover:brightness-90 hover:border-primary{% endif %}">{{ item.name }}</a>
+
                 </li>
                 {%- endfor ~%}
               </ol>
