@@ -18,7 +18,8 @@
     {%~ include 'partials/regsw.js.twig' -%}
     {%~ include 'partials/identity.html.twig' -%}
     {%- endblock ~%}
-    <meta name="theme-color" content="{{ site.manifest.theme_color }}">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="{{ site.manifest.theme_color }}">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
   </head>
   <body class="bg-slate-200 dark:bg-slate-900 dark:text-slate-300">
     <div class="container mx-auto">
@@ -28,15 +29,13 @@
           <header class="mt-4 md:mt-10">
             <div class="flex flex-row space-x-2">
               <div>
-                {%- if page.type == 'homepage' ~%}
-                <h1 class="text-2xl md:text-3xl uppercase font-bold">
-                  <span class="text-primary">{{ site.title }}</span>
-                </h1>
-                {%- else ~%}
                 <div class="text-2xl md:text-3xl uppercase font-bold">
+                {%- if page.type == 'homepage' ~%}
+                  <span class="text-primary">{{ site.title }}</span>
+                {%- else ~%}
                   <a href="{{ url(site.home) }}">{{ site.title }}</a>
-                </div>
                 {%- endif ~%}
+                </div>
                 {#-<p class="text-sm text-slate-500">{{ site.podcast.author }}</p>~#}
                 <p class="text-base mt-2">{{ site.description }}</p>
               </div>
