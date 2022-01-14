@@ -1,13 +1,14 @@
           <article class="mb-8">
             <header class="mb-1">
               <time class="text-xs text-slate-400">{{ p.date|localizeddate('long', 'none') }}</time>
+              {%- if page.type != 'page' ~%}
               <h2 class="text-2xl text-primary flex items-center">
-                {%- if page.type != 'page' ~%}
                 <a href="{{ url(p) }}">{{ p.title }}</a>
-                {%- else ~%}
+              {%- else ~%}
+              <h1 class="text-2xl text-primary flex items-center">
                 {{ p.title }}
-                {%- endif ~%}
-              </h2>
+              </h1>
+              {%- endif ~%}
               {#-{%- if p.categories is defined ~%}
               <div class="uppercase text-sm"><a href="/categories/{{ p.categories[0] }}">{{ p.categories[0] }}</a></div>
               {%- endif ~%}~#}
