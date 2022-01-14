@@ -68,7 +68,10 @@ See the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config.
 
 ## Development
 
-_Staticast_ use Tailwind CSS to build its styles sheet.
+_Staticast_ use Tailwind CSS so you can customize the stylesheet with the following files:
+
+- `tailwind.config.js`
+- `tailwind.css`
 
 ```bash
 npm install
