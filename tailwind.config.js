@@ -1,7 +1,6 @@
 module.exports = {
   content: [
     './layouts/**/*.html.twig',
-    './themes/**/layouts/**/*.html.twig',
   ],
   theme: {
     container: {
@@ -15,7 +14,6 @@ module.exports = {
     extend: {
       colors: {
         primary: '#7E4EA3',
-        secondary: '#E2E8F0',
       },
     },
   },
