@@ -40,7 +40,7 @@ Example (`1.md`):
 ---
 title: "Episode #1"
 episode:
-  file: /episode-1.mp3
+  file: episode-1.mp3
 ---
 Short description of the episode.
 <!-- break -->
@@ -71,7 +71,7 @@ See the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config.
 _Staticast_ use Tailwind CSS so you can customize the stylesheet with the following files:
 
 - `tailwind.config.js`
-- `tailwind.css`
+- `assets/tailwind.css`
 
 ```bash
 npm install
@@ -81,6 +81,6 @@ php cecil.phar serve -v --config=config_dev.yml
 
 ## License
 
-Staticast is a free software distributed under the terms of the MIT license.
+_Staticast_ is a free software distributed under the terms of the MIT license.
 
 © [Arnaud Ligny](https://arnaudligny.fr)
