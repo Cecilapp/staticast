@@ -12,7 +12,7 @@
       {{- asset('styles.css')|inline ~}}
     </style>
     {%- else ~%}
-    <link rel="stylesheet" href="{{ asset('styles.css',{minify:false,fingerprint:false}) }}" />
+    <link rel="stylesheet" href="{{ asset('styles.css', {minify: false, fingerprint: false}) }}" />
     {%- endif ~%}
     <link rel="manifest" href="{{ url('manifest') }}">
     {%~ include 'partials/regsw.js.twig' -%}
