@@ -12,6 +12,7 @@ date:
   timezone: Europe/Paris
 output:
   pagetypeformats:
+    homepage: html
     section: [html, rss, json]
 theme:
   - podcast
