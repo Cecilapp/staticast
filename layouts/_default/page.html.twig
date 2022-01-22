@@ -79,7 +79,12 @@
           {#- cover image ~#}
           <div class="pb-5 hidden md:block">
             {%- set cover = asset(site.podcast.image) ~%}
-            <img class="rounded-lg" src="{{ cover|url }}" alt="{{ site.title }} cover" width="{{ cover.width }}" height="{{ cover.height }}">
+            {%- set cover_title = site.title ~ ' cover' ~%}
+            {%- if page.episode.image is defined ~%}
+              {%- set cover = asset(page.episode.image) ~%}
+              {%- set cover_title = page.title ~ ' cover' ~%}
+            {%- endif ~%}
+            <img class="rounded-lg" src="{{ cover|url }}" alt="{{ cover_title }}" width="{{ cover.width }}" height="{{ cover.height }}">
           </div>
           {#- subscribe in ~#}
           <div class="mb-5">
