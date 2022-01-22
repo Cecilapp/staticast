@@ -3,8 +3,8 @@
 {%- if page.episode.image is defined -%}
 	{%- set cover_image = page.episode.image -%}
 	{%- set cover_title = page.title ~ ' cover' -%}
+  {%- set image = cover_image -%}
 {%- endif -%}
-{%- set image = cover_image -%}
 {%- set cover = asset(cover_image) -%}
 {%- set cover_mobile = asset(cover_image)|resize(225) -%}
 <!DOCTYPE html>
