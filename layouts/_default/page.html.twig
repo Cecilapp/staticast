@@ -1,3 +1,12 @@
+{%- set cover_image = site.podcast.image -%}
+{%- set cover_title = site.title ~ ' cover' -%}
+{%- if page.episode.image is defined -%}
+	{%- set cover_image = page.episode.image -%}
+	{%- set cover_title = page.title ~ ' cover' -%}
+{%- endif -%}
+{%- set image = cover_image -%}
+{%- set cover = asset(cover_image) -%}
+{%- set cover_mobile = asset(cover_image)|resize(225) -%}
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
   <head>
@@ -41,14 +50,6 @@
               </div>
               {#- cover image ~#}
               <div class="block md:hidden">
-                {%- set cover_image = site.podcast.image ~%}
-                {%- set cover_title = site.title ~ ' cover' ~%}
-                {%- if page.episode.image is defined ~%}
-                  {%- set cover_image = page.episode.image ~%}
-                  {%- set cover_title = page.title ~ ' cover' ~%}
-                {%- endif ~%}
-                {%- set cover = asset(cover_image) ~%}
-                {%- set cover_mobile = asset(cover_image)|resize(225) ~%}
                 <img class="rounded-lg" src="{{ cover_mobile|url }}" alt="{{ cover_title }} cover" width="{{ cover_mobile.width }}" height="{{ cover_mobile.height }}">
               </div>
             </div>
