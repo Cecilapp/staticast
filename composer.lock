@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5e5cf63bfd2574fec25d528252f05a8",
+    "content-hash": "af0db768df01a202f2611dd381146524",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -187,16 +187,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "1.13.0",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "2d5f0552f48e648e9db61d94d9c1e78503a7255c"
+                "reference": "cdfb3f511ce6671786010d2fd291a015434f19fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/2d5f0552f48e648e9db61d94d9c1e78503a7255c",
-                "reference": "2d5f0552f48e648e9db61d94d9c1e78503a7255c",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/cdfb3f511ce6671786010d2fd291a015434f19fc",
+                "reference": "cdfb3f511ce6671786010d2fd291a015434f19fc",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +221,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-podcast/issues",
-                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.13.0"
+                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.13.1"
             },
             "funding": [
                 {
@@ -237,7 +237,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-01-11T00:18:24+00:00"
+            "time": "2022-01-22T01:16:18+00:00"
         },
         {
             "name": "cecil/theme-serviceworker",

@@ -12,8 +12,8 @@
     }
   ],
   "require": {
-    "cecil/theme-podcast": "^1.11",
-    "cecil/theme-serviceworker": "^1.10",
+    "cecil/theme-podcast": "^1.13",
+    "cecil/theme-serviceworker": "^1.11",
     "cecil/theme-netlify": "^1.2",
     "cecil/theme-netlifycms": "^1.5"
   },
