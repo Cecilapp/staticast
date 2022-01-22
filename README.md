@@ -2,7 +2,7 @@
 
 _Staticast_ is a ready to use Progressive Web App to publish your podcast, with a RSS feed ready for syndication platforms, and a user friendly CMS.
 
-![Staticast preview](https://user-images.githubusercontent.com/80580/150656228-4e7b08e2-b3f3-4c54-9bb1-818260e88e19.png)
+[![Staticast preview](https://user-images.githubusercontent.com/80580/150656228-4e7b08e2-b3f3-4c54-9bb1-818260e88e19.png)](https://staticast.cecil.app)
 
 ## Installation
 
