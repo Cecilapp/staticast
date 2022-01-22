@@ -41,8 +41,15 @@
               </div>
               {#- cover image ~#}
               <div class="block md:hidden">
-                {%- set cover_mobile = asset(site.podcast.image)|resize(225) ~%}
-                <img class="rounded-lg" src="{{ cover_mobile|url }}" alt="{{ site.title }} cover" width="{{ cover_mobile.width }}" height="{{ cover_mobile.height }}">
+                {%- set cover_image = site.podcast.image ~%}
+                {%- set cover_title = site.title ~ ' cover' ~%}
+                {%- if page.episode.image is defined ~%}
+                  {%- set cover_image = page.episode.image ~%}
+                  {%- set cover_title = page.title ~ ' cover' ~%}
+                {%- endif ~%}
+                {%- set cover = asset(cover_image) ~%}
+                {%- set cover_mobile = asset(cover_image)|resize(225) ~%}
+                <img class="rounded-lg" src="{{ cover_mobile|url }}" alt="{{ cover_title }} cover" width="{{ cover_mobile.width }}" height="{{ cover_mobile.height }}">
               </div>
             </div>
             {#- navigation ~#}
@@ -78,12 +85,6 @@
         <aside class="px-4 md:p-6 self-start md:order-first bg-slate-200 dark:bg-slate-900">
           {#- cover image ~#}
           <div class="pb-5 hidden md:block">
-            {%- set cover = asset(site.podcast.image) ~%}
-            {%- set cover_title = site.title ~ ' cover' ~%}
-            {%- if page.episode.image is defined ~%}
-              {%- set cover = asset(page.episode.image) ~%}
-              {%- set cover_title = page.title ~ ' cover' ~%}
-            {%- endif ~%}
             <img class="rounded-lg" src="{{ cover|url }}" alt="{{ cover_title }}" width="{{ cover.width }}" height="{{ cover.height }}">
           </div>
           {#- subscribe in ~#}
