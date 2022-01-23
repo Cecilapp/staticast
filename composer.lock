@@ -187,16 +187,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "1.13.2",
+            "version": "1.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "16e3b66a557a003c533c903a9f84089673ee6a82"
+                "reference": "8fd78b990247b1df6249166d51b23f2f53d2cea3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/16e3b66a557a003c533c903a9f84089673ee6a82",
-                "reference": "16e3b66a557a003c533c903a9f84089673ee6a82",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/8fd78b990247b1df6249166d51b23f2f53d2cea3",
+                "reference": "8fd78b990247b1df6249166d51b23f2f53d2cea3",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +221,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-podcast/issues",
-                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.13.2"
+                "source": "https://github.com/Cecilapp/theme-podcast/tree/1.13.3"
             },
             "funding": [
                 {
@@ -237,7 +237,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-01-22T23:09:15+00:00"
+            "time": "2022-01-23T18:39:55+00:00"
         },
         {
             "name": "cecil/theme-serviceworker",

@@ -75,7 +75,7 @@
             </ol>
             <script>{% apply minify_js %}
               window.addEventListener('DOMContentLoaded', (event) => {
-                const startTime = sessionStorage.getItem('{{ asset(p.episode.file) }}');
+                const startTime = localStorage.getItem('{{ asset(p.episode.file) }}');
                 if (startTime !== null && startTime !== '0') {
                   console.log('Resume "{{ p.title }}" at', startTime);
                   const button = document.getElementById('player-button-{{ p.id }}');
