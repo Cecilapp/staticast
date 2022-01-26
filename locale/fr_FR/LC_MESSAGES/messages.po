@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-01-12 01:05+0100\n"
-"PO-Revision-Date: 2022-01-12 01:05+0100\n"
+"POT-Creation-Date: 2022-01-26 18:35+0100\n"
+"PO-Revision-Date: 2022-01-26 18:36+0100\n"
 "Last-Translator: Arnaud Ligny <arnaud@ligny.org>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -10,46 +10,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.3\n"
-"X-Poedit-Basepath: ../../../layouts\n"
+"X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-0: layouts\n"
+"X-Poedit-SearchPath-1: themes\n"
 
-#: _default/page.html.twig:78
+#: layouts/_default/page.html.twig:93
 msgid "Subscribe in"
 msgstr "Abonnez-vous"
 
-#: _default/page.html.twig:102
+#: layouts/_default/page.html.twig:117
 msgid "Hosted by"
 msgstr "Hébergé par"
 
-#: episodes/list.html.twig:12
+#: layouts/episodes/list.html.twig:12
 msgid "Available episodes"
 msgstr "Épisodes disponibles"
 
-#: index.html.twig:12
-msgid "Last episode"
-msgstr "Dernier épisode"
-
-#: partials/episode.html.twig:20
+#: layouts/partials/episode.html.twig:21
 msgid "Download"
 msgstr "Télécharger"
 
-#: partials/episode.html.twig:25
+#: layouts/partials/episode.html.twig:26
 msgid "Mark as read / unread"
 msgstr "Marquer comme lu / non lu"
 
-#: partials/episode.html.twig:28
+#: layouts/partials/episode.html.twig:29
 msgid "Share this episode"
 msgstr "Partager cet épisode"
 
-#: partials/episode.html.twig:70
+#: layouts/partials/episode.html.twig:71
 msgid "Play"
-msgstr "Lecture"
+msgstr "Lire"
 
-#: partials/episode.html.twig:84
+#: layouts/partials/episode.html.twig:85
 msgid "Ended"
 msgstr "Terminé"
 
-#: partials/episode.html.twig:86
+#: layouts/partials/episode.html.twig:87
 msgid "Resume"
 msgstr "Reprendre"
+
+#: themes/podcast/layouts/partials/audioplayer.html.twig:9
+msgid "Download file"
+msgstr "Télécharger le fichier"
+
+#: themes/podcast/layouts/partials/audioplayer.html.twig:14
+msgid "Play in new window"
+msgstr "Lire dans une nouvelle fenêtre"
+
+#~ msgid "Last episode"
+#~ msgstr "Dernier épisode"
