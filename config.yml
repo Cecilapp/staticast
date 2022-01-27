@@ -8,11 +8,6 @@ baseurl: /
 canonicalurl: true
 image: twitter-card.png
 language: en
-languages:
-  - code: fr
-    locale: fr_FR
-    config:
-      description: Ceci est une démo de Staticast, le moyen le plus simple de publier votre podcast 🎙️.
 date:
   timezone: Europe/Paris
 output:
