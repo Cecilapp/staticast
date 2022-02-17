@@ -91,7 +91,6 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string", default: "About", required: true}
           - {label: "Text", name: "body", widget: "markdown", required: true}
-          - {label: "Menu", name: "menu", widget: "string", default: "main", required: true}
   - label: "Settings"
     name: "settings"
     description: >
