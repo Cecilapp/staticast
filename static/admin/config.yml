@@ -26,14 +26,13 @@ collections:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false, required: true}
       - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Image", name: "image", widget: "image", choose_url: false, required: false, hint: "Used for social share (recommended size: 800x418px)."}
       - label: "Episode"
         name: "episode"
         widget: "object"
         fields:
-          - {label: "MP3 file", name: "file", widget: "file", choose_url: false, required: true}
-          - {label: "Cover image", name: "image", widget: "image", choose_url: false, required: false}
-          - {label: "Season", name: "season", widget: "number", default: 0, value_type: "int", required: false}
-          - {label: "Number", name: "number", widget: "number", default: 0, value_type: "int", required: false}
+          - {label: "Audio file", name: "file", widget: "file", choose_url: false, required: true, hint: "(recommended format: aac, m4a, mp3, ogg, wav)."}
+          - {label: "Cover image", name: "image", widget: "image", choose_url: false, required: false, hint: "(recommended size: 1400x1400px)."}
           - label: "Type"
             name: "type"
             widget: "select"
@@ -41,28 +40,28 @@ collections:
               - { label: "Full", value: "full" }
               - { label: "Trailer", value: "trailer" }
               - { label: "Bonus", value: "bonus" }
-            default: ["full"]
+            default: "full"
             required: false
+          - {label: "Number", name: "number", widget: "number", value_type: "int", min: 1, required: false, hint: "If you would like your episodes to be ordered. Episode number is optional for episodic shows, but is mandatory for serial shows."}
+          - {label: "Season", name: "season", widget: "number", value_type: "int", min: 1, required: false, hint: "If this episode is within a season then set the season number."}
           - label: "Explicit"
             name: "explicit"
             widget: "select"
             options:
               - { label: "No", value: "no" }
               - { label: "Yes", value: "yes" }
-            default: ["no"]
+            default: "no"
             required: false
-            hint: >
-              Explicit content warning: drugs, inflammatory speech, profanity, sexual references/depictions, violence, etc.
+            hint: "Explicit content warning: drugs, inflammatory speech, profanity, sexual references/depictions, violence, etc."
           - label: "Block"
             name: "block"
             widget: "select"
             options:
               - { label: "No", value: "no" }
               - { label: "Yes", value: "yes" }
-            default: ["no"]
+            default: "no"
             required: false
-            hint: >
-              If you want to remove your show from Apple Podcasts and Google Podcasts platforms.
+            hint: "If you want to remove your show from Apple Podcasts and Google Podcasts platforms."
     sortable_fields: ['title', 'date', 'episode.number']
     view_filters:
       - label: "Full"
@@ -121,7 +120,7 @@ collections:
               - {label: "Format", name: "format", widget: "string", default: "j F Y", required: true}
               - {label: "Time zone", name: "timezone", widget: "string", default: "Europe/Paris", required: true}
           - {label: "Theme(s)", name: "theme", widget: "list", required: true}
-          - {label: "Image", name: "image", widget: "image", default: "twitter-card.png", required: false, hint: Used for social share.}
+          - {label: "Image", name: "image", widget: "image", default: "twitter-card.png", required: false, hint: "Used for social share (recommended size: 800x418px)."}
           - label: "Menus"
             name: "menus"
             widget: "object"
@@ -153,8 +152,7 @@ collections:
                 fields:
                   - {label: "Name", name: "name", widget: "string", required: true}
                   - {label: "Email", name: "email", widget: "string", required: true}
-                hint: >
-                  Required to add the podcast to Apple Podcasts or Google Podcasts platforms.
+                hint: "Required to add the podcast to Apple Podcasts or Google Podcasts platforms."
               - {label: "Cover image", name: "image", widget: "image", required: true}
               - {label: "Author", name: "author", widget: "string", required: false}
               - label: "Categories"
@@ -163,15 +161,14 @@ collections:
                 multiple: true
                 options: ["Arts", "Business", "Comedy", "Education", "Fiction", "Government", "History", "Health & Fitness", "Kids & Family", "Leisure", "Music", "News", "Religion & Spirituality", "Science", "Society & Culture", "Sports", "Technology", "True Crime", "TV & Film"]
                 required: false
-                hint: >
-                  The general topic of the podcast to be shown in the Search results.
+                hint: "The general topic of the podcast to be shown in the Search results."
               - label: "Type"
                 name: "type"
                 widget: "select"
                 options:
                   - { label: "Episodic", value: "episodic" }
                   - { label: "Serial", value: "serial" }
-                default: ["episodic"]
+                default: "episodic"
                 required: false
               - label: "Explicit"
                 name: "explicit"
@@ -179,20 +176,18 @@ collections:
                 options:
                   - { label: "No", value: "no" }
                   - { label: "Yes", value: "yes" }
-                default: ["no"]
+                default: "no"
                 required: false
-                hint: >
-                  Explicit content warning: drugs, inflammatory speech, profanity, sexual references/depictions, violence, etc.
+                hint: "Explicit content warning: drugs, inflammatory speech, profanity, sexual references/depictions, violence, etc."
               - label: "Block"
                 name: "block"
                 widget: "select"
                 options:
                   - { label: "No", value: "no" }
                   - { label: "Yes", value: "yes" }
-                default: ["no"]
+                default: "no"
                 required: false
-                hint: >
-                  If you want to remove your show from Apple Podcasts and Google Podcasts platforms.
+                hint: "If you want to remove your show from Apple Podcasts and Google Podcasts platforms."
               - {label: "New feed URL", name: "newfeedurl", widget: "string", required: false, hint: "Only if you move your feed."}
               - label: "Platforms"
                 name: "subscribe"
