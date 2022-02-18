@@ -78,6 +78,10 @@ defaultpages:
     output: js
 netlify:
   redirects:
+    - from: /episodes
+      to: /
+      status: 301
+      force: true
     - from: https://staticast-demo.netlify.app/*
       to: https://staticast-demo.cecil.app/:splat
       status: 301
