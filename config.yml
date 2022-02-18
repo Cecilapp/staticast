@@ -78,8 +78,8 @@ defaultpages:
     output: js
 netlify:
   redirects:
-    - from: episodes/
-      to: /
+    - from: "episodes/"
+      to: "/"
       status: 301
       force: true
     - from: https://staticast-demo.netlify.app/*
