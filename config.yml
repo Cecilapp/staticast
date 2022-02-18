@@ -78,7 +78,7 @@ defaultpages:
     output: js
 netlify:
   redirects:
-    - from: /episodes
+    - from: episodes/
       to: /
       status: 301
       force: true
