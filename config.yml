@@ -38,9 +38,6 @@ podcast:
   categories:
     - Technology
   type: episodic
-  explicit: "no"
-  block: "no"
-  newfeedurl: ""
   subscribe:
     - name: apple
       title: Apple Podcasts
