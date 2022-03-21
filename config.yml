@@ -9,6 +9,7 @@ canonicalurl: true
 image: twitter-card.png
 language: en
 date:
+  format: j F Y
   timezone: Europe/Paris
 output:
   pagetypeformats:
