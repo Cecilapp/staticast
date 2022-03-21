@@ -76,7 +76,7 @@ _Staticast_ use Tailwind CSS so you can customize the stylesheet with the follow
 ```bash
 npm install
 npx tailwindcss -i ./assets/tailwind.css -o ./assets/styles.css --watch
-php cecil.phar serve -v --config=config_dev.yml
+php cecil.phar serve -v --config=config/dev.yml
 ```
 
 ## License
