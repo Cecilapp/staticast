@@ -132,7 +132,7 @@ collections:
                 - {label: "Identifier", name: "id", widget: "string", required: true}
                 - {label: "Name", name: "name", widget: "string", required: true}
                 - {label: "URL", name: "url", widget: "string"}
-                - {label: "Position", name: "weight", widget: "number"}
+                - {label: "Position", name: "weight", widget: "number", required: false}
           - label: "Pagination"
             name: "pagination"
             widget: "object"
