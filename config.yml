@@ -1,34 +1,35 @@
+output:
+  pagetypeformats:
+    homepage: html
+    section:
+      - html
+      - rss
+      - json
+defaultpages:
+  serviceworker:
+    path: serviceworker
+    layout: sw
+    output: js
 title: Staticast
 baseline: The easiest way to publish your podcast
 description: This is a demo of Staticast, the easiest way to publish your 🎙️ podcast.
-keywords: [Podcast, Cecil, Static Site Generator]
+keywords:
+  - Podcast
+  - Cecil
+  - Static Site Generator
 author: Arnaud Ligny
 copyright: Arnaud Ligny
 baseurl: /
 canonicalurl: true
-image: twitter-card.png
 language: en
 date:
   timezone: Europe/Paris
-output:
-  pagetypeformats:
-    homepage: html
-    section: [html, rss, json]
+  format: j F Y
 theme:
   - podcast
   - netlify-cms
   - netlify
   - serviceworker
-menus:
-  main:
-    - id: episodes
-      enabled: false
-  footer:
-    - name: CMS
-      id: admin
-      url: admin
-pagination:
-  max: 10
 podcast:
   owner:
     name: Arnaud Ligny
@@ -55,6 +56,12 @@ podcast:
     - name: Arnaud Ligny
       avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
       twitter: "@arnaudligny"
+netlify:
+  redirects:
+    - from: https://staticast-demo.netlify.app/*
+      to: https://staticast-demo.cecil.app/:splat
+      status: 301
+      force: true
 manifest:
   background_color: "#7E4EA3"
   theme_color: "#7E4EA3"
@@ -68,18 +75,14 @@ manifest:
   shortcuts: true
 serviceworker:
   enabled: true
-defaultpages:
-  serviceworker:
-    path: serviceworker
-    layout: sw # override default layout
-    output: js
-netlify:
-  redirects:
-    #- from: "episodes/"
-    #  to: "/"
-    #  status: 301
-    #  force: true
-    - from: https://staticast-demo.netlify.app/*
-      to: https://staticast-demo.cecil.app/:splat
-      status: 301
-      force: true
+image: twitter-card.png
+menus:
+  main:
+    - id: episodes
+      enabled: false
+  footer:
+    - name: CMS
+      id: admin
+      url: admin
+pagination:
+  max: 10
