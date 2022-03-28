@@ -1,5 +1,5 @@
           <article class="mb-8">
-            <header class="mb-1">
+            <header class="mb-1 bg-white{% if page.type == 'page' %} sticky top-0{% endif %}">
               <time class="text-xs text-slate-400">{{ p.date|localizeddate('long', 'none') }}</time>
               {%- if page.type != 'page' ~%}
               <h2 class="text-2xl text-primary flex items-center">
@@ -15,9 +15,9 @@
             </header>
             <div class="mb-2">
               {%- if page.type == 'page' ~%}
-              <div class="flex space-x-2 flex-col md:flex-row">
+              <div class="flex space-x-2 flex-col md:flex-row bg-white sticky top-14">
                 {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
-                <div class="flex space-x-2 text-primary mb-2 md:mb-0">
+                <div class="flex space-x-2 text-primary mb-2 md:mb-0 self-center">
                   <button class="inline-flex items-center" type="button" title="{% trans %}Download{% endtrans %}">
                     <a href="{{ asset(page.episode.file)|url }}" download>
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
