@@ -60,15 +60,14 @@ manifest:
   background_color: "#7E4EA3"
   theme_color: "#7E4EA3"
   icons:
-    - src: manifest/icon-192x192.png
-      sizes: 192x192
-      type: image/png
-    - src: manifest/icon-512x512.png
-      sizes: 512x512
-      type: image/png
+    - manifest/icon-192x192.png
+    - manifest/icon-512x512.png
   shortcuts: true
 serviceworker:
   enabled: true
+  precache:
+    - manifest/icon-192x192.png
+    - manifest/icon-512x512.png
 defaultpages:
   serviceworker:
     path: serviceworker
