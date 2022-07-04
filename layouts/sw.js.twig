@@ -3,8 +3,12 @@
 {%- block precache ~%}
 // cache cover
 urlsToCache.push('{{ asset(site.podcast.image)|url }}');
+urlsToCache.push('{{ asset(site.podcast.image)|resize(225)|url }}');
 // cache last 2 episodes
   {%- for page in site.pages|filter(p => p.section == 'episodes')|sort_by_date|slice(0,2) ~%}
 urlsToCache.push('{{ asset(page.episode.file)|url }}');
+    {%- if page.episode.image|default('') ~%}
+urlsToCache.push('{{ asset(page.episode.image)|url }}');
+    {%- endif ~%}
   {%- endfor ~%}
 {%- endblock ~%}
