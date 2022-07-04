@@ -19,7 +19,7 @@ theme:
   - podcast
   - netlify-cms
   - netlify
-  - serviceworker
+  - pwa
 menus:
   main:
     - id: episodes
