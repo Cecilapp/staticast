@@ -18,7 +18,7 @@ collections:
     label_singular: "Episode"
     description: >
       Podcast episodes.
-    folder: "content/episodes"
+    folder: "pages/episodes"
     summary: "{{episode.number | default(' ')}} {{title}} · {{date | date('DD-MM-YYYY')}}"
     create: true
     preview_path: "episodes/{{slug}}"
@@ -86,7 +86,7 @@ collections:
     files:
       - label: "About"
         name: "about"
-        file: "content/about.md"
+        file: "pages/about.md"
         fields:
           - {label: "Title", name: "title", widget: "string", default: "About", required: true}
           - {label: "Text", name: "body", widget: "markdown", required: true}

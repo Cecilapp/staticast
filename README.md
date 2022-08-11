@@ -32,7 +32,7 @@ This will setup everything needed for running your website, with a CMS:
 ### Create a new episode
 
 1. Add the MP3 file in `assets` directory
-2. Create a new Markdown file in `content/episodes`
+2. Create a new Markdown file in `pages/episodes`
 
 Example (`1.md`):
 
