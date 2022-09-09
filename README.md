@@ -72,8 +72,8 @@ Edit the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config
 
 _Staticast_ use [Tailwind CSS](https://tailwindcss.com) so you can customize the stylesheet with the following files:
 
-- Configuration: `tailwind.config.js`
-- CSS: `assets/tailwind.css`
+- Configuration: [`tailwind.config.js`](tailwind.config.js)
+- CSS: [`assets/tailwind.css`](assets/tailwind.css)
 
 ```bash
 # install
