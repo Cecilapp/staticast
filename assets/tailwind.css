@@ -1,19 +1,16 @@
-/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 18px
+  }
   a {
     @apply text-primary;
   }
-}
-
-html {
-  font-size: 18px
-}
-
-audio {
-  width: 100%;
-  margin: 1rem 0 1rem 0;
+  audio {
+    width: 100%;
+    margin: 1rem 0 1rem 0;
+  }
 }
