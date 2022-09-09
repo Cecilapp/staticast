@@ -1,6 +1,6 @@
           <article class="mb-8">
             <header class="mb-1 bg-white dark:bg-black{% if page.type == 'page' %} sticky top-0{% endif %}">
-              <time class="text-xs text-slate-400">{{ p.date|localizeddate('long', 'none') }}</time>
+              <time class="text-xs text-slate-400">{{ p.date|format_date('long') }}</time>
               {%- if page.type != 'page' ~%}
               <h2 class="text-2xl text-primary flex items-center">
                 <a href="{{ url(p) }}">{{ p.title }}</a>
