@@ -1,6 +1,6 @@
 /* Tailwind CSS */
 
-/* ! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -355,13 +355,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -603,8 +596,22 @@ a {
   font-weight: 600;
 }
 
+.markdown :where(a strong):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+}
+
+.markdown :where(blockquote strong):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+}
+
+.markdown :where(thead th strong):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+}
+
 .markdown :where(ol):not(:where([class~="not-markdown"] *)) {
   list-style-type: decimal;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
   padding-left: 1.625em;
 }
 
@@ -646,6 +653,8 @@ a {
 
 .markdown :where(ul):not(:where([class~="not-markdown"] *)) {
   list-style-type: disc;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
   padding-left: 1.625em;
 }
 
@@ -696,6 +705,7 @@ a {
 
 .markdown :where(h1 strong):not(:where([class~="not-markdown"] *)) {
   font-weight: 900;
+  color: inherit;
 }
 
 .markdown :where(h2):not(:where([class~="not-markdown"] *)) {
@@ -709,6 +719,7 @@ a {
 
 .markdown :where(h2 strong):not(:where([class~="not-markdown"] *)) {
   font-weight: 800;
+  color: inherit;
 }
 
 .markdown :where(h3):not(:where([class~="not-markdown"] *)) {
@@ -722,6 +733,7 @@ a {
 
 .markdown :where(h3 strong):not(:where([class~="not-markdown"] *)) {
   font-weight: 700;
+  color: inherit;
 }
 
 .markdown :where(h4):not(:where([class~="not-markdown"] *)) {
@@ -734,6 +746,12 @@ a {
 
 .markdown :where(h4 strong):not(:where([class~="not-markdown"] *)) {
   font-weight: 700;
+  color: inherit;
+}
+
+.markdown :where(img):not(:where([class~="not-markdown"] *)) {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .markdown :where(figure > *):not(:where([class~="not-markdown"] *)) {
@@ -763,7 +781,33 @@ a {
 }
 
 .markdown :where(a code):not(:where([class~="not-markdown"] *)) {
-  color: var(--tw-prose-links);
+  color: inherit;
+}
+
+.markdown :where(h1 code):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+}
+
+.markdown :where(h2 code):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+  font-size: 0.875em;
+}
+
+.markdown :where(h3 code):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+  font-size: 0.9em;
+}
+
+.markdown :where(h4 code):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+}
+
+.markdown :where(blockquote code):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
+}
+
+.markdown :where(thead th code):not(:where([class~="not-markdown"] *)) {
+  color: inherit;
 }
 
 .markdown :where(pre):not(:where([class~="not-markdown"] *)) {
@@ -837,10 +881,15 @@ a {
 
 .markdown :where(tbody td):not(:where([class~="not-markdown"] *)) {
   vertical-align: baseline;
-  padding-top: 0.5714286em;
-  padding-right: 0.5714286em;
-  padding-bottom: 0.5714286em;
-  padding-left: 0.5714286em;
+}
+
+.markdown :where(tfoot):not(:where([class~="not-markdown"] *)) {
+  border-top-width: 1px;
+  border-top-color: var(--tw-prose-th-borders);
+}
+
+.markdown :where(tfoot td):not(:where([class~="not-markdown"] *)) {
+  vertical-align: top;
 }
 
 .markdown {
@@ -885,11 +934,6 @@ a {
   margin-bottom: 1.25em;
 }
 
-.markdown :where(img):not(:where([class~="not-markdown"] *)) {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
 .markdown :where(video):not(:where([class~="not-markdown"] *)) {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -898,14 +942,6 @@ a {
 .markdown :where(figure):not(:where([class~="not-markdown"] *)) {
   margin-top: 2em;
   margin-bottom: 2em;
-}
-
-.markdown :where(h2 code):not(:where([class~="not-markdown"] *)) {
-  font-size: 0.875em;
-}
-
-.markdown :where(h3 code):not(:where([class~="not-markdown"] *)) {
-  font-size: 0.9em;
 }
 
 .markdown :where(li):not(:where([class~="not-markdown"] *)) {
@@ -921,24 +957,24 @@ a {
   padding-left: 0.375em;
 }
 
-.markdown > :where(ul > li p):not(:where([class~="not-markdown"] *)) {
+.markdown :where(.markdown > ul > li p):not(:where([class~="not-markdown"] *)) {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
 
-.markdown > :where(ul > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(.markdown > ul > li > *:first-child):not(:where([class~="not-markdown"] *)) {
   margin-top: 1.25em;
 }
 
-.markdown > :where(ul > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(.markdown > ul > li > *:last-child):not(:where([class~="not-markdown"] *)) {
   margin-bottom: 1.25em;
 }
 
-.markdown > :where(ol > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(.markdown > ol > li > *:first-child):not(:where([class~="not-markdown"] *)) {
   margin-top: 1.25em;
 }
 
-.markdown > :where(ol > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(.markdown > ol > li > *:last-child):not(:where([class~="not-markdown"] *)) {
   margin-bottom: 1.25em;
 }
 
@@ -971,19 +1007,171 @@ a {
   padding-right: 0;
 }
 
-.markdown :where(tbody td:first-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(tbody td, tfoot td):not(:where([class~="not-markdown"] *)) {
+  padding-top: 0.5714286em;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+.markdown :where(tbody td:first-child, tfoot td:first-child):not(:where([class~="not-markdown"] *)) {
   padding-left: 0;
 }
 
-.markdown :where(tbody td:last-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(tbody td:last-child, tfoot td:last-child):not(:where([class~="not-markdown"] *)) {
   padding-right: 0;
 }
 
-.markdown > :where(:first-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(.markdown > :first-child):not(:where([class~="not-markdown"] *)) {
   margin-top: 0;
 }
 
-.markdown > :where(:last-child):not(:where([class~="not-markdown"] *)) {
+.markdown :where(.markdown > :last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 0;
+}
+
+.markdown-sm :where(.markdown > ul > li p):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0.5714286em;
+  margin-bottom: 0.5714286em;
+}
+
+.markdown-sm :where(.markdown > ul > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.1428571em;
+}
+
+.markdown-sm :where(.markdown > ul > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.1428571em;
+}
+
+.markdown-sm :where(.markdown > ol > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.1428571em;
+}
+
+.markdown-sm :where(.markdown > ol > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.1428571em;
+}
+
+.markdown-sm :where(.markdown > :first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0;
+}
+
+.markdown-sm :where(.markdown > :last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 0;
+}
+
+.markdown-base :where(.markdown > ul > li p):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.markdown-base :where(.markdown > ul > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.25em;
+}
+
+.markdown-base :where(.markdown > ul > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.markdown-base :where(.markdown > ol > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.25em;
+}
+
+.markdown-base :where(.markdown > ol > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.25em;
+}
+
+.markdown-base :where(.markdown > :first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0;
+}
+
+.markdown-base :where(.markdown > :last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 0;
+}
+
+.markdown-lg :where(.markdown > ul > li p):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0.8888889em;
+  margin-bottom: 0.8888889em;
+}
+
+.markdown-lg :where(.markdown > ul > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.markdown-lg :where(.markdown > ul > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.markdown-lg :where(.markdown > ol > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.markdown-lg :where(.markdown > ol > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.markdown-lg :where(.markdown > :first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0;
+}
+
+.markdown-lg :where(.markdown > :last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 0;
+}
+
+.markdown-xl :where(.markdown > ul > li p):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.markdown-xl :where(.markdown > ul > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.2em;
+}
+
+.markdown-xl :where(.markdown > ul > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.2em;
+}
+
+.markdown-xl :where(.markdown > ol > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.2em;
+}
+
+.markdown-xl :where(.markdown > ol > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.2em;
+}
+
+.markdown-xl :where(.markdown > :first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0;
+}
+
+.markdown-xl :where(.markdown > :last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 0;
+}
+
+.markdown-2xl :where(.markdown > ul > li p):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0.8333333em;
+  margin-bottom: 0.8333333em;
+}
+
+.markdown-2xl :where(.markdown > ul > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.markdown-2xl :where(.markdown > ul > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.markdown-2xl :where(.markdown > ol > li > *:first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 1.3333333em;
+}
+
+.markdown-2xl :where(.markdown > ol > li > *:last-child):not(:where([class~="not-markdown"] *)) {
+  margin-bottom: 1.3333333em;
+}
+
+.markdown-2xl :where(.markdown > :first-child):not(:where([class~="not-markdown"] *)) {
+  margin-top: 0;
+}
+
+.markdown-2xl :where(.markdown > :last-child):not(:where([class~="not-markdown"] *)) {
   margin-bottom: 0;
 }
 
