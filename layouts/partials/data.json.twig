@@ -12,8 +12,8 @@
 {#- handle episode file -#}
 {% if item.episode.file|default() %}
   {%- for key, value in item.episode -%}
-    {%- if key == 'file' -%}
-      {%- set episode = attributes.episode|merge({ (key): "\"" ~ asset(item.episode.file)|url({canonical: true}) ~ "\"" }) -%}
+    {%- if key in ['file', 'image'] -%}
+      {%- set episode = attributes.episode|merge({ (key): "\"" ~ asset(value)|url({canonical: true}) ~ "\"" }) -%}
     {%- else -%}
       {%- set episode = attributes.episode|merge({ (key): value }) -%}
     {%- endif -%}
