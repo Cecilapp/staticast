@@ -7,13 +7,21 @@
   'date': item.date|date('c')|json_encode(),
   'updated': item.updated|date('c')|json_encode(),
 } %}
+{#- add front matter variables to attributes -#}
+{% set attributes = item.fmvariables|merge(attributes) %}
+{#- handle episode file -#}
 {% if item.episode.file|default() %}
-{% set attributes = attributes|merge({'file': "\"" ~ asset(item.episode.file)|url({canonical: true}) ~ "\""}) %}
+  {%- for key, value in item.episode -%}
+    {%- if key == 'file' -%}
+      {%- set episode = attributes.episode|merge({ (key): "\"" ~ asset(item.episode.file)|url({canonical: true}) ~ "\"" }) -%}
+    {%- else -%}
+      {%- set episode = attributes.episode|merge({ (key): value }) -%}
+    {%- endif -%}
+    {%- set attributes = attributes|merge({'episode': episode}) -%}
+  {%- endfor -%}
 {% endif %}
-{% set attributes = item.fmvariables
-  |map((v) => v|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')))
-  |merge(attributes)
-%}
+{#- encode attributes values to JSON -#}
+{% set attributes = attributes|map((v) => v|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))) %}
     {
       "type": {{ type }},
       "id": {{ id }}
