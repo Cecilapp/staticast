@@ -14,7 +14,8 @@ date:
 output:
   pagetypeformats:
     homepage: html
-    section: [html, rss, json]
+    #section: [html, rss, json]
+    section: [html, rss]
 theme:
   - podcast
   - netlify-cms
