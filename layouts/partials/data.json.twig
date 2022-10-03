@@ -6,8 +6,10 @@
   'body': item.body|e('html')|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')),
   'date': item.date|date('c')|json_encode(),
   'updated': item.updated|date('c')|json_encode(),
-  'file': "\"" ~ asset(item.episode.file)|url({canonical: true}) ~ "\"",
 } %}
+{% if item.episode.file|default() %}
+{% set attributes = attributes|merge({'file': "\"" ~ asset(item.episode.file)|url({canonical: true}) ~ "\""}) %}
+{% endif %}
 {% set attributes = item.fmvariables
   |map((v) => v|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')))
   |merge(attributes)
