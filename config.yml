@@ -1,3 +1,4 @@
+# Website options
 title: Staticast
 baseline: The easiest way to publish your podcast
 description: This is a demo of Staticast, the easiest way to publish your 🎙️ podcast.
@@ -9,17 +10,7 @@ canonicalurl: true
 image: twitter-card.png
 language: en
 date:
-  format: j F Y
   timezone: Europe/Paris
-output:
-  pagetypeformats:
-    homepage: html
-    section: [html, rss, json]
-theme:
-  - podcast
-  - netlify-cms
-  - netlify
-  - pwa
 menus:
   main:
     - id: episodes
@@ -30,6 +21,25 @@ menus:
       url: admin
 pagination:
   max: 10
+theme:
+  - podcast # Podcast player component
+  - pwa     # Progressive Web App features
+  - netlify # Netlify feature
+  - netlify-cms # Netlify CMS support
+manifest:
+  background_color: "#7E4EA3"
+  theme_color: "#7E4EA3"
+  icons:
+    - manifest/icon-192x192.png
+    - manifest/icon-512x512.png
+  shortcuts: true
+serviceworker:
+  enabled: true
+  precache:
+    - manifest/icon-192x192.png
+    - manifest/icon-512x512.png
+
+# Podcast options
 podcast:
   owner:
     name: Arnaud Ligny
@@ -54,31 +64,23 @@ podcast:
       enabled: true
   hoster:
     - name: Arnaud Ligny
-      avatar: https://avatars.githubusercontent.com/u/80580?v=4&s=150
+      avatar: https://github.com/arnaudligny.png?s=150
       twitter: "@arnaudligny"
-manifest:
-  background_color: "#7E4EA3"
-  theme_color: "#7E4EA3"
-  icons:
-    - manifest/icon-192x192.png
-    - manifest/icon-512x512.png
-  shortcuts: true
-serviceworker:
-  enabled: true
-  precache:
-    - manifest/icon-192x192.png
-    - manifest/icon-512x512.png
+
+# Cecil options
+output:
+  pagetypeformats:
+    homepage: html
+    section: [html, rss]
 defaultpages:
+  # overrides serviceworker default layout
   serviceworker:
     path: serviceworker
-    layout: sw # override default layout
+    layout: sw
     output: js
 netlify:
   redirects:
-    #- from: "episodes/"
-    #  to: "/"
-    #  status: 301
-    #  force: true
+    # redirect demo
     - from: https://staticast-demo.netlify.app/*
       to: https://staticast-demo.cecil.app/:splat
       status: 301
