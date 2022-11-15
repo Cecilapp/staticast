@@ -64,7 +64,7 @@ podcast:
       enabled: true
   hoster:
     - name: Arnaud Ligny
-      avatar: https://github.com/arnaudligny.png?s=150
+      avatar: https://github.com/arnaudligny.png?size=150
       twitter: "@arnaudligny"
 
 # Cecil options
