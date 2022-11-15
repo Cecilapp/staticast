@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-10-03 11:34+0200\n"
-"PO-Revision-Date: 2022-10-03 11:34+0200\n"
+"POT-Creation-Date: 2022-11-15 13:39+0100\n"
+"PO-Revision-Date: 2022-11-15 13:39+0100\n"
 "Last-Translator: Arnaud Ligny <arnaud@ligny.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -10,15 +10,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 "X-Poedit-Basepath: ../layouts\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: _default/page.html.twig:93
+#: _default/page.html.twig:80
+msgid "Powered by %powered_by%"
+msgstr "Propulsé par %powered_by%"
+
+#: _default/page.html.twig:95
 msgid "Subscribe in"
 msgstr "Abonnez-vous"
 
-#: _default/page.html.twig:117
+#: _default/page.html.twig:119
 msgid "Hosted by"
 msgstr "Hébergé par"
 
