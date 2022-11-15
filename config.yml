@@ -11,16 +11,16 @@ image: twitter-card.png
 language: en
 date:
   timezone: Europe/Paris
+pagination:
+  max: 10
 menus:
   main:
     - id: episodes
       enabled: false
   footer:
-    - name: CMS
+    - name: Admin
       id: admin
       url: admin
-pagination:
-  max: 10
 theme:
   - podcast # Podcast player component
   - pwa     # Progressive Web App features
