@@ -32,6 +32,10 @@ manifest:
   icons:
     - manifest/icon-192x192.png
     - manifest/icon-512x512.png
+  screenshots:
+    - screenshots/screenshot-desktop-1.png
+    - screenshots/screenshot-desktop-2.png
+    - screenshots/screenshot-mobile-1.png
   shortcuts: true
 serviceworker:
   enabled: true
