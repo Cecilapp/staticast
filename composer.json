@@ -12,9 +12,9 @@
     }
   ],
   "require": {
-    "cecil/theme-podcast": "^1.15",
-    "cecil/theme-pwa": "^1.15",
-    "cecil/theme-netlify": "^1.4",
+    "cecil/theme-podcast": "^1.16",
+    "cecil/theme-pwa": "^1.19",
+    "cecil/theme-netlify": "^1.6",
     "cecil/theme-netlifycms": "^1.7"
   },
   "config": {

@@ -6,7 +6,7 @@
   {%- set pages = page.pagination.pages -%}
 {% endif %}
 
-{% extends '_default/page.html.twig' %}
+{% extends ['page.html.twig', '_default/page.html.twig'] %}
 
 {% block content ~%}
       <h1 class="text-lg mb-2">{% trans %}Available episodes{% endtrans %}</h1>
