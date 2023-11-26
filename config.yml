@@ -34,7 +34,9 @@ manifest:
     - manifest/icon-512x512.png
   screenshots:
     - manifest/screenshot-desktop.png
+    - manifest/screenshot-desktop-dark.png
     - manifest/screenshot-mobile.png
+    - manifest/screenshot-mobile-dark.png
   shortcuts: true
 serviceworker:
   enabled: true
@@ -42,7 +44,9 @@ serviceworker:
     - manifest/icon-192x192.png
     - manifest/icon-512x512.png
     - manifest/screenshot-desktop.png
+    - manifest/screenshot-desktop-dark.png
     - manifest/screenshot-mobile.png
+    - manifest/screenshot-mobile-dark.png
 
 # Podcast options
 podcast:
