@@ -12,10 +12,10 @@
     }
   ],
   "require": {
-    "cecil/theme-podcast": "^1.16",
-    "cecil/theme-pwa": "^1.19",
-    "cecil/theme-netlify": "^1.6",
-    "cecil/theme-netlifycms": "^1.7"
+    "cecil/theme-podcast": "^2.0",
+    "cecil/theme-pwa": "^2.0",
+    "cecil/theme-netlify": "^2.0",
+    "cecil/theme-netlifycms": "^2.0"
   },
   "config": {
     "allow-plugins": {
