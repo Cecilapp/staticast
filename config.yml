@@ -77,16 +77,17 @@ podcast:
       twitter: "@arnaudligny"
 
 # Cecil options
+pages:
+  default:
+    # overrides serviceworker default layout
+    serviceworker:
+      path: serviceworker
+      layout: sw
+      output: js
 output:
   pagetypeformats:
     homepage: html
     section: [html, rss]
-defaultpages:
-  # overrides serviceworker default layout
-  serviceworker:
-    path: serviceworker
-    layout: sw
-    output: js
 netlify:
   redirects:
     # redirect demo
