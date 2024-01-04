@@ -22,9 +22,9 @@ menus:
       id: admin
       url: admin
 theme:
-  - podcast # Podcast player component
-  - pwa     # Progressive Web App features
-  - netlify # Netlify feature
+  - podcast     # Podcast player component
+  - pwa         # Progressive Web App features
+  - netlify     # Netlify feature
   - netlify-cms # Netlify CMS support
 manifest:
   background_color: "#7E4EA3"
@@ -32,6 +32,10 @@ manifest:
   icons:
     - manifest/icon-192x192.png
     - manifest/icon-512x512.png
+    - src: manifest/icon-192x192-maskable.png
+      purpose: maskable
+    - src: manifest/icon-512x512-maskable.png
+      purpose: maskable
   screenshots:
     - manifest/screenshot-desktop.png
     - manifest/screenshot-desktop-dark.png
@@ -43,6 +47,8 @@ serviceworker:
   precache:
     - manifest/icon-192x192.png
     - manifest/icon-512x512.png
+    - manifest/icon-192x192-maskable.png
+    - manifest/icon-512x512-maskable.png
     - manifest/screenshot-desktop.png
     - manifest/screenshot-desktop-dark.png
     - manifest/screenshot-mobile.png
