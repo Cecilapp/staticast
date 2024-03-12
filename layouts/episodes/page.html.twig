@@ -1,7 +1,7 @@
 {% extends ['page.html.twig', '_default/page.html.twig'] %}
 
 {%- block head ~%}
-{{- parent() }}
+    {{- parent() ~}}
     <meta property="og:audio" content="{{ asset(page.episode.file)|url({canonical: true}) }}" />
     <meta property="og:audio:type" content="{{ asset(page.episode.file).subtype }}" />
 {%- endblock %}

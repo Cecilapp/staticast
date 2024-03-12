@@ -9,12 +9,12 @@
 {% extends ['page.html.twig', '_default/page.html.twig'] %}
 
 {% block content ~%}
-      <h1 class="text-lg mb-2">{% trans %}Available episodes{% endtrans %}</h1>
-      {%- for p in pages ~%}
-      {%~ include 'partials/episode.html.twig' with {p: p} %}
-      {% if not loop.last %}
-      <hr class="mb-4 border-t border-slate-300" />
-      {% endif %}
-      {%- endfor ~%}
-    {%~ include 'partials/paginator.html.twig' with {page: page} only ~%}
+          <h1 class="text-lg mb-2">{% trans %}Available episodes{% endtrans %}</h1>
+          {%- for p in pages ~%}
+          {%- include 'partials/episode.html.twig' with {p: p} ~%}
+          {%- if not loop.last ~%}
+          <hr class="mb-4 border-t border-slate-300" />
+          {%- endif ~%}
+          {%- endfor ~%}
+          {%- include 'partials/paginator.html.twig' with {page: page} only ~%}
 {% endblock content %}

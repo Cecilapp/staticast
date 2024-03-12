@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {%~ include 'partials/metatags.html.twig' with {'title': title|default('')} ~%}
+    {%- include 'partials/metatags.html.twig' with {title: title|default} ~%}
     <meta name="copyright" content="{{ site.author }}" />
     {%- if getenv('CECIL_ENV') == 'production' ~%}
     <style>
@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="{{ asset('styles.css', {minify: false, fingerprint: false}) }}" />
     {%- endif ~%}
     <link rel="manifest" href="{{ url('manifest') }}">
-    {%~ include 'partials/regsw.js.twig' -%}
-    {%~ include 'partials/identity.html.twig' -%}
+    {%- include 'partials/regsw.js.twig' ~%}
+    {%- include 'partials/identity.html.twig' ~%}
     {%- endblock ~%}
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="{{ site.manifest.theme_color }}">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -74,7 +74,7 @@
           {%- endblock ~%}
           {#- footer ~#}
           <footer class="pt-2 mt-4 mb-6 md:mb-10 border-t border-slate-300">
-            {% set powered_by = '<a href="https://staticast.cecil.app">Staticast</a> &amp; <a href="' ~ cecil.url ~ '">Cecil</a>' %}
+            {%- set powered_by = '<a href="https://staticast.cecil.app">Staticast</a> &amp; <a href="' ~ cecil.url ~ '">Cecil</a>' ~%}
             <div class="text-sm text-slate-500">
               © {{ "now"|date('Y') }} {{ site.author}} ·
               {% trans %}Powered by %powered_by%{% endtrans %} ·
