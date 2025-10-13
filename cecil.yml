@@ -11,8 +11,6 @@ image: twitter-card.png
 language: en
 date:
   timezone: Europe/Paris
-pagination:
-  max: 10
 menus:
   main:
     - id: episodes
@@ -80,10 +78,13 @@ podcast:
   hoster:
     - name: Arnaud Ligny
       avatar: https://github.com/arnaudligny.png?size=150
-      twitter: "@arnaudligny"
+    - name: Cecil
+      avatar: https://github.com/cecilapp.png?size=150
 
 # Cecil options
 pages:
+  pagination:
+    max: 10
   default:
     # overrides serviceworker default layout
     serviceworker:
