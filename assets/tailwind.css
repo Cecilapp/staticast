@@ -1,6 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography' {
+  classname: 'markdown';
+}
+
+@utility container {
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 100%) {
+    max-width: 100%;
+  }
+  @media (width >= 100%) {
+    max-width: 100%;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+}
+
+@theme {
+  --color-primary: #7e4ea3;
+}
 
 @layer base {
   html {
