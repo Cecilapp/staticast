@@ -15,10 +15,6 @@ menus:
   main:
     - id: episodes
       enabled: false
-  footer:
-    - name: Admin
-      id: admin
-      url: admin
 theme:
   - podcast     # Podcast player component
   - pwa         # Progressive Web App features

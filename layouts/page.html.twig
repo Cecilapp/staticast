@@ -77,7 +77,8 @@
             {%- set powered_by = '<a href="https://staticast.cecil.app">Staticast</a> &amp; <a href="' ~ cecil.url ~ '">Cecil</a>' ~%}
             <div class="text-sm text-slate-500">
               © {{ "now"|date('Y') }} {{ site.author}} ·
-              {% trans %}Powered by %powered_by%{% endtrans %} ·
+              {% trans %}Powered by %powered_by%{% endtrans %}
+              {%- if site.menus.footer|default() %} · {% endif -%}
               {%- for item in site.menus.footer|default() ~%}
               <a href="{{ url(item.url) }}" class="text-slate-500">{{ item.name }}</a>
               {%- endfor ~%}
