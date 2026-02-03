@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "382aca1e9bc7ac4b95b0699a202bf0a4",
+    "content-hash": "a53ec630752dc120b6a41111b180ce6d",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -179,16 +179,16 @@
         },
         {
             "name": "cecil/theme-podcast",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "c31df803a75ce93d00d299432966e0af3397d745"
+                "reference": "42a0e1db32a310c45b76c637692e3d2d7fb43732"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/c31df803a75ce93d00d299432966e0af3397d745",
-                "reference": "c31df803a75ce93d00d299432966e0af3397d745",
+                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/42a0e1db32a310c45b76c637692e3d2d7fb43732",
+                "reference": "42a0e1db32a310c45b76c637692e3d2d7fb43732",
                 "shasum": ""
             },
             "require": {
@@ -213,7 +213,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-podcast/issues",
-                "source": "https://github.com/Cecilapp/theme-podcast/tree/2.0.1"
+                "source": "https://github.com/Cecilapp/theme-podcast/tree/2.1.0"
             },
             "funding": [
                 {
@@ -225,7 +225,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-03-12T10:55:27+00:00"
+            "time": "2026-02-03T09:58:42+00:00"
         },
         {
             "name": "cecil/theme-pwa",
@@ -286,5 +286,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
