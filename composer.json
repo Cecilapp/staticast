@@ -17,11 +17,19 @@
     "cecil/theme-netlify": "^2.2"
   },
   "scripts": {
-    "post-create-project-cmd": "curl -LO https://cecil.app/cecil.phar"
+    "post-create-project-cmd": "curl -LO https://cecil.app/cecil.phar",
+    "css:build": "tailwind-builder assets/tailwind.css",
+    "css:watch": [
+      "Composer\\Config::disableProcessTimeout",
+      "tailwind-builder assets/tailwind.css --watch"
+    ]
   },
   "config": {
     "allow-plugins": {
       "cecil/theme-installer": true
     }
+  },
+  "require-dev": {
+    "aligny/tailwind-builder": "^1.2"
   }
 }

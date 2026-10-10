@@ -70,17 +70,17 @@ Edit the [`config.yml`](https://github.com/Cecilapp/staticast/blob/master/config
 
 ## Development
 
-_Staticast_ use [Tailwind CSS](https://tailwindcss.com) so you can customize the stylesheet with the following files:
+_Staticast_ uses [Tailwind CSS](https://tailwindcss.com) (v4) so you can customize the stylesheet with the following file:
 
-- Configuration: [`tailwind.config.js`](tailwind.config.js)
-- CSS: [`assets/tailwind.css`](assets/tailwind.css)
+- Configuration and CSS source: [`assets/tailwind.css`](assets/tailwind.css)
+
+The CSS is compiled to `assets/styles.css` with [Tailwind Builder](https://github.com/ArnaudLigny/tailwind-builder), which uses the Tailwind standalone binary: no Node.js required.
 
 ```bash
 # install
 composer install
-npm install
-# build CSS
-npx tailwindcss -i ./assets/tailwind.css -o ./assets/styles.css --watch
+# build CSS (or `composer css:build` to build once)
+composer css:watch
 # serve
 php cecil.phar serve -v --config=config/dev.yml
 ```

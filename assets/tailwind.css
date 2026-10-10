@@ -1,21 +1,16 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+
+/* only scan templates for classes */
+@source '../layouts';
 
 @plugin '@tailwindcss/typography' {
-  classname: 'markdown';
+  className: 'markdown';
 }
 
+/* full width container, limited to 1024px on large screens */
 @utility container {
   @media (width >= --theme(--breakpoint-sm)) {
     max-width: none;
-  }
-  @media (width >= 100%) {
-    max-width: 100%;
-  }
-  @media (width >= 100%) {
-    max-width: 100%;
-  }
-  @media (width >= 1024px) {
-    max-width: 1024px;
   }
   @media (width >= 1024px) {
     max-width: 1024px;
