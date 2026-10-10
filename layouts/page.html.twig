@@ -13,9 +13,8 @@
     {%- block head ~%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {%- include 'partials/metatags.html.twig' with {title: title|default} ~%}
-    <meta name="copyright" content="{{ site.author }}" />
+    <meta name="copyright" content="{{ site.copyright|default(site.author) }}" />
     {%- if getenv('CECIL_ENV') == 'production' ~%}
     <style>
       {{- asset('styles.css')|inline ~}}
@@ -50,7 +49,7 @@
               </div>
               {#- cover image ~#}
               <div class="block md:hidden">
-                <img class="rounded-lg" src="{{ cover_mobile|url }}" alt="{{ cover_title }} cover" width="{{ cover_mobile.width }}" height="{{ cover_mobile.height }}">
+                <img class="rounded-lg" src="{{ cover_mobile|url }}" alt="{{ cover_title }}" width="{{ cover_mobile.width }}" height="{{ cover_mobile.height }}">
               </div>
             </div>
             {#- navigation ~#}
@@ -76,7 +75,7 @@
           <footer class="pt-2 mt-4 mb-6 md:mb-10 border-t border-slate-300">
             {%- set powered_by = '<a href="https://staticast.cecil.app">Staticast</a> &amp; <a href="' ~ cecil.url ~ '">Cecil</a>' ~%}
             <div class="text-sm text-slate-500">
-              © {{ "now"|date('Y') }} {{ site.author}} ·
+              © {{ "now"|date('Y') }} {{ site.copyright|default(site.author) }} ·
               {% trans %}Powered by %powered_by%{% endtrans %}
               {%- if site.menus.footer|default() %} · {% endif -%}
               {%- for item in site.menus.footer|default() ~%}
@@ -103,7 +102,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-slate-500 dark:fill-slate-300" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
                 </a>
               </li>
-              {%- for subscribe in site.podcast.subscribe ~%}
+              {%- for subscribe in site.podcast.subscribe|default([])|filter(s => s.enabled|default(true)) ~%}
               {%- set icon = asset('icons/' ~ subscribe.name ~ '.png')|resize(30) ~%}
               <li>
                 <a class="flex p-2 space-x-1 items-center hover:bg-slate-300 dark:hover:bg-black rounded-lg" href="{{ url(subscribe.url) }}">

@@ -16,11 +16,9 @@
               <div class="flex space-x-2 flex-col md:flex-row bg-white dark:bg-black sticky top-[60px]">
                 {%~ include 'partials/audioplayer.html.twig' with {page: p} ~%}
                 <div class="flex space-x-2 text-primary mb-2 md:mb-0 self-center">
-                  <button class="inline-flex items-center" type="button" title="{% trans %}Download{% endtrans %}">
-                    <a href="{{ asset(page.episode.file)|url }}" download>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                    </a>
-                  </button>
+                  <a class="inline-flex items-center" href="{{ asset(p.episode.file)|url }}" title="{% trans %}Download{% endtrans %}" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  </a>
                   <button class="inline-flex items-center" id="check-button-text-{{ p.id }}" type="button" title="{% trans %}Mark as read / unread{% endtrans %}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   </button>
@@ -33,7 +31,7 @@
                   const shareButton = document.getElementById('share-button-text-{{ p.id }}');
                   if (navigator.share) {
                     shareButton.addEventListener('click', event => {
-                      navigator.share({text: '{{ p.title }}', url: '{{ url(p) }}'}).then(() => {
+                      navigator.share({text: '{{ p.title|e('js') }}', url: '{{ url(p)|e('js') }}'}).then(() => {
                         console.log('Thanks for sharing!');
                       }).catch(console.error);
                     });
@@ -43,6 +41,7 @@
                   // mark as read button script
                   const checkButton = document.getElementById('check-button-text-{{ p.id }}');
                   checkButton.addEventListener('click', event => {
+                    const audioplayer = document.getElementById('audioplayer');
                     if (audioplayer.currentTime == audioplayer.duration) {
                       audioplayer.currentTime = 0;
                     } else {
@@ -54,10 +53,11 @@
               <div class="markdown dark:markdown-invert dark:text-slate-300">
                 {{ p.content }}
               </div>
-              {%- endif ~%}
+              {%- else ~%}
               <div class="markdown dark:markdown-invert dark:text-slate-300">
                 {{ p.content|excerpt_html }}
               </div>
+              {%- endif ~%}
             </div>
             {%- if page.type != 'page' ~%}
             {#- audio player state ~#}
@@ -74,9 +74,9 @@
             <script>{% apply minify_js ~%}
               // reading state
               window.addEventListener('DOMContentLoaded', (event) => {
-                const startTime = localStorage.getItem('{{ asset(p.episode.file) }}');
+                const startTime = localStorage.getItem('{{ asset(p.episode.file)|e('js') }}');
                 if (startTime !== null && startTime !== '0') {
-                  console.log('Resume "{{ p.title }}" at', startTime);
+                  console.log('Resume "{{ p.title|e('js') }}" at', startTime);
                   const button = document.getElementById('player-button-{{ p.id }}');
                   const buttonText = document.getElementById('player-button-text-{{ p.id }}');
                   if (startTime == 'ended') {

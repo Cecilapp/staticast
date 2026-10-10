@@ -1,30 +1,33 @@
 {#- data -#}
 {% set type = item.section|default('page')|json_encode() %}
 {% set id = item.id|json_encode(constant('JSON_UNESCAPED_SLASHES')) %}
+{% set url = url(item, {canonical: true})|json_encode(constant('JSON_UNESCAPED_SLASHES')) %}
 {% set attributes = {
-  'title': item.title|json_encode(constant('JSON_UNESCAPED_UNICODE')),
-  'body': item.body|e('html')|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')),
-  'date': item.date|date('c')|json_encode(),
-  'updated': item.updated|date('c')|json_encode(),
+  title: item.title,
+  body: item.body|e('html'),
+  date: item.date|date('c'),
 } %}
+{% if item.updated|default %}
+  {%- set attributes = attributes|merge({updated: item.updated|date('c')}) %}
+{% endif %}
 {#- add front matter variables to attributes -#}
-{% set attributes = item.fmvariables|merge(attributes) %}
-{#- handle episode file -#}
-{% if item.episode.file|default() %}
-  {%- for key, value in item.episode -%}
-    {%- if key in ['file', 'image'] -%}
-      {%- set episode = attributes.episode|merge({ (key): "\"" ~ asset(value)|url({canonical: true}) ~ "\"" }) -%}
-    {%- else -%}
-      {%- set episode = attributes.episode|merge({ (key): value }) -%}
+{% set attributes = item.fmVariables|merge(attributes) %}
+{#- handle episode files: replace paths by canonical URLs -#}
+{% if item.episode.file|default %}
+  {%- set episode = item.episode -%}
+  {%- for key in ['file', 'image'] -%}
+    {%- if episode[key]|default -%}
+      {%- set episode = episode|merge({(key): asset(episode[key])|url({canonical: true})}) -%}
     {%- endif -%}
-    {%- set attributes = attributes|merge({'episode': episode}) -%}
   {%- endfor -%}
+  {%- set attributes = attributes|merge({episode: episode}) -%}
 {% endif %}
 {#- encode attributes values to JSON -#}
 {% set attributes = attributes|map((v) => v|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))) %}
     {
       "type": {{ type }},
-      "id": {{ id }}
+      "id": {{ id }},
+      "url": {{ url }}
 {%- if attributes is defined %},
       "attributes": {
 {%- for key, value in attributes ~%}
