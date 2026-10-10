@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "954c989cf4ae53993ad47c5b7f159537",
+    "content-hash": "d4f08be08c4abd3cde2f41048b4dfc1d",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -125,57 +125,6 @@
                 }
             ],
             "time": "2025-06-11T22:50:06+00:00"
-        },
-        {
-            "name": "cecil/theme-netlifycms",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Cecilapp/theme-netlifycms.git",
-                "reference": "422d822f8e97bd10b79bb335de53ab7ea3afd416"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/422d822f8e97bd10b79bb335de53ab7ea3afd416",
-                "reference": "422d822f8e97bd10b79bb335de53ab7ea3afd416",
-                "shasum": ""
-            },
-            "require": {
-                "cecil/theme-installer": "^1.4"
-            },
-            "type": "cecil-theme",
-            "extra": {
-                "name": "netlify-cms",
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Cecil component theme Netlify CMS",
-            "keywords": [
-                "cecil",
-                "cms",
-                "netlify",
-                "theme"
-            ],
-            "support": {
-                "issues": "https://github.com/Cecilapp/theme-netlifycms/issues",
-                "source": "https://github.com/Cecilapp/theme-netlifycms/tree/2.0.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/ArnaudLigny",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/cecil",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2024-03-12T10:55:59+00:00"
         },
         {
             "name": "cecil/theme-podcast",
