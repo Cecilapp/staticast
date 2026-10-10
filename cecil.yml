@@ -30,6 +30,7 @@ menus:
     - id: episodes
       weight: 1
 theme:
+  - flexsearch
   - pwa
   - netlify
 manifest:
@@ -86,6 +87,14 @@ podcast:
     - name: Cecil
       avatar: https://github.com/cecilapp.png?size=150
       url: https://cecil.app
+
+# Search options
+flexsearch:
+  sections:
+    episodes:
+      limit: 10
+      split: false
+      date: true
 
 # Cecil options
 pages:

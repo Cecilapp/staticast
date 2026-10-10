@@ -33,6 +33,28 @@
   --color-primary: #7e4ea3;
 }
 
+/* search (FlexSearch theme) colors */
+:root {
+  --flexsearch-accent: var(--color-primary);
+  --flexsearch-mark-color: var(--color-primary);
+  --flexsearch-selected-bg: #f3edf8;
+  --flexsearch-selected-color: var(--color-primary);
+}
+:root[data-theme=dark] {
+  --flexsearch-accent: #b794d4;
+  --flexsearch-mark-color: #b794d4;
+  --flexsearch-selected-bg: #2e1d3d;
+  --flexsearch-selected-color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) {
+    --flexsearch-accent: #b794d4;
+    --flexsearch-mark-color: #b794d4;
+    --flexsearch-selected-bg: #2e1d3d;
+    --flexsearch-selected-color: #fff;
+  }
+}
+
 @layer base {
   html {
     font-size: 18px

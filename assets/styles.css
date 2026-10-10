@@ -652,6 +652,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
@@ -1173,6 +1176,26 @@
   .markdown-code\:text-xs :is(:where(code):not(:where([class~="not-markdown"], [class~="not-markdown"] *))) {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+}
+:root {
+  --flexsearch-accent: var(--color-primary);
+  --flexsearch-mark-color: var(--color-primary);
+  --flexsearch-selected-bg: #f3edf8;
+  --flexsearch-selected-color: var(--color-primary);
+}
+:root[data-theme=dark] {
+  --flexsearch-accent: #b794d4;
+  --flexsearch-mark-color: #b794d4;
+  --flexsearch-selected-bg: #2e1d3d;
+  --flexsearch-selected-color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) {
+    --flexsearch-accent: #b794d4;
+    --flexsearch-mark-color: #b794d4;
+    --flexsearch-selected-bg: #2e1d3d;
+    --flexsearch-selected-color: #fff;
   }
 }
 @layer base {

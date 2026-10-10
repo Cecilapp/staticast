@@ -1,0 +1,4 @@
+{#- search dialog (FlexSearch theme), kept across Turbo visits: the dialog is permanent and its script runs only once ~#}
+{%- apply replace({'<dialog ': '<dialog data-turbo-permanent ', '<script ': '<script data-turbo-eval="false" '}) ~%}
+{{ include('partials/flexsearch/dialog.html.twig') }}
+{%- endapply ~%}

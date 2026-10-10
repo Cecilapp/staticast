@@ -1,0 +1,6 @@
+{#- search button: opens the FlexSearch dialog (see partials/search.html.twig) ~#}
+{%- if site.flexsearch.enabled ?? true ~%}
+<button type="button" data-flexsearch-open accesskey="s" aria-haspopup="dialog" class="inline-flex items-center justify-center h-8 w-8 text-primary border-2 border-primary rounded-full cursor-pointer hover:shadow-lg hover:bg-primary hover:text-slate-50" title="{% trans %}Search the site{% endtrans %}" aria-label="{% trans %}Search the site{% endtrans %}">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+</button>
+{%- endif ~%}

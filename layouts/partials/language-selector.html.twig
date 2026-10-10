@@ -11,7 +11,8 @@
   </li>
   {%- elseif translation ~%}
   <li class="h-full">
-    <a href="{{ url(translation) }}" class="inline-flex items-center h-full px-3 hover:bg-primary hover:text-slate-50" hreflang="{{ language.code }}" lang="{{ language.code }}" title="{{ language.name }}">{{ language.code|upper }}</a>
+    {#- full reload: the search dialog is kept across Turbo visits and must be reloaded in the new language ~#}
+    <a href="{{ url(translation) }}" data-turbo="false" class="inline-flex items-center h-full px-3 hover:bg-primary hover:text-slate-50" hreflang="{{ language.code }}" lang="{{ language.code }}" title="{{ language.name }}">{{ language.code|upper }}</a>
   </li>
   {%- endif ~%}
   {%- endfor ~%}

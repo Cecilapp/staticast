@@ -22,6 +22,7 @@
     {%- else ~%}
     <link rel="stylesheet" href="{{ asset('styles.css', {minify: false, fingerprint: false}) }}" data-turbo-track="reload" />
     {%- endif ~%}
+    {{ html(asset('flexsearch/flexsearch.css')) }}
     {#- Turbo Drive: navigates without full page reloads, so the audio player keeps playing ~#}
     <script src="{{ asset('https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.23/dist/turbo.es2017-umd.min.js', {minify: false}) }}" defer data-turbo-track="reload"></script>
     <script src="{{ asset('js/player.js') }}" defer data-turbo-track="reload"></script>
@@ -66,8 +67,9 @@
                 {%- endfor ~%}
               </ol>
             </nav>
-            {#- language and theme selectors ~#}
+            {#- search, language and theme selectors ~#}
             <div class="flex items-center space-x-2">
+              {%- include 'partials/search-button.html.twig' ~%}
               {%- include 'partials/language-selector.html.twig' ~%}
               {%- include 'partials/theme-toggle.html.twig' ~%}
             </div>
@@ -151,5 +153,6 @@
     {%- include 'partials/player.html.twig' ~%}
     {#- keeps the PWA snackbar across Turbo visits ~#}
     <div id="snackbar" data-turbo-permanent></div>
+    {%- include 'partials/search.html.twig' ~%}
   </body>
 </html>
