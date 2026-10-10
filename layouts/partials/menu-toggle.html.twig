@@ -1,0 +1,5 @@
+{#- burger button: toggles the main menu on mobile (see partials/menu.js.twig) ~#}
+<button type="button" data-menu-toggle aria-controls="main-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center h-8 w-8 text-primary border-2 border-primary rounded-full cursor-pointer hover:shadow-lg hover:bg-primary hover:text-slate-50" title="{% trans %}Menu{% endtrans %}" aria-label="{% trans %}Menu{% endtrans %}">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-data-open:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 hidden group-data-open:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+</button>

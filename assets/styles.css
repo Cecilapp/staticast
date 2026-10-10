@@ -207,6 +207,12 @@
   .z-40 {
     z-index: 40;
   }
+  .order-first {
+    order: -9999;
+  }
+  .order-last {
+    order: 9999;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -761,6 +767,9 @@
   .grow {
     flex-grow: 1;
   }
+  .basis-full {
+    flex-basis: 100%;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -953,6 +962,12 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
+  .group-data-open\:block:is(:where(.group)[data-open] *) {
+    display: block;
+  }
+  .group-data-open\:hidden:is(:where(.group)[data-open] *) {
+    display: none;
+  }
   .group-data-\[state\=pause\]\:block:is(:where(.group)[data-state="pause"] *) {
     display: block;
   }
@@ -999,11 +1014,20 @@
     .md\:order-first {
       order: -9999;
     }
+    .md\:order-none {
+      order: 0;
+    }
     .md\:my-0 {
       margin-block: 0px;
     }
+    .md\:mt-4 {
+      margin-top: calc(var(--spacing) * 4);
+    }
     .md\:mt-10 {
       margin-top: calc(var(--spacing) * 10);
+    }
+    .md\:mb-6 {
+      margin-bottom: calc(var(--spacing) * 6);
     }
     .md\:mb-10 {
       margin-bottom: calc(var(--spacing) * 10);
@@ -1014,6 +1038,9 @@
     .md\:hidden {
       display: none;
     }
+    .md\:inline-flex {
+      display: inline-flex;
+    }
     .md\:min-h-screen {
       min-height: 100vh;
     }
@@ -1022,6 +1049,9 @@
     }
     .md\:flex-none {
       flex: none;
+    }
+    .md\:basis-auto {
+      flex-basis: auto;
     }
     .md\:grid-cols-\[300px_1fr\] {
       grid-template-columns: 300px 1fr;

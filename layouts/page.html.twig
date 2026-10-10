@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {%- include 'partials/theme.js.twig' ~%}
+    {%- include 'partials/menu.js.twig' ~%}
     {%- include 'partials/metatags.html.twig' with {title: title|default} ~%}
     <meta name="copyright" content="{{ site.copyright|default(site.author) }}" />
     {%- if getenv('CECIL_ENV') == 'production' ~%}
@@ -37,7 +38,7 @@
       <div class="grid gap-4 grid-cols-0 md:grid-cols-[300px_1fr]">
         {#- main ~#}
         <main class="px-4 md:px-14 bg-white dark:bg-black md:min-h-screen">
-          <header class="mt-4 md:mt-10">
+          <header class="flex flex-col mt-4 md:mt-10">
             <div class="flex flex-row space-x-2">
               <div>
                 <div class="text-2xl md:text-3xl uppercase font-bold">
@@ -57,12 +58,14 @@
             </div>
             {#- navigation ~#}
             {%- set menu = menu|default('main') ~%}
-            <div class="flex flex-wrap items-center justify-between gap-2 mt-4 mb-6">
-            <nav>
-              <ol class="flex space-x-2">
+            <div data-menu class="group flex flex-wrap items-center justify-between gap-2 order-first mb-4 md:order-none md:mt-4 md:mb-6">
+            {%- include 'partials/menu-toggle.html.twig' ~%}
+            {#- hidden on mobile until opened with the burger button ~#}
+            <nav id="main-menu" class="hidden group-data-open:block basis-full order-last md:block md:basis-auto md:order-none">
+              <ol class="flex flex-col gap-2 md:flex-row">
                 {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
                 <li>
-                  <a href="{{ url(item.url) }}" class="inline-flex items-center h-8 px-4 text-sm font-bold border-2 border-primary rounded-full hover:shadow-lg hover:border-primary hover:bg-primary hover:text-slate-50{% if url(page) == url(item.url) %} text-slate-50 bg-primary{% endif %}">{{ item.name }}</a>
+                  <a href="{{ url(item.url) }}" class="flex md:inline-flex items-center h-8 px-4 text-sm font-bold border-2 border-primary rounded-full hover:shadow-lg hover:border-primary hover:bg-primary hover:text-slate-50{% if url(page) == url(item.url) %} text-slate-50 bg-primary{% endif %}">{{ item.name }}</a>
                 </li>
                 {%- endfor ~%}
               </ol>

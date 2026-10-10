@@ -1,0 +1,19 @@
+{#- main menu: opens / closes the menu with the burger button on mobile (see partials/menu-toggle.html.twig) ~#}
+<script>{% apply minify_js ~%}
+(() => {
+  const toggle = (open) => {
+    const button = document.querySelector('[data-menu-toggle]');
+    const menu = button?.closest('[data-menu]');
+    if (!menu) return;
+    menu.toggleAttribute('data-open', open);
+    button.setAttribute('aria-expanded', open);
+  };
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-menu-toggle]');
+    if (button) toggle(button.getAttribute('aria-expanded') !== 'true');
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') toggle(false);
+  });
+})();
+{%- endapply %}</script>
