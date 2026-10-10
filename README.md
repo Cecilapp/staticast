@@ -4,6 +4,16 @@ _Staticast_ is a ready to use Progressive Web App to publish your podcast, with 
 
 [![Staticast screenshot](/docs/screenshot.png)](https://staticast.cecil.app)
 
+## Features
+
+- **Podcast RSS feed** compatible with Apple Podcasts, Spotify and other platforms, with a style sheet to display it nicely in browsers
+- **Persistent audio player**: browse the website without interrupting the episode you are listening to, and resume where you left off
+- **Progressive Web App**: installable on mobile and desktop, works offline
+- **Search** through all the episodes
+- **Multilingual**: English and French out of the box
+- **Light and dark themes**
+- **Fast and secure**: a static website, without database, that can be hosted anywhere
+
 ## Installation
 
 ### Manually
@@ -92,6 +102,21 @@ podcast:
   newfeedurl: ""              # optional, the URL of the new feed in case of hosting change
   subscribe: []               # links to podcast platforms (Apple Podcasts, Spotify, etc.)
   hoster: []                  # hosts names and avatars
+```
+
+Example of `subscribe` and `hoster` entries:
+
+```yaml
+podcast:
+  subscribe:
+    - name: apple             # icon file name in `assets/icons/` (e.g. `apple.png`)
+      title: Apple Podcasts
+      url: https://podcasts.apple.com/podcast/id0000000000
+      enabled: true           # optional, `false` to hide the link
+  hoster:
+    - name: Cecil
+      avatar: https://github.com/cecilapp.png?size=150
+      url: https://cecil.app  # optional
 ```
 
 The RSS feed is available at `/episodes/rss.xml`, with a style sheet to display it nicely in browsers.
