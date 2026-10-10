@@ -1,0 +1,19 @@
+{#- language selector: links to the translations of the current page ~#}
+{%- set current_language = page.language|default(site.language) ~%}
+{%- set languages = site.languages|filter(l => l.enabled|default(true)) ~%}
+{%- if languages|length > 1 ~%}
+<ul class="inline-flex items-center h-8 text-sm font-bold border-2 border-primary rounded-full overflow-hidden" aria-label="{% trans %}Language{% endtrans %}">
+  {%- for language in languages ~%}
+  {%- set translation = page.translations|default([])|filter(p => p.language|default == language.code)|first ~%}
+  {%- if language.code == current_language ~%}
+  <li class="h-full">
+    <span class="inline-flex items-center h-full px-3 bg-primary text-slate-50" aria-current="true" title="{{ language.name }}">{{ language.code|upper }}</span>
+  </li>
+  {%- elseif translation ~%}
+  <li class="h-full">
+    <a href="{{ url(translation) }}" class="inline-flex items-center h-full px-3 hover:bg-primary hover:text-slate-50" hreflang="{{ language.code }}" lang="{{ language.code }}" title="{{ language.name }}">{{ language.code|upper }}</a>
+  </li>
+  {%- endif ~%}
+  {%- endfor ~%}
+</ul>
+{%- endif ~%}

@@ -56,7 +56,8 @@
             </div>
             {#- navigation ~#}
             {%- set menu = menu|default('main') ~%}
-            <nav class="mt-4 mb-6">
+            <div class="flex flex-wrap items-center justify-between gap-2 mt-4 mb-6">
+            <nav>
               <ol class="flex space-x-2">
                 {%- for item in attribute(site.menus, menu)|sort_by_weight ~%}
                 <li>
@@ -65,6 +66,11 @@
                 {%- endfor ~%}
               </ol>
             </nav>
+            {#- language selector ~#}
+            <div class="flex items-center space-x-2">
+              {%- include 'partials/language-selector.html.twig' ~%}
+            </div>
+            </div>
           </header>
           {#- breadcrumb ~#}
           {%- include 'partials/breadcrumb.html.twig' ~%}
