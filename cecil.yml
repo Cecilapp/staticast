@@ -16,7 +16,6 @@ menus:
     - id: episodes
       enabled: false
 theme:
-  - podcast     # Podcast player component
   - pwa         # Progressive Web App features
   - netlify     # Netlify feature
 manifest:
@@ -77,6 +76,16 @@ pages:
   pagination:
     max: 10
   default:
+    # RSS feed style sheet
+    xsl/podcast:
+      path: xsl/podcast
+      layout: podcast
+      output: xsl
+      uglyurl: true
+      published: true
+      excluded: true
+      serviceworker:
+        precache: false
     # overrides serviceworker default layout
     serviceworker:
       path: serviceworker

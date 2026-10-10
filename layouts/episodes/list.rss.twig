@@ -1,0 +1,117 @@
+{% extends ['feed.twig', 'extended/feed.twig'] %}
+
+{% block feed %}
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="{{ url('xsl/podcast', {language: lang}) }}" media="all"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+>
+  <channel>
+    {%- set podcast = site.podcast|default({}) ~%}
+    {%- set site_author = site.author.name ?? (site.author is defined and site.author is not iterable ? site.author : null) ~%}
+    {%- set owner_name = podcast.owner.name ?? site_author ?? site.title ~%}
+    {%- set owner_email = podcast.owner.email ?? site.author.email ?? '' ~%}
+    {%- set author = podcast.author ?? owner_name ~%}
+    <title><![CDATA[{{ site.title }}]]></title>
+    <description><![CDATA[{{ site.description|default(site.title) }}]]></description>
+    <lastBuildDate>{{ updated|date('r') }}</lastBuildDate>
+    <atom:link href="{{ url(page, {canonical: true, format: 'rss'}) }}" rel="self" type="application/rss+xml" />
+    <link>{{ url(page, {canonical: true, format: 'html'}) }}</link>
+    <language>{{ lang }}</language>
+    {%- if site.copyright|default ~%}
+    <copyright><![CDATA[{{ site.copyright }}]]></copyright>
+    {%- endif ~%}
+    <generator>{{ cecil.url }}</generator>
+    {#- podcast ~#}
+    {%- if site.baseline|default ~%}
+    <itunes:subtitle><![CDATA[{{ site.baseline }}]]></itunes:subtitle>
+    {%- endif ~%}
+    <itunes:summary><![CDATA[{{ site.description|default(site.title) }}]]></itunes:summary>
+    <googleplay:description><![CDATA[{{ site.description|default(site.title) }}]]></googleplay:description>
+    <itunes:owner>
+      <itunes:name><![CDATA[{{ owner_name }}]]></itunes:name>
+      {%- if owner_email ~%}
+      <itunes:email>{{ owner_email }}</itunes:email>
+      {%- endif ~%}
+    </itunes:owner>
+    {%- if owner_email ~%}
+    <googleplay:owner>{{ owner_email }}</googleplay:owner>
+    {%- endif ~%}
+    {%- set cover = asset(podcast.image|default('cover.png')) ~%}
+    <image>
+      <url>{{ cover|url({canonical: true}) }}</url>
+      <title><![CDATA[{{ site.title }}]]></title>
+      <link>{{ url(page, {canonical: true, format: 'html'}) }}</link>
+      <description><![CDATA[{{ site.title }}]]></description>
+      <width>{{ cover.width }}</width>
+      <height>{{ cover.height }}</height>
+    </image>
+    <itunes:image href="{{ cover|url({canonical: true}) }}" />
+    <googleplay:image href="{{ cover|url({canonical: true}) }}" />
+    {%- if author ~%}
+    <itunes:author><![CDATA[{{ author }}]]></itunes:author>
+    <googleplay:author><![CDATA[{{ author }}]]></googleplay:author>
+    {%- endif ~%}
+    {%- if podcast.categories is defined and podcast.categories is iterable ~%}
+    {%- for category in podcast.categories %}{# https://podcasters.apple.com/support/1691-apple-podcasts-categories ~#}
+    <itunes:category text="{{ category|e }}" />
+    <googleplay:category text="{{ category|e }}" />
+    {%- endfor ~%}
+    {%- endif ~%}
+    <itunes:type>{{ podcast.type|default('episodic') }}</itunes:type>{# 'episodic' or 'serial' ~#}
+    {%- set explicit = podcast.explicit ?? false ~%}
+    {%- set explicit = explicit is same as(true) or explicit in ['yes', 'true'] ~%}
+    <itunes:explicit>{{ explicit ? 'true' : 'false' }}</itunes:explicit>
+    <googleplay:explicit>{{ explicit ? 'yes' : 'no' }}</googleplay:explicit>
+    {%- set block = podcast.block ?? false ~%}
+    {%- if block is same as(true) or block in ['yes', 'Yes'] ~%}
+    <itunes:block>Yes</itunes:block>
+    <googleplay:block>yes</googleplay:block>
+    {%- endif ~%}
+    {%- if podcast.newfeedurl|default ~%}
+    <itunes:new-feed-url>{{ podcast.newfeedurl }}</itunes:new-feed-url>
+    {%- endif ~%}
+    {#- /podcast ~#}
+    {%- for item in items|filter(item => item.episode.file is defined) ~%}
+    {%- set file = asset(item.episode.file) ~%}
+    <item>
+      <guid isPermaLink="true">{{ url(item, {canonical: true}) }}</guid>
+      <title><![CDATA[{{ item.title }}]]></title>
+      <description><![CDATA[{{ item.content }}]]></description>
+      <content:encoded><![CDATA[{{ item.content }}]]></content:encoded>
+      <pubDate>{{ item.date|date('r') }}</pubDate>
+      <link>{{ url(item, {canonical: true}) }}</link>
+      {#- episode ~#}
+      {%- if item.episode.image is defined ~%}
+      {%- set item_cover = asset(item.episode.image) ~%}
+      <itunes:image href="{{ item_cover|url({canonical: true}) }}" />
+      {%- endif ~%}
+      <itunes:summary><![CDATA[{{ item.content }}]]></itunes:summary>
+      <googleplay:description><![CDATA[{{ item.content }}]]></googleplay:description>
+      <enclosure url="{{ file|url({canonical: true}) }}" length="{{ file.size }}" type="{{ file.subtype }}" />
+      <itunes:duration>{{ file.duration|round }}</itunes:duration>
+      {%- if item.episode.season|default(0) > 0 ~%}
+      <itunes:season>{{ item.episode.season }}</itunes:season>
+      {%- endif ~%}
+      {%- if item.episode.number|default(0) > 0 ~%}
+      <itunes:episode>{{ item.episode.number }}</itunes:episode>
+      {%- endif ~%}
+      <itunes:episodeType>{{ item.episode.type|default('full') }}</itunes:episodeType>{# 'full', 'trailer' or 'bonus' ~#}
+      {%- if item.episode.explicit is defined ~%}
+      {%- set item_explicit = item.episode.explicit is same as(true) or item.episode.explicit in ['yes', 'true'] ~%}
+      <itunes:explicit>{{ item_explicit ? 'true' : 'false' }}</itunes:explicit>
+      <googleplay:explicit>{{ item_explicit ? 'yes' : 'no' }}</googleplay:explicit>
+      {%- endif ~%}
+      {%- if item.episode.block is defined and (item.episode.block is same as(true) or item.episode.block in ['yes', 'Yes']) ~%}
+      <itunes:block>Yes</itunes:block>
+      <googleplay:block>yes</googleplay:block>
+      {%- endif ~%}
+      {#- /episode ~#}
+    </item>
+    {%- endfor ~%}
+  </channel>
+</rss>
+{% endblock feed %}

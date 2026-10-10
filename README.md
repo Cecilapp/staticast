@@ -47,7 +47,18 @@ Short description of the episode.
 Notes of the episode.
 ```
 
-Refer to _[Podcast component theme](https://github.com/Cecilapp/theme-podcast#usage)_ for advanced options.
+Optional episode options:
+
+```yaml
+episode:
+  file: episode-X.mp3  # MP3 file in `assets/`
+  image: episode-X.png # optional, episode cover
+  season: 0            # optional
+  number: X            # optional
+  type: full           # optional, "full" (default), "trailer" or "bonus"
+  explicit: false      # optional
+  block: false         # optional, `true` to hide the episode from podcast directories
+```
 
 ### Preview
 
@@ -64,7 +75,26 @@ php cecil.phar serve --open
 
 ### Configuration
 
-Edit the [`cecil.yml`](cecil.yml) file, and more precisely the `podcast` section.
+Edit the [`cecil.yml`](cecil.yml) file, and more precisely the `podcast` section:
+
+```yaml
+podcast:
+  owner:
+    name: Cecil               # optional, defaults to `author.name` (or `author`), then `title`
+    email: contact@cecil.app  # optional, defaults to `author.email`
+  image: cover.png            # square image (1400x1400 to 3000x3000)
+  author: Cecil               # optional, defaults to owner name
+  categories:                 # https://podcasters.apple.com/support/1691-apple-podcasts-categories
+    - Technology
+  type: episodic              # optional, "episodic" (default) or "serial"
+  explicit: false             # optional, `true` or `false` (default)
+  block: false                # optional, `true` to hide the show from podcast directories
+  newfeedurl: ""              # optional, the URL of the new feed in case of hosting change
+  subscribe: []               # links to podcast platforms (Apple Podcasts, Spotify, etc.)
+  hoster: []                  # hosts names and avatars
+```
+
+The RSS feed is available at `/episodes/rss.xml`, with a style sheet to display it nicely in browsers.
 
 > For details, please refer to the [Cecil documentation](https://cecil.app/documentation/configuration/).
 

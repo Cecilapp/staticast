@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e1af88bb1f32f3d70be4a39b590f43e",
+    "content-hash": "f646966197f42ebfddcdb9fa0e94fb7b",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -121,56 +121,6 @@
                 }
             ],
             "time": "2025-06-11T22:50:06+00:00"
-        },
-        {
-            "name": "cecil/theme-podcast",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Cecilapp/theme-podcast.git",
-                "reference": "c6e60e407f4659cd5ee76feb048f2c4d4f50a50e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-podcast/zipball/c6e60e407f4659cd5ee76feb048f2c4d4f50a50e",
-                "reference": "c6e60e407f4659cd5ee76feb048f2c4d4f50a50e",
-                "shasum": ""
-            },
-            "require": {
-                "cecil/theme-installer": "^1.4||^2.0"
-            },
-            "type": "cecil-theme",
-            "extra": {
-                "name": "podcast",
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Cecil component theme: Podcast",
-            "keywords": [
-                "cecil",
-                "podcast",
-                "theme"
-            ],
-            "support": {
-                "issues": "https://github.com/Cecilapp/theme-podcast/issues",
-                "source": "https://github.com/Cecilapp/theme-podcast/tree/2.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/ArnaudLigny",
-                    "type": "github"
-                },
-                {
-                    "url": "https://opencollective.com/cecil",
-                    "type": "open_collective"
-                }
-            ],
-            "time": "2026-10-10T20:30:36+00:00"
         },
         {
             "name": "cecil/theme-pwa",
