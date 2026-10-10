@@ -82,8 +82,10 @@ podcast:
   hoster:
     - name: Arnaud Ligny
       avatar: https://github.com/arnaudligny.png?size=150
+      url: https://arnaudligny.fr
     - name: Cecil
       avatar: https://github.com/cecilapp.png?size=150
+      url: https://cecil.app
 
 # Cecil options
 pages:
