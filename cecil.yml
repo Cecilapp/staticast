@@ -21,14 +21,18 @@ languages:
       description: Ceci est une démo de Staticast, la façon la plus simple de publier votre 🎙️ podcast.
       menus:
         main:
-          - id: episodes
+          - id: index
             enabled: false
+          - id: episodes
+            weight: 1
 date:
   timezone: Europe/Paris
 menus:
   main:
-    - id: episodes
+    - id: index
       enabled: false
+    - id: episodes
+      weight: 1
 theme:
   - pwa         # Progressive Web App features
   - netlify     # Netlify feature

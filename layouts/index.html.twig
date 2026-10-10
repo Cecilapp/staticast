@@ -1,1 +1,14 @@
-{% extends 'episodes/list.html.twig' %}
+{% extends ['page.html.twig', '_default/page.html.twig'] %}
+
+{% block content ~%}
+          <h1 class="text-lg mb-2">{% trans %}Latest episodes{% endtrans %}</h1>
+          {%- for p in page.pages|sort_by_date|slice(0, 2) ~%}
+          {%- include 'partials/episode.html.twig' with {p: p} ~%}
+          {%- if not loop.last ~%}
+          <hr class="mb-4 border-t border-slate-300" />
+          {%- endif ~%}
+          {%- endfor ~%}
+          <p class="mt-6 mb-4">
+            <a href="{{ url(site.page('episodes')) }}" class="inline-flex items-center h-8 px-4 text-sm font-bold border-2 border-primary rounded-full hover:shadow-lg hover:bg-primary hover:text-slate-50">{% trans %}Listen to all episodes{% endtrans %}</a>
+          </p>
+{% endblock content %}
