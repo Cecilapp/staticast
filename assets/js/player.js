@@ -137,10 +137,10 @@
   });
   audio.addEventListener('timeupdate', () => {
     if (!current) return;
-    // save position
-    if (!audio.ended) {
-      storage.set(current.key, audio.currentTime);
-    }
+    // save position (a seek to the end, e.g. "mark as read", doesn't always set `ended`)
+    const atEnd = audio.ended || (audio.duration > 0 && audio.currentTime >= audio.duration - 0.5);
+    storage.set(current.key, atEnd ? 'ended' : audio.currentTime);
+    if (atEnd) updateButtons();
     // display progress in page's title
     if (!audio.paused) {
       document.title = current.title + ' (' + formatTime(audio.currentTime) + ')';
