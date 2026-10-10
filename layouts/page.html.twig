@@ -137,7 +137,7 @@
             {%- for hoster in site.podcast.hoster ~%}
             <div class="flex items-center space-x-4 mb-4">
               {%- set avatar = asset(hoster.avatar)|resize(112) ~%}
-              <img class="flex-none w-14 h-14 rounded-full object-cover" src="{{ avatar }}" alt="{{ hoster.name }}" width="{{ avatar.width }}" height="{{ avatar.height }}">
+              <img class="flex-none w-12 h-12 rounded-full object-cover" src="{{ avatar }}" alt="{{ hoster.name }}" width="{{ avatar.width }}" height="{{ avatar.height }}">
               <div class="flex-auto">
                 <div class="text-base dark:text-slate-300">
                   {%- if hoster.url is defined ~%}
