@@ -6,7 +6,6 @@
   {#- set image = cover_image -#}
 {%- endif -%}
 {%- set cover = asset(cover_image) -%}
-{%- set cover_mobile = asset(cover_image)|resize(225) -%}
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
   <head>
@@ -52,7 +51,7 @@
               </div>
               {#- cover image ~#}
               <div class="block md:hidden">
-                <img class="rounded-lg" src="{{ cover_mobile|url }}" alt="{{ cover_title }}" width="{{ cover_mobile.width }}" height="{{ cover_mobile.height }}">
+                {{ html(cover, {class: 'rounded-lg', alt: cover_title, width: 225}, {responsive: 'density'}) }}
               </div>
             </div>
             {#- navigation ~#}
@@ -100,7 +99,8 @@
         <aside class="px-4 md:p-6 self-start md:order-first bg-slate-200 dark:bg-slate-900 sticky top-0">
           {#- cover image ~#}
           <div class="pb-5 hidden md:block">
-            <img class="rounded-lg" src="{{ cover|url }}" alt="{{ cover_title }}" width="{{ cover.width }}" height="{{ cover.height }}">
+            {#- sidebar is 300px wide with 24px padding on each side ~#}
+            {{ html(cover, {class: 'rounded-lg', alt: cover_title, width: 252}, {responsive: 'density'}) }}
           </div>
           {#- subscribe in ~#}
           <div class="mb-5">
@@ -131,7 +131,7 @@
             <div class="font-medium mb-3">{% trans %}Hosted by{% endtrans %}</div>
             {%- for hoster in site.podcast.hoster ~%}
             <div class="flex items-center space-x-4 mb-4">
-              {%- set avatar = asset(hoster.avatar) ~%}
+              {%- set avatar = asset(hoster.avatar)|resize(112) ~%}
               <img class="flex-none w-14 h-14 rounded-full object-cover" src="{{ avatar }}" alt="{{ hoster.name }}" width="{{ avatar.width }}" height="{{ avatar.height }}">
               <div class="flex-auto">
                 <div class="text-base dark:text-slate-300">
