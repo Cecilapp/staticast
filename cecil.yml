@@ -5,9 +5,7 @@ description: This is a demo of Staticast, the easiest way to publish your ðŸŽ™ï¸
 keywords: [Podcast, Cecil, Static Site Generator]
 author: Arnaud Ligny
 copyright: Arnaud Ligny
-baseurl: /
-canonicalurl: true
-image: twitter-card.png
+image: og-card.png
 language: en
 languages:
   - code: en
@@ -25,8 +23,6 @@ languages:
             enabled: false
           - id: episodes
             weight: 1
-date:
-  timezone: Europe/Paris
 menus:
   main:
     - id: index
@@ -34,8 +30,8 @@ menus:
     - id: episodes
       weight: 1
 theme:
-  - pwa         # Progressive Web App features
-  - netlify     # Netlify feature
+  - pwa
+  - netlify
 manifest:
   background_color: "#7E4EA3"
   theme_color: "#7E4EA3"
@@ -94,7 +90,6 @@ pages:
   pagination:
     max: 10
   default:
-    # RSS feed style sheet
     xsl/podcast:
       path: xsl/podcast
       layout: podcast
@@ -104,7 +99,6 @@ pages:
       excluded: true
       serviceworker:
         precache: false
-    # overrides serviceworker default layout
     serviceworker:
       path: serviceworker
       layout: sw
@@ -115,7 +109,6 @@ output:
     section: [html, rss]
 netlify:
   redirects:
-    # redirect demo
     - from: https://staticast-demo.netlify.app/*
       to: https://staticast-demo.cecil.app/:splat
       status: 301
