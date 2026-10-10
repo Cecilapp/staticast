@@ -89,7 +89,7 @@ pages:
       output: js
 output:
   pagetypeformats:
-    homepage: html
+    homepage: [html]
     section: [html, rss]
 netlify:
   redirects:
