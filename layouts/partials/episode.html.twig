@@ -20,10 +20,10 @@
                   <a class="inline-flex items-center" href="{{ file|url }}" title="{% trans %}Download{% endtrans %}" download>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   </a>
-                  <button class="inline-flex items-center" type="button" title="{% trans %}Mark as read / unread{% endtrans %}" data-player-read data-key="{{ file }}">
+                  <button class="inline-flex items-center cursor-pointer" type="button" title="{% trans %}Mark as read / unread{% endtrans %}" data-player-read data-key="{{ file }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   </button>
-                  <button class="inline-flex items-center" type="button" title="{% trans %}Share this episode{% endtrans %}" data-share data-share-title="{{ p.title }}" data-share-url="{{ url(p, {canonical: true}) }}">
+                  <button class="inline-flex items-center cursor-pointer" type="button" title="{% trans %}Share this episode{% endtrans %}" data-share data-share-title="{{ p.title }}" data-share-url="{{ url(p, {canonical: true}) }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/></svg>
                   </button>
                 </div>
