@@ -37,6 +37,7 @@ Example (`1.md`):
 ```yaml
 ---
 title: "Episode #1"
+description: "Short summary of the episode (used by search engines and social networks)."
 episode:
   file: episode-1.mp3
 ---
