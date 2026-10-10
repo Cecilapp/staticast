@@ -1,0 +1,35 @@
+{#- color theme: applies the stored (or system) theme before first paint, and handles the toggle button ~#}
+<script>{% apply minify_js ~%}
+(() => {
+  const KEY = 'staticast:theme';
+  const COLORS = { light: '{{ site.manifest.theme_color }}', dark: 'black' };
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  const storage = {
+    get: () => { try { return localStorage.getItem(KEY); } catch (e) { return null; } },
+    set: (value) => { try { localStorage.setItem(KEY, value); } catch (e) {} },
+    remove: () => { try { localStorage.removeItem(KEY); } catch (e) {} },
+  };
+  const system = () => (media.matches ? 'dark' : 'light');
+  const apply = () => {
+    const stored = storage.get();
+    const theme = stored === 'light' || stored === 'dark' ? stored : system();
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    // browser UI color follows the explicit choice
+    document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+      meta.content = stored ? COLORS[theme] : meta.media.includes('dark') ? COLORS.dark : COLORS.light;
+    });
+  };
+  apply();
+  media.addEventListener('change', apply);
+  // Turbo Drive replaces <head> meta tags on each visit
+  document.addEventListener('turbo:load', apply);
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('[data-theme-toggle]')) return;
+    const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    // forgets the choice when it matches the system preference
+    theme === system() ? storage.remove() : storage.set(theme);
+    apply();
+  });
+})();
+{%- endapply %}</script>

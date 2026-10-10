@@ -724,6 +724,9 @@
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
@@ -755,6 +758,9 @@
   .grow {
     flex-grow: 1;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -769,6 +775,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .gap-1 {
     gap: var(--spacing);
@@ -1037,31 +1046,98 @@
       line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
+  .dark\:block:where([data-theme=dark], [data-theme=dark] *) {
+    display: block;
+  }
   @media (prefers-color-scheme: dark) {
-    .dark\:border-slate-700 {
+    .dark\:block:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
+      display: block;
+    }
+  }
+  .dark\:hidden:where([data-theme=dark], [data-theme=dark] *) {
+    display: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:hidden:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
+      display: none;
+    }
+  }
+  .dark\:border-slate-700:where([data-theme=dark], [data-theme=dark] *) {
+    border-color: var(--color-slate-700);
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:border-slate-700:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
       border-color: var(--color-slate-700);
     }
-    .dark\:bg-black {
+  }
+  .dark\:bg-black:where([data-theme=dark], [data-theme=dark] *) {
+    background-color: var(--color-black);
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-black:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
       background-color: var(--color-black);
     }
-    .dark\:bg-black\/95 {
-      background-color: color-mix(in srgb, #000 95%, transparent);
-    }
+  }
+  .dark\:bg-black\/95:where([data-theme=dark], [data-theme=dark] *) {
+    background-color: color-mix(in srgb, #000 95%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      .dark\:bg-black\/95 {
+      background-color: color-mix(in oklab, var(--color-black) 95%, transparent);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-black\/95:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
+      background-color: color-mix(in srgb, #000 95%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-black) 95%, transparent);
       }
     }
-    .dark\:bg-slate-900 {
+  }
+  .dark\:bg-slate-900:where([data-theme=dark], [data-theme=dark] *) {
+    background-color: var(--color-slate-900);
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-slate-900:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
       background-color: var(--color-slate-900);
     }
-    .dark\:fill-slate-300 {
+  }
+  .dark\:fill-slate-300:where([data-theme=dark], [data-theme=dark] *) {
+    fill: var(--color-slate-300);
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:fill-slate-300:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
       fill: var(--color-slate-300);
     }
-    .dark\:text-slate-300 {
+  }
+  .dark\:text-slate-300:where([data-theme=dark], [data-theme=dark] *) {
+    color: var(--color-slate-300);
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:text-slate-300:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
       color: var(--color-slate-300);
     }
-    .dark\:markdown-invert {
+  }
+  .dark\:markdown-invert:where([data-theme=dark], [data-theme=dark] *) {
+    --tw-prose-body: var(--tw-prose-invert-body);
+    --tw-prose-headings: var(--tw-prose-invert-headings);
+    --tw-prose-lead: var(--tw-prose-invert-lead);
+    --tw-prose-links: var(--tw-prose-invert-links);
+    --tw-prose-bold: var(--tw-prose-invert-bold);
+    --tw-prose-counters: var(--tw-prose-invert-counters);
+    --tw-prose-bullets: var(--tw-prose-invert-bullets);
+    --tw-prose-hr: var(--tw-prose-invert-hr);
+    --tw-prose-quotes: var(--tw-prose-invert-quotes);
+    --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
+    --tw-prose-captions: var(--tw-prose-invert-captions);
+    --tw-prose-kbd: var(--tw-prose-invert-kbd);
+    --tw-prose-kbd-shadows: var(--tw-prose-invert-kbd-shadows);
+    --tw-prose-code: var(--tw-prose-invert-code);
+    --tw-prose-pre-code: var(--tw-prose-invert-pre-code);
+    --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
+    --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
+    --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:markdown-invert:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
       --tw-prose-body: var(--tw-prose-invert-body);
       --tw-prose-headings: var(--tw-prose-invert-headings);
       --tw-prose-lead: var(--tw-prose-invert-lead);
@@ -1081,8 +1157,15 @@
       --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
       --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
+  }
+  @media (hover: hover) {
+    .dark\:hover\:bg-black:where([data-theme=dark], [data-theme=dark] *):hover {
+      background-color: var(--color-black);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
     @media (hover: hover) {
-      .dark\:hover\:bg-black:hover {
+      .dark\:hover\:bg-black:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *):hover {
         background-color: var(--color-black);
       }
     }

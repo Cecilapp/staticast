@@ -7,6 +7,18 @@
   className: 'markdown';
 }
 
+/* dark mode: explicit choice (`data-theme` on <html>), otherwise system preference */
+@custom-variant dark {
+  &:where([data-theme=dark], [data-theme=dark] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme=light]), :root:not([data-theme=light]) *) {
+      @slot;
+    }
+  }
+}
+
 /* full width container, limited to 1024px on large screens */
 @utility container {
   @media (width >= --theme(--breakpoint-sm)) {

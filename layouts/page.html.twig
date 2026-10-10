@@ -13,6 +13,7 @@
     {%- block head ~%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- include 'partials/theme.js.twig' ~%}
     {%- include 'partials/metatags.html.twig' with {title: title|default} ~%}
     <meta name="copyright" content="{{ site.copyright|default(site.author) }}" />
     {%- if getenv('CECIL_ENV') == 'production' ~%}
@@ -66,9 +67,10 @@
                 {%- endfor ~%}
               </ol>
             </nav>
-            {#- language selector ~#}
+            {#- language and theme selectors ~#}
             <div class="flex items-center space-x-2">
               {%- include 'partials/language-selector.html.twig' ~%}
+              {%- include 'partials/theme-toggle.html.twig' ~%}
             </div>
             </div>
           </header>
