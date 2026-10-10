@@ -1,6 +1,0 @@
-language: fr
-languages:
-  - code: fr
-    locale: fr_FR
-    config:
-      description: Ceci est une démo de Staticast, le moyen le plus simple de publier votre podcast 🎙️.
