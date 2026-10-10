@@ -66,6 +66,8 @@
               </ol>
             </nav>
           </header>
+          {#- breadcrumb ~#}
+          {%- include 'partials/breadcrumb.html.twig' ~%}
           {#- content ~#}
           {%- block content ~%}
           <h1 class="text-lg mb-2">{{ page.title }}</h1>

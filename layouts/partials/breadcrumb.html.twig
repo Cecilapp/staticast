@@ -1,0 +1,24 @@
+{#- breadcrumb navigation (overrides Cecil's built-in partial) ~#}
+{%- if page.type != 'homepage' ~%}
+{%- set separator = '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 fill-slate-400" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>' ~%}
+<nav aria-label="{% trans %}Breadcrumb{% endtrans %}" class="mb-4">
+  <ol class="flex flex-wrap items-center gap-1 text-sm text-slate-500" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li class="flex items-center" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="{{ url(site.home) }}" class="hover:underline" itemprop="item"><span itemprop="name">{% trans %}Home{% endtrans %}</span></a>
+      <meta itemprop="position" content="1" />
+    </li>
+    {%- for section in page.ancestors|reverse ~%}
+    <li class="flex items-center gap-1" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      {{ separator|raw }}
+      <a href="{{ url(section) }}" class="hover:underline" itemprop="item"><span itemprop="name">{{ section.title }}</span></a>
+      <meta itemprop="position" content="{{ loop.index + 1 }}" />
+    </li>
+    {%- endfor ~%}
+    <li class="flex items-center gap-1 min-w-0" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      {{ separator|raw }}
+      <span class="truncate text-slate-700 dark:text-slate-300" aria-current="page" itemprop="name">{{ page.title }}</span>
+      <meta itemprop="position" content="{{ page.ancestors|length + 2 }}" />
+    </li>
+  </ol>
+</nav>
+{%- endif ~%}
