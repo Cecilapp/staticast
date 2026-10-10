@@ -1,0 +1,20 @@
+    {#- persistent audio player: kept alive by Turbo Drive between pages (see assets/js/player.js) ~#}
+    <div id="player" class="fixed inset-x-0 bottom-0 z-40 border-t border-slate-300 dark:border-slate-700 bg-white/95 dark:bg-black/95 backdrop-blur shadow-lg" data-turbo-permanent hidden
+      data-label-play="{% trans %}Play{% endtrans %}"
+      data-label-pause="{% trans %}Pause{% endtrans %}"
+      data-label-resume="{% trans %}Resume{% endtrans %}"
+      data-label-ended="{% trans %}Ended{% endtrans %}">
+      <div class="container mx-auto flex items-center gap-3 px-4 py-2">
+        <img data-player-image class="hidden sm:block flex-none w-12 h-12 rounded-lg object-cover" src="data:," alt="" width="48" height="48">
+        <div class="flex flex-col md:flex-row md:items-center md:gap-3 grow min-w-0">
+          <div class="min-w-0 md:w-56 md:flex-none">
+            <a data-player-title class="block truncate text-sm font-bold" href="{{ url(site.home) }}"></a>
+            <span data-player-artist class="block truncate text-xs text-slate-500"></span>
+          </div>
+          <audio id="audioplayer" class="grow h-10 my-1 md:my-0 rounded-full" controls preload="metadata"></audio>
+        </div>
+        <button data-player-close class="flex-none inline-flex items-center text-slate-500 hover:text-primary" type="button" title="{% trans %}Close{% endtrans %}">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>

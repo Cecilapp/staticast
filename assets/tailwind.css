@@ -32,4 +32,11 @@
     width: 100%;
     margin: 1rem 0 1rem 0;
   }
+  /* leaves room for the persistent player */
+  body:has(> #player:not([hidden])) {
+    @apply pb-28 md:pb-16;
+  }
+  .turbo-progress-bar {
+    @apply bg-primary;
+  }
 }

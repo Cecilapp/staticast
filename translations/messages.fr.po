@@ -53,3 +53,11 @@ msgstr "Terminé"
 #: partials/episode.html.twig:87
 msgid "Resume"
 msgstr "Reprendre"
+
+#: partials/player.html.twig:4
+msgid "Pause"
+msgstr "Pause"
+
+#: partials/player.html.twig:16
+msgid "Close"
+msgstr "Fermer"
